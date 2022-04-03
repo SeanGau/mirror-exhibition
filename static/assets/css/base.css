@@ -1,0 +1,24 @@
+.btn-purple {
+  background-color: #EDE9FE;
+  color: #7C3AED !important;
+  transition: 0.3s;
+}
+.btn-purple:hover {
+  filter: brightness(0.95);
+}
+
+body {
+  background-color: #FFF8E7;
+}
+
+.nav {
+  background-color: #FFF8E7;
+  padding: 1em 0;
+}
+.nav a {
+  color: #333;
+  font-weight: bold;
+}
+.nav a:link:hover, .nav a:visited:hover {
+  color: #7C3AED;
+}
