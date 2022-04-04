@@ -14,7 +14,7 @@ function build() {
   .pipe(sass.sync().on('error', sass.logError))
   .pipe(gulp.dest('./static/assets/css'));
 
-  gulp.src('src/pug/**/*.pug')
+  gulp.src(['src/pug/**/*.pug','!src/pug/_layout.pug'])
   .pipe(data((file) => {
     console.log("[build] "+file['history']);
     const result = {
