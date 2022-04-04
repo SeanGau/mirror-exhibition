@@ -1,3 +1,7 @@
+h1, h2, h3 {
+  margin-bottom: 1rem;
+}
+
 .btn-purple {
   background-color: #EDE9FE;
   color: #7C3AED !important;
@@ -9,16 +13,88 @@
 
 body {
   background-color: #FFF8E7;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 .nav {
   background-color: #FFF8E7;
-  padding: 1em 0;
+  padding: 0.5rem 0;
 }
 .nav a {
   color: #333;
   font-weight: bold;
 }
+.nav a:focus, .nav a.navbar-brand {
+  color: #7C3AED;
+}
 .nav a:link:hover, .nav a:visited:hover {
   color: #7C3AED;
+}
+
+#top-anim {
+  height: calc(100vh - 4rem);
+  background-color: white;
+}
+
+#slogan {
+  padding: 4rem 0;
+  color: white;
+  background-color: #1A051D;
+}
+#slogan h6 {
+  font-weight: lighter;
+  padding-top: 1rem;
+}
+
+#works .disc {
+  padding: 4rem 3rem;
+}
+#works .bg-rice {
+  background-color: #F6E9D0;
+}
+#works .bg-pink {
+  background-color: #FFE8DA;
+}
+#works .bg-sky {
+  background-color: #D5FAFC;
+}
+#works .bg-lightpurple {
+  background-color: #ECEBED;
+}
+#works .carousel {
+  background: linear-gradient(90deg, #FFE8DA 50%, #D5FAFC 50%);
+}
+#works .carousel.revert-bg {
+  background: linear-gradient(270deg, #FFE8DA 50%, #D5FAFC 50%);
+}
+#works .carousel .carousel-control-next, #works .carousel .carousel-control-prev {
+  filter: brightness(0.25);
+  width: 4rem;
+}
+#works .carousel .carousel-control-next-icon, #works .carousel .carousel-control-prev-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+#works .carousel .carousel-left div {
+  border-radius: 1rem 0 0 1rem;
+}
+#works .carousel .carousel-right div {
+  border-radius: 0 1rem 1rem 0;
+}
+#works .carousel .carousel-left, #works .carousel .carousel-right {
+  padding: 4rem;
+}
+#works .carousel .carousel-left div, #works .carousel .carousel-right div {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height: 25vw;
+}
+#works .box-big {
+  padding: 4rem;
+}
+#works .box-big div {
+  height: 25vw;
+  border-radius: 1rem;
+  overflow: hidden;
 }
