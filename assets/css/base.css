@@ -31,6 +31,15 @@ body {
   color: #7C3AED;
 }
 
+.dropdown-menu {
+  background-color: #FFF8E7;
+  border: 0;
+  padding: 1rem 0;
+}
+.dropdown-menu .dropdown-item:focus, .dropdown-menu .dropdown-item:hover {
+  background-color: transparent;
+}
+
 #top-anim {
   height: calc(100vh - 4rem);
   background-color: white;
