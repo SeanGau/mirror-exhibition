@@ -32,13 +32,35 @@ body
     background-color: white
 
 #slogan
-    padding: 4rem 0
+    padding: 4rem 2rem
     color: white
     background-color: #1A051D
     h6
         font-weight: lighter
         padding-top: 1rem
 
+.modal-content
+    background-color: transparent
+    #workImage
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center center
+        width: 60%
+        height: 70%
+        margin: auto
+    #close
+        display: block
+        position: absolute
+        bottom: 7%
+        background-color: white
+        width: 2.5rem
+        height: 2.5rem
+        border-radius: 1.25rem
+        padding: 0.5rem
+        transition: .3s
+        &:hover
+            color: $color-link
+            
 #works
     .disc
         padding: 4rem 3rem
@@ -58,7 +80,7 @@ body
             background: linear-gradient(270deg, #FFE8DA 50%, #D5FAFC 50%)
         .carousel-control-next, .carousel-control-prev
             filter: brightness(.25)
-            width: 4rem
+            width: 8%
         .carousel-control-next-icon, .carousel-control-prev-icon
             width: 1.5rem
             height: 1.5rem
@@ -72,10 +94,20 @@ body
                 display: flex
                 justify-content: center
                 overflow: hidden
-                height: 25vw
+                aspect-ratio: 0.75
     .box-big
         padding: 4rem
         div
-            height: 25vw
+            aspect-ratio: 1.85
             border-radius: 1rem
             overflow: hidden
+
+@media (max-width: 767px)
+    #works
+        .disc
+            padding: 4rem 2rem
+        .carousel
+            .carousel-left, .carousel-right
+                padding: 2rem
+        .box-big
+            padding: 2rem

@@ -9,6 +9,15 @@ block body
         h2 像星空中的光，在黑暗中給予一點方向指引 
         h6 -陳向榮
     #works
+        .modal.fade#workModal(tabindex='-1' aria-hidden='true')
+            .modal-dialog.modal-fullscreen
+                .modal-content
+                    .modal-body.d-flex.justify-content-center.align-items.center
+                        #workImage
+                        a#close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                            svg.w-100.h-100(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='currentColor')
+                                // ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. 
+                                path(d='M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z')
         .row.g-0
             .col-md-4: .disc 
                 h1 迪斯可
@@ -19,21 +28,22 @@ block body
                     .carousel-inner
                         .carousel-item.active
                             .row.g-0
-                                .col-6.carousel-left: div
+                                .col-6.carousel-left: div: a.workbox(href="#")
                                     img.d-block.h-100(src='/assets/artist/1/work 1-1.jpg' alt='...')
-                                .col-6.carousel-right: div
+                                .col-6.carousel-right: div: a.workbox(href="#")
                                     img.d-block.h-100(src='/assets/artist/1/work 1-2.jpg' alt='...')
                         .carousel-item
                             .row.g-0
-                                .col-6.carousel-left: div
+                                .col-6.carousel-left: div: a.workbox(href="#")
                                     img.d-block.h-100(src='/assets/artist/1/work 1-3.jpg' alt='...')
-                                .col-6.carousel-right: div
+                                .col-6.carousel-right: div: a.workbox(href="#")
                                     img.d-block.h-100(src='/assets/artist/1/work 1-4.jpg' alt='...')
                         .carousel-item
                             .row.g-0
-                                .col-6.carousel-left: div
+                                .col-6.carousel-left: div: a.workbox(href="#")
                                     img.d-block.h-100(src='/assets/artist/1/work 1-5.jpg' alt='...')
-                                .col-6.carousel-a.carousel-right
+                                .col-6.carousel-right: div: a.workbox(href="#")
+                                    img.d-block.h-100(src='/assets/artist/1/work 1-1.jpg' alt='...')
                     button.carousel-control-prev(type='button' data-bs-target='#carousel1' data-bs-slide='prev')
                         span.carousel-control-prev-icon(aria-hidden='true')
                         span.visually-hidden Previous
@@ -53,15 +63,15 @@ block body
                     .carousel-inner
                         .carousel-item.active
                             .row.g-0
-                                .col-6.carousel-left: div
+                                .col-6.carousel-left: div: a.workbox(href="#")
                                     img.d-block.h-100(src='/assets/artist/1/work 2-1.jpg' alt='...')
-                                .col-6.carousel-right: div
+                                .col-6.carousel-right: div: a.workbox(href="#")
                                     img.d-block.h-100(src='/assets/artist/1/work 2-2.jpg' alt='...')
                         .carousel-item
                             .row.g-0
-                                .col-6.carousel-left: div
+                                .col-6.carousel-left: div: a.workbox(href="#")
                                     img.d-block.h-100(src='/assets/artist/1/work 2-3.jpg' alt='...')
-                                .col-6.carousel-right: div
+                                .col-6.carousel-right: div: a.workbox(href="#")
                                     img.d-block.h-100(src='/assets/artist/1/work 2-4.jpg' alt='...')
                     button.carousel-control-prev(type='button' data-bs-target='#carousel2' data-bs-slide='prev')
                         span.carousel-control-prev-icon(aria-hidden='true')
@@ -82,15 +92,15 @@ block body
                     .carousel-inner
                         .carousel-item.active
                             .row.g-0
-                                .col-6.carousel-left: div
+                                .col-6.carousel-left: div: a.workbox(href="#")
                                     img.d-block.h-100(src='/assets/artist/1/work 3-1.jpg' alt='...')
-                                .col-6.carousel-right: div
+                                .col-6.carousel-right: div: a.workbox(href="#")
                                     img.d-block.h-100(src='/assets/artist/1/work 3-2.jpg' alt='...')
                         .carousel-item
                             .row.g-0
-                                .col-6.carousel-left: div
+                                .col-6.carousel-left: div: a.workbox(href="#")
                                     img.d-block.h-100(src='/assets/artist/1/work 3-3.jpg' alt='...')
-                                .col-6.carousel-right: div
+                                .col-6.carousel-right: div: a.workbox(href="#")
                                     img.d-block.h-100(src='/assets/artist/1/work 3-4.jpg' alt='...')
                     button.carousel-control-prev(type='button' data-bs-target='#carousel3' data-bs-slide='prev')
                         span.carousel-control-prev-icon(aria-hidden='true')
@@ -108,21 +118,21 @@ block body
                     .carousel-inner
                         .carousel-item.active
                             .row.g-0
-                                .col-6.carousel-left: div
+                                .col-6.carousel-left: div: a.workbox(href="#")
                                     img.d-block.w-100(src='/assets/artist/1/work 4-1.jpg' alt='...')
-                                .col-6.carousel-right: div
+                                .col-6.carousel-right: div: a.workbox(href="#")
                                     img.d-block.w-100(src='/assets/artist/1/work 4-2.jpg' alt='...')
                         .carousel-item
                             .row.g-0
-                                .col-6.carousel-left: div
+                                .col-6.carousel-left: div: a.workbox(href="#")
                                     img.d-block.w-100(src='/assets/artist/1/work 4-3.jpg' alt='...')
-                                .col-6.carousel-right: div
+                                .col-6.carousel-right: div: a.workbox(href="#")
                                     img.d-block.w-100(src='/assets/artist/1/work 4-4.jpg' alt='...')
                         .carousel-item
                             .row.g-0
-                                .col-6.carousel-left: div
+                                .col-6.carousel-left: div: a.workbox(href="#")
                                     img.d-block.h-100(src='/assets/artist/1/work 4-5.jpg' alt='...')
-                                .col-6.carousel-right: div
+                                .col-6.carousel-right: div: a.workbox(href="#")
                                     img.d-block.h-100(src='/assets/artist/1/work 4-6.jpg' alt='...')
                     button.carousel-control-prev(type='button' data-bs-target='#carousel4' data-bs-slide='prev')
                         span.carousel-control-prev-icon(aria-hidden='true')
@@ -140,9 +150,9 @@ block body
                     .carousel-inner
                         .carousel-item.active
                             .row.g-0
-                                .col-6.carousel-left: div
+                                .col-6.carousel-left: div: a.workbox(href="#")
                                     img.d-block.h-100(src='/assets/artist/1/work 5-1.jpg' alt='...')
-                                .col-6.carousel-right: div
+                                .col-6.carousel-right: div: a.workbox(href="#")
                                     img.d-block.h-100(src='/assets/artist/1/work 5-2.jpg' alt='...')
         .row.g-0
             .col-md-4.bg-rice: .disc
@@ -156,3 +166,13 @@ block body
             .col-md-8.bg-lightpurple: .box-big
                 a.
                     陳向榮，陶藝創作者，生活及工作於台北。創作靈感來自日常生活，例如：市場、食物、植物等。透過個人創作形式的解構與轉化，試圖再現人們共同的生活經驗，引起觀者共感。雖然主要創作媒材為陶土，陳向榮也將陶作與其它異材質、現成物並置、組合，這些被大量且快速製造的日常生活物件反映當代現下的生活。陶作與其他物件之間的反差襯托了彼此，而陳向榮嘗試在這衝突之間捕捉和諧的可能性。
+block script
+    script.
+        let myModal = new bootstrap.Modal(document.getElementById('workModal'), {});
+        $('.workbox').on('click', function(e) {
+            e.preventDefault();
+            let imgpath = $('img', this).attr('src');
+            console.log(imgpath);
+            $('#workImage').css('background-image', `url("${imgpath}")`);
+            myModal.toggle();
+        });

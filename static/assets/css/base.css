@@ -37,13 +37,39 @@ body {
 }
 
 #slogan {
-  padding: 4rem 0;
+  padding: 4rem 2rem;
   color: white;
   background-color: #1A051D;
 }
 #slogan h6 {
   font-weight: lighter;
   padding-top: 1rem;
+}
+
+.modal-content {
+  background-color: transparent;
+}
+.modal-content #workImage {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 60%;
+  height: 70%;
+  margin: auto;
+}
+.modal-content #close {
+  display: block;
+  position: absolute;
+  bottom: 7%;
+  background-color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 1.25rem;
+  padding: 0.5rem;
+  transition: 0.3s;
+}
+.modal-content #close:hover {
+  color: #7C3AED;
 }
 
 #works .disc {
@@ -72,7 +98,7 @@ body {
 }
 #works .carousel .carousel-control-next, #works .carousel .carousel-control-prev {
   filter: brightness(0.25);
-  width: 4rem;
+  width: 8%;
 }
 #works .carousel .carousel-control-next-icon, #works .carousel .carousel-control-prev-icon {
   width: 1.5rem;
@@ -91,13 +117,25 @@ body {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  height: 25vw;
+  aspect-ratio: 0.75;
 }
 #works .box-big {
   padding: 4rem;
 }
 #works .box-big div {
-  height: 25vw;
+  aspect-ratio: 1.85;
   border-radius: 1rem;
   overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  #works .disc {
+    padding: 4rem 2rem;
+  }
+  #works .carousel .carousel-left, #works .carousel .carousel-right {
+    padding: 2rem;
+  }
+  #works .box-big {
+    padding: 2rem;
+  }
 }
