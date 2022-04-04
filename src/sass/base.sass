@@ -1,6 +1,9 @@
 $color-bg:#FFF8E7
 $color-link: #7C3AED
 
+h1, h2, h3
+    margin-bottom: 1rem
+
 .btn-purple
     background-color: #EDE9FE
     color: $color-link !important
@@ -10,13 +13,67 @@ $color-link: #7C3AED
 
 body
     background-color: $color-bg
+    font-family: 'Noto Sans TC', sans-serif
 
 .nav
     background-color: $color-bg
-    padding: 1em 0
+    padding: .5rem 0
     a
         color: #333
         font-weight: bold
+        &:focus, &.navbar-brand
+            color: $color-link
         &:link, &:visited
             &:hover
                 color: $color-link
+
+#top-anim
+    height: calc(100vh - 4rem)
+    background-color: white
+
+#slogan
+    padding: 4rem 0
+    color: white
+    background-color: #1A051D
+    h6
+        font-weight: lighter
+        padding-top: 1rem
+
+#works
+    .disc
+        padding: 4rem 3rem
+    .bg-rice
+        background-color: #F6E9D0
+    .bg-pink
+        background-color: #FFE8DA
+    .bg-sky
+        background-color: #D5FAFC
+    .bg-lightpurple
+        background-color: #ECEBED
+    .carousel
+        background: linear-gradient(90deg, #FFE8DA 50%, #D5FAFC 50%)
+        &.revert-bg
+            background: linear-gradient(270deg, #FFE8DA 50%, #D5FAFC 50%)
+        .carousel-control-next, .carousel-control-prev
+            filter: brightness(.25)
+            width: 4rem
+        .carousel-control-next-icon, .carousel-control-prev-icon
+            width: 1.5rem
+            height: 1.5rem
+        .carousel-left div
+            border-radius: 1rem 0 0 1rem
+        .carousel-right div
+            border-radius: 0 1rem 1rem 0
+        .carousel-left, .carousel-right
+            padding: 4rem
+            div
+                display: flex
+                justify-content: center
+                overflow: hidden
+                height: 25vw
+    .box-big
+        padding: 4rem
+        div
+            height: 25vw
+            border-radius: 1rem
+            overflow: hidden
