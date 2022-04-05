@@ -18,12 +18,13 @@ html(lang="zh-Hant-TW")
             a.navbar-brand(href="/") Mirror
             .row.flex-grow-1.link-box
                 .col-md-6.d-flex
-                    a.nav-link(href='#') 關於展覽
-                    a.nav-link.dropdown-toggle#artistDropdownMenuLink(href='#' data-bs-toggle="dropdown" aria-expanded="false") 藝術家
+                    a.nav-link(href='/about') 關於展覽
+                    a.nav-link#artistDropdownMenuLink(href='#' data-bs-toggle="dropdown" aria-expanded="false") 藝術家
                     a.nav-link(href='#') 了解更多
                     ul.dropdown-menu(aria-labelledby="artistDropdownMenuLink")
                         li
                             a.dropdown-item(href='/artist/1') 陳向榮‧向榮水果行
+                            a.dropdown-item(href='#') 測試測試測試測試測試測試測試測試測試
                 .col-md-6.d-flex.justify-content-end
                     a.btn.btn-purple(href='#') 🎧閉著眼睛聽導覽
                     a.btn.btn-purple(href='#') 🦄
@@ -31,4 +32,12 @@ html(lang="zh-Hant-TW")
         block body      
         script(src='https://code.jquery.com/jquery-3.6.0.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=' crossorigin='anonymous')        
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous')
+        script.
+            var dropdown = new bootstrap.Dropdown(document.getElementById('artistDropdownMenuLink'), {});
+            $("#artistDropdownMenuLink").on("mouseenter", function(e) {
+                    dropdown.show();
+            });
+            $(".dropdown-menu").on("mouseleave", function(e) {
+                    dropdown.hide();
+            });
         block script

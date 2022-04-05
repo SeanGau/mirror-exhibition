@@ -1,0 +1,34 @@
+extends /_layout.pug
+block variables
+    - title = "關於展覽"
+block head
+block body
+    #works
+        .row.g-0
+            .col-md-4.bg-color-2.about
+                h1 策展論述
+                span.
+            .col-md-8.bg-color-6: .box-big
+                h6.mb-4 《鏡子》療癒工藝線上展
+                p: i "Learn to see and to feel life; that is, cultivate imagination, because there are still marvels in the world, because life is a mystery and always will be. But be aware of it." ~Josef Albers
+                p 《鏡子》療癒工藝線上展邀請8位藝術家回看自己創作的核心，試著將情緒感官化，以直觀的方式產出。在哲學思辨中更認識自己，在光影中尋找歸屬感，在冥想中紀錄生活的不同情境與狀態，也思考面對關係的修復，如何讓受傷的心走向癒合。在原初、投射和轉化之間來回走動。
+                p 過程中藝術家藉由雙手形塑手中的物件和內心的樣貌，專注感受手中的真實感，以重覆的動作和身體的力量，在作品上留下獨有的印記。作品的最終樣貌也表現藝術家的自主性、投注的時間與心力。有趣的是創作中的未知總是帶來許多驚喜，也許是因為信任內在的指引，才能不斷地前行。
+                p 藝術創作的本質也就是對於美的探究，以及面對自己的探索，進而從中了解自己。如果能夠把這樣的核心概念帶給觀者，觸發他們的共感，進而願意面對自己的情緒，達到整合，那療癒的真諦也就此發生。
+                p 在這個線上展中，我們期望作品就等同於是一面鏡子。當藝術家在面對作品時，作品反映了創作者的內心，以及在過程中的自我成長。當觀眾面向作品時， 除了獲得感官上的體驗外，也期待可以反射出觀者心中最深層的回應。  
+        .row.g-0
+            .col-md-4.bg-color-3.artist
+                h1 關於策展人
+                span.
+            .col-md-8.bg-color-6: .box-big
+                a.
+                    洪秉綺，獨⽴策展人與專業藝術行政，現任台灣藝⽂空間連線 TASA 協會理事長暨自己人策展團隊成員。曾任竹圍工作室營運總監、台北紅館主任。 畢業於英國倫敦金匠大學(Goldsmiths)文化產業碩士，研究游擊式文化在仕紳化空間的政治關係。關注在藝文環境支持系統、跨界跨領域合作、國際交流以及在地社群連結。展覽策劃主軸著重在透過不同的體感經驗來探究感知與情緒。
+block script
+    script.
+        let myModal = new bootstrap.Modal(document.getElementById('workModal'), {});
+        $('.workbox').on('click', function(e) {
+            e.preventDefault();
+            let imgpath = $('img', this).attr('src');
+            console.log(imgpath);
+            $('#workImage').css('background-image', `url("${imgpath}")`);
+            myModal.toggle();
+        });
