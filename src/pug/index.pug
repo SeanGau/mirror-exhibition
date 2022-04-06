@@ -2,6 +2,10 @@ extends /_layout.pug
 block variables
     - title = "Hello"
 block head
+    link(rel="stylesheet" href="/assets/css/main.css?version="+timestamp)
 block body
-    .container
-        .dropdown
+    #main-top.container-fluid.g-0 
+        .row.g-0.h-100
+            .col-4
+            .col-4
+            .col-4

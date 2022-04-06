@@ -2,6 +2,7 @@ extends /_layout.pug
 block variables
     - title = "關於展覽"
 block head
+    link(rel="stylesheet" href="/assets/css/artist.css?version="+timestamp)
 block body
     #works
         .row.g-0
@@ -21,7 +22,7 @@ block body
                 span.
             .col-md-8.bg-color-6: .box-big
                 a.
-                    洪秉綺，獨⽴策展人與專業藝術行政，現任台灣藝⽂空間連線 TASA 協會理事長暨自己人策展團隊成員。曾任竹圍工作室營運總監、台北紅館主任。 畢業於英國倫敦金匠大學(Goldsmiths)文化產業碩士，研究游擊式文化在仕紳化空間的政治關係。關注在藝文環境支持系統、跨界跨領域合作、國際交流以及在地社群連結。展覽策劃主軸著重在透過不同的體感經驗來探究感知與情緒。
+                    洪秉綺，獨立策展人與專業藝術行政，現任台灣藝文空間連線 TASA 協會理事長暨自己人策展團隊成員。曾任竹圍工作室營運總監、台北紅館主任。 畢業於英國倫敦金匠大學(Goldsmiths)文化產業碩士，研究游擊式文化在仕紳化空間的政治關係。關注在藝文環境支持系統、跨界跨領域合作、國際交流以及在地社群連結。展覽策劃主軸著重在透過不同的體感經驗來探究感知與情緒。
 block script
     script.
         let myModal = new bootstrap.Modal(document.getElementById('workModal'), {});

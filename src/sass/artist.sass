@@ -1,0 +1,142 @@
+@import _variables.sass
+#top-anim
+    height: calc(100vh - 4rem)
+    background-color: white
+
+#slogan
+    padding: 4rem 2rem
+    color: white
+    background-color: #1A051D
+    h6
+        font-weight: lighter
+        padding-top: 1rem
+
+.modal-content
+    background-color: transparent
+    #workImage
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center center
+        width: 70%
+        height: 80%
+        margin: auto
+        display: flex
+        justify-content: center
+        align-items: center
+        .img-box
+            position: relative
+        img
+            max-height: 100%
+            max-width: 100%
+            border-radius: 1rem
+            filter: drop-shadow(0px 6px 40px rgba(#000, .5))
+    #close
+        display: block
+        position: absolute
+        background-color: white
+        right: 1rem
+        top: 1rem
+        width: 2rem
+        height: 2rem
+        border-radius: 1rem
+        padding: 0.5rem
+        line-height: 0.85rem
+        transition: .3s
+        &:hover
+            color: $color-link
+            
+#works
+    .disc, .about, .artist
+        padding: 4rem 3rem
+        .small
+            color: #9D9EA0
+        p
+            padding-left: .25rem
+        p, h2
+            margin-bottom: .25rem
+    .about, .artist
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center
+        color: white
+        h1
+            line-height: 2rem
+            z-index: 1
+        span
+            display: block
+            height: 1rem
+            border-radius: .5rem
+            margin-top: -1rem
+            filter: drop-shadow(0px 8px 24px rgba(#000, .25))
+        &.about span
+            width: 10rem
+            background-color: #D1C9C1
+        &.artist span
+            width: 12.5rem
+            background-color: #EEDDCD
+    .bg-color-1
+        background-color: #F6E9D0
+    .bg-color-2
+        background-color: #EFE3D8
+    .bg-color-3
+        background-color: #D6CDC5
+    .bg-color-4
+        background-color: #FFE8DA
+    .bg-color-5
+        background-color: #D5FAFC
+    .bg-color-6
+        background-color: #ECEBED
+    a.workbox
+        img
+            transition: .3s  
+        &:hover img
+            transform: scale(1.1)  
+    .carousel
+        background: linear-gradient(90deg, #FFE8DA 50%, #D5FAFC 50%)
+        &.revert-bg
+            background: linear-gradient(270deg, #FFE8DA 50%, #D5FAFC 50%)
+        .carousel-control-next, .carousel-control-prev
+            width: 8%
+        .carousel-control-next-icon
+            background-image: url("/assets/angle-right-solid.svg")
+        .carousel-control-prev-icon
+            background-image: url("/assets/angle-left-solid.svg")
+        .carousel-control-next-icon, .carousel-control-prev-icon
+            filter: brightness(1.2) drop-shadow(0px 2px 2px rgba(#000, .25))
+            width: 3rem
+            height: 3rem
+        .carousel-left div
+            border-radius: 1rem 0 0 1rem
+        .carousel-right div
+            border-radius: 0 1rem 1rem 0
+        .carousel-left, .carousel-right
+            padding: 4rem
+            div
+                overflow: hidden
+                height: calc(36vw - 6rem)
+                img
+                    object-position: center center
+                    object-fit: cover
+    .box-big
+        padding: 4rem
+        div
+            height: calc(36vw - 4rem)
+            border-radius: 1rem
+            overflow: hidden
+
+@media (max-width: 767px)
+    #works
+        .disc
+            padding: 4rem 2rem
+        .carousel
+            .carousel-left, .carousel-right
+                padding: 2rem
+                div
+                    height: calc(54vw - 2rem)
+
+        .box-big
+            padding: 2rem
+            div
+                height: calc(56vw - 2rem)

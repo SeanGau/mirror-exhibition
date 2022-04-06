@@ -1,0 +1,181 @@
+#top-anim {
+  height: calc(100vh - 4rem);
+  background-color: white;
+}
+
+#slogan {
+  padding: 4rem 2rem;
+  color: white;
+  background-color: #1A051D;
+}
+#slogan h6 {
+  font-weight: lighter;
+  padding-top: 1rem;
+}
+
+.modal-content {
+  background-color: transparent;
+}
+.modal-content #workImage {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 70%;
+  height: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content #workImage .img-box {
+  position: relative;
+}
+.modal-content #workImage img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 1rem;
+  filter: drop-shadow(0px 6px 40px rgba(0, 0, 0, 0.5));
+}
+.modal-content #close {
+  display: block;
+  position: absolute;
+  background-color: white;
+  right: 1rem;
+  top: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  line-height: 0.85rem;
+  transition: 0.3s;
+}
+.modal-content #close:hover {
+  color: #7C3AED;
+}
+
+#works .disc, #works .about, #works .artist {
+  padding: 4rem 3rem;
+}
+#works .disc .small, #works .about .small, #works .artist .small {
+  color: #9D9EA0;
+}
+#works .disc p, #works .about p, #works .artist p {
+  padding-left: 0.25rem;
+}
+#works .disc p, #works .disc h2, #works .about p, #works .about h2, #works .artist p, #works .artist h2 {
+  margin-bottom: 0.25rem;
+}
+#works .about, #works .artist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+#works .about h1, #works .artist h1 {
+  line-height: 2rem;
+  z-index: 1;
+}
+#works .about span, #works .artist span {
+  display: block;
+  height: 1rem;
+  border-radius: 0.5rem;
+  margin-top: -1rem;
+  filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.25));
+}
+#works .about.about span, #works .artist.about span {
+  width: 10rem;
+  background-color: #D1C9C1;
+}
+#works .about.artist span, #works .artist.artist span {
+  width: 12.5rem;
+  background-color: #EEDDCD;
+}
+#works .bg-color-1 {
+  background-color: #F6E9D0;
+}
+#works .bg-color-2 {
+  background-color: #EFE3D8;
+}
+#works .bg-color-3 {
+  background-color: #D6CDC5;
+}
+#works .bg-color-4 {
+  background-color: #FFE8DA;
+}
+#works .bg-color-5 {
+  background-color: #D5FAFC;
+}
+#works .bg-color-6 {
+  background-color: #ECEBED;
+}
+#works a.workbox img {
+  transition: 0.3s;
+}
+#works a.workbox:hover img {
+  transform: scale(1.1);
+}
+#works .carousel {
+  background: linear-gradient(90deg, #FFE8DA 50%, #D5FAFC 50%);
+}
+#works .carousel.revert-bg {
+  background: linear-gradient(270deg, #FFE8DA 50%, #D5FAFC 50%);
+}
+#works .carousel .carousel-control-next, #works .carousel .carousel-control-prev {
+  width: 8%;
+}
+#works .carousel .carousel-control-next-icon {
+  background-image: url("/assets/angle-right-solid.svg");
+}
+#works .carousel .carousel-control-prev-icon {
+  background-image: url("/assets/angle-left-solid.svg");
+}
+#works .carousel .carousel-control-next-icon, #works .carousel .carousel-control-prev-icon {
+  filter: brightness(1.2) drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+  width: 3rem;
+  height: 3rem;
+}
+#works .carousel .carousel-left div {
+  border-radius: 1rem 0 0 1rem;
+}
+#works .carousel .carousel-right div {
+  border-radius: 0 1rem 1rem 0;
+}
+#works .carousel .carousel-left, #works .carousel .carousel-right {
+  padding: 4rem;
+}
+#works .carousel .carousel-left div, #works .carousel .carousel-right div {
+  overflow: hidden;
+  height: calc(36vw - 6rem);
+}
+#works .carousel .carousel-left div img, #works .carousel .carousel-right div img {
+  object-position: center center;
+  object-fit: cover;
+}
+#works .box-big {
+  padding: 4rem;
+}
+#works .box-big div {
+  height: calc(36vw - 4rem);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  #works .disc {
+    padding: 4rem 2rem;
+  }
+  #works .carousel .carousel-left, #works .carousel .carousel-right {
+    padding: 2rem;
+  }
+  #works .carousel .carousel-left div, #works .carousel .carousel-right div {
+    height: calc(54vw - 2rem);
+  }
+  #works .box-big {
+    padding: 2rem;
+  }
+  #works .box-big div {
+    height: calc(56vw - 2rem);
+  }
+}
