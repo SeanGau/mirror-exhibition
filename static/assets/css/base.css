@@ -20,6 +20,7 @@ body {
 }
 
 .navbar.navbar-light {
+  height: 4rem !important;
   background-color: #FFFAEF;
   padding: 0.5rem 0.5rem;
   filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.1));
