@@ -1,0 +1,115 @@
+.bg-exhibition {
+  background-color: #F5EDE6;
+}
+
+.bg-talk {
+  background-color: #EFE3D8;
+}
+
+.bg-1 {
+  background-color: #D6CDC5;
+}
+
+.bg-2 {
+  background-color: #FFCADA;
+}
+
+.bg-3 {
+  background-color: #EFEFEF;
+}
+
+#moreNav {
+  top: 4rem;
+}
+
+#bodyOffset {
+  height: 8.5rem;
+}
+
+h3 {
+  position: relative;
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  padding-bottom: 1.5rem;
+  border-radius: 0;
+  flex: 1 1 auto;
+  text-align: center;
+  cursor: pointer;
+}
+.nav-link h3 {
+  line-height: 4rem;
+  color: rgba(68, 68, 68, 0.5) !important;
+}
+.nav-link span {
+  width: 3rem;
+  display: block;
+  height: 1rem;
+  border-radius: 0.5rem;
+  margin-top: -1.75rem;
+  filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.25));
+  background-color: #D1C9C1;
+}
+.nav-link.active h3 {
+  color: #444 !important;
+}
+
+#exhibition {
+  padding: 3rem;
+}
+#exhibition .content-box {
+  height: calc(100vh - 14.5rem);
+  border-radius: 3rem 3rem 0 0;
+}
+#exhibition .content-box .col-md-5 {
+  padding: 4rem 0 0 4rem;
+}
+#exhibition .content-box .col-md-7 {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#exhibition .content-box .title-box {
+  z-index: 0;
+  color: white;
+}
+#exhibition .content-box .title-box h3 {
+  z-index: 1;
+}
+#exhibition .content-box .title-box span {
+  width: 13.5rem;
+  display: block;
+  height: 1rem;
+  border-radius: 0.5rem;
+  margin-top: -0.5rem;
+  margin-left: -0.5rem;
+  filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.25));
+  background-color: #EFE3D8;
+}
+#exhibition .content-box table td {
+  border-top: 2rem solid transparent;
+}
+#exhibition .content-box table th {
+  min-width: 4rem;
+  vertical-align: top;
+}
+
+#talk {
+  height: calc(100vh - 8.5rem);
+  padding: 3rem;
+}
+#talk .content-box {
+  height: 100%;
+  border-radius: 0 0 3rem 3rem;
+}

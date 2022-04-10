@@ -2,7 +2,7 @@ block variables
 doctype
 html(lang="zh-Hant-TW")
     head
-        title Mirror | #{title}
+        title 《鏡子》療癒工藝線上展 | #{title}
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         //meta(property="og:title" content="")
@@ -13,7 +13,7 @@ html(lang="zh-Hant-TW")
         link(href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@300;500;700&display=swap" rel="stylesheet")
         link(rel="stylesheet" href="/assets/css/base.css?version="+timestamp)
         block head
-    body
+    body(tabindex="0" data-bs-spy="scroll")
         nav.navbar.navbar-expand-md.navbar-light.fixed-top: .container-fluid
             a.navbar-brand(href="/") Mirror
             button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='#navbarNav' aria-expanded='false' aria-label='Toggle navigation')
@@ -27,20 +27,21 @@ html(lang="zh-Hant-TW")
                             li
                                 a.dropdown-item(href='/artist/1') 陳向榮‧向榮水果行
                                 a.dropdown-item(href='#') 測試測試測試測試測試測試測試測試測試
-                    li.nav-item: a.nav-link(href='#') 了解更多
+                    li.nav-item: a.nav-link(href='/more') 了解更多
                 ul.navbar-nav.link-box
                     li.nav-item: a.btn.btn-purple(href='#') 🎧閉著眼睛聽導覽
                     li.nav-item: a.btn.btn-purple(href='#') 🦄
                     li.nav-item: a.btn.btn-purple(href='#') 🌍
+        #bodyOffset
         block body      
         script(src='https://code.jquery.com/jquery-3.6.0.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=' crossorigin='anonymous')        
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous')
         script.
             var dropdown = new bootstrap.Dropdown(document.getElementById('artistDropdownMenuLink'), {});
             $("#artistDropdownMenuLink").on("mouseenter", function(e) {
-                    dropdown.show();
-            });
+                    dropdown.show()
+            })
             $(".dropdown-menu").on("mouseleave", function(e) {
-                    dropdown.hide();
-            });
+                    dropdown.hide()
+            })
         block script

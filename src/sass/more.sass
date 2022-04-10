@@ -1,0 +1,89 @@
+@import _variables.sass
+
+.bg-exhibition
+    background-color: #F5EDE6
+.bg-talk
+    background-color: #EFE3D8
+.bg-1
+    background-color: #D6CDC5
+.bg-2
+    background-color: #FFCADA
+.bg-3
+    background-color: #EFEFEF
+
+#moreNav
+    top: 4rem
+#bodyOffset
+    height: 8.5rem
+h3
+    position: relative
+    font-size: 1.25rem
+    margin: 0
+    font-weight: 500
+    z-index: 1
+
+.nav-link
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 0
+    padding-bottom: 1.5rem
+    border-radius: 0
+    flex: 1 1 auto
+    text-align: center
+    cursor: pointer
+    h3
+        line-height: 4rem
+        color: rgba(#444, .5) !important
+    span
+        width: 3rem
+        display: block
+        height: 1rem
+        border-radius: .5rem
+        margin-top: -1.75rem
+        filter: drop-shadow(0px 8px 24px rgba(#000, .25))
+        background-color: #D1C9C1
+    &.active h3
+        color: #444 !important
+
+#exhibition
+    padding: 3rem
+    .content-box
+        height: calc(100vh - 14.5rem)
+        border-radius: 3rem 3rem 0 0
+        .col-md-5
+            padding: 4rem 0 0 4rem
+        .col-md-7
+            padding: 4rem
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+        .title-box
+            z-index: 0
+            color: white
+            h3
+                z-index: 1
+            span
+                width: 13.5rem
+                display: block
+                height: 1rem
+                border-radius: .5rem
+                margin-top: -0.5rem
+                margin-left: -0.5rem
+                filter: drop-shadow(0px 8px 24px rgba(#000, .25))
+                background-color: #EFE3D8
+        table
+            td
+                border-top: 2rem solid transparent
+            th
+                min-width: 4rem
+                vertical-align: top
+        
+#talk
+    height: calc(100vh - 8.5rem)
+    padding: 3rem
+    .content-box
+        height: 100%
+        border-radius: 0 0 3rem 3rem
