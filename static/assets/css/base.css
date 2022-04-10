@@ -41,6 +41,7 @@ body {
 .navbar.navbar-light a.navbar-brand {
   font-weight: bold;
   font-size: 2rem;
+  margin-right: 4rem;
   padding: 0;
 }
 .navbar.navbar-light a.nav-link {

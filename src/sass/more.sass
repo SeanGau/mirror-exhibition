@@ -6,10 +6,16 @@
     background-color: #EFE3D8
 .bg-1
     background-color: #D6CDC5
+    .underline span
+        background-color: #EFE3D8
 .bg-2
     background-color: #FFCADA
+    .underline span
+        background-color: #EFEFEF
 .bg-3
     background-color: #EFEFEF
+    .underline span
+        background-color: #FFCADA
 
 #moreNav
     top: 4rem
@@ -21,6 +27,14 @@ h3
     margin: 0
     font-weight: 500
     z-index: 1
+
+table
+    td, th
+        border-top: 1.5rem solid transparent
+    th
+        font-weight: 500
+        min-width: 5rem
+        vertical-align: top
 
 .nav-link
     display: flex
@@ -35,14 +49,14 @@ h3
     cursor: pointer
     h3
         line-height: 4rem
-        color: rgba(#444, .5) !important
+        color: rgba(#444, .25) !important
     span
-        width: 3rem
+        width: 4rem
         display: block
         height: 1rem
         border-radius: .5rem
         margin-top: -1.75rem
-        filter: drop-shadow(0px 8px 24px rgba(#000, .25))
+        filter: drop-shadow(0px 6px 18px rgba(#000, .25))
         background-color: #D1C9C1
     &.active h3
         color: #444 !important
@@ -50,11 +64,11 @@ h3
 #exhibition
     padding: 3rem
     .content-box
-        height: calc(100vh - 14.5rem)
+        min-height: calc(100vh - 14.5rem)
         border-radius: 3rem 3rem 0 0
-        .col-md-5
-            padding: 4rem 0 0 4rem
-        .col-md-7
+        .col-md-auto
+            padding: 4rem 0 4rem 4rem
+        .col
             padding: 4rem
             display: flex
             flex-direction: column
@@ -74,16 +88,39 @@ h3
                 margin-left: -0.5rem
                 filter: drop-shadow(0px 8px 24px rgba(#000, .25))
                 background-color: #EFE3D8
-        table
-            td
-                border-top: 2rem solid transparent
-            th
-                min-width: 4rem
-                vertical-align: top
+
         
 #talk
-    height: calc(100vh - 8.5rem)
+    min-height: calc(100vh - 8.5rem)
     padding: 3rem
     .content-box
-        height: 100%
-        border-radius: 0 0 3rem 3rem
+        a
+            color: black
+            text-decoration: none
+        .bg-1
+            border-radius: 0 0 0 3rem
+        .bg-3
+            border-radius: 0 0 3rem 0
+        .float-box
+            display: flex
+            flex-direction: column
+            height: 100%
+            padding: 2rem
+            &:hover
+                transition: .3s
+                transform: translate(-3px, -3px)
+                filter: drop-shadow(0px 8px 24px rgba(#000, .25))
+            .number
+                line-height: 7rem
+                font-size: 7rem
+                color: white
+                font-family: 'Roboto Mono', sans-serif
+            
+            .underline span
+                position: absolute
+                bottom: 0
+                width: calc(100% - 2rem)
+                display: block
+                height: 1rem
+                border-radius: .5rem
+                filter: drop-shadow(0px 8px 24px rgba(#000, .25))

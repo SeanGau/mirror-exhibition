@@ -9,13 +9,22 @@
 .bg-1 {
   background-color: #D6CDC5;
 }
+.bg-1 .underline span {
+  background-color: #EFE3D8;
+}
 
 .bg-2 {
   background-color: #FFCADA;
 }
+.bg-2 .underline span {
+  background-color: #EFEFEF;
+}
 
 .bg-3 {
   background-color: #EFEFEF;
+}
+.bg-3 .underline span {
+  background-color: #FFCADA;
 }
 
 #moreNav {
@@ -34,6 +43,15 @@ h3 {
   z-index: 1;
 }
 
+table td, table th {
+  border-top: 1.5rem solid transparent;
+}
+table th {
+  font-weight: 500;
+  min-width: 5rem;
+  vertical-align: top;
+}
+
 .nav-link {
   display: flex;
   flex-direction: column;
@@ -48,15 +66,15 @@ h3 {
 }
 .nav-link h3 {
   line-height: 4rem;
-  color: rgba(68, 68, 68, 0.5) !important;
+  color: rgba(68, 68, 68, 0.25) !important;
 }
 .nav-link span {
-  width: 3rem;
+  width: 4rem;
   display: block;
   height: 1rem;
   border-radius: 0.5rem;
   margin-top: -1.75rem;
-  filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 6px 18px rgba(0, 0, 0, 0.25));
   background-color: #D1C9C1;
 }
 .nav-link.active h3 {
@@ -67,13 +85,13 @@ h3 {
   padding: 3rem;
 }
 #exhibition .content-box {
-  height: calc(100vh - 14.5rem);
+  min-height: calc(100vh - 14.5rem);
   border-radius: 3rem 3rem 0 0;
 }
-#exhibition .content-box .col-md-5 {
-  padding: 4rem 0 0 4rem;
+#exhibition .content-box .col-md-auto {
+  padding: 4rem 0 4rem 4rem;
 }
-#exhibition .content-box .col-md-7 {
+#exhibition .content-box .col {
   padding: 4rem;
   display: flex;
   flex-direction: column;
@@ -97,19 +115,44 @@ h3 {
   filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.25));
   background-color: #EFE3D8;
 }
-#exhibition .content-box table td {
-  border-top: 2rem solid transparent;
-}
-#exhibition .content-box table th {
-  min-width: 4rem;
-  vertical-align: top;
-}
 
 #talk {
-  height: calc(100vh - 8.5rem);
+  min-height: calc(100vh - 8.5rem);
   padding: 3rem;
 }
-#talk .content-box {
+#talk .content-box a {
+  color: black;
+  text-decoration: none;
+}
+#talk .content-box .bg-1 {
+  border-radius: 0 0 0 3rem;
+}
+#talk .content-box .bg-3 {
+  border-radius: 0 0 3rem 0;
+}
+#talk .content-box .float-box {
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  border-radius: 0 0 3rem 3rem;
+  padding: 2rem;
+}
+#talk .content-box .float-box:hover {
+  transition: 0.3s;
+  transform: translate(-3px, -3px);
+  filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.25));
+}
+#talk .content-box .float-box .number {
+  line-height: 7rem;
+  font-size: 7rem;
+  color: white;
+  font-family: "Roboto Mono", sans-serif;
+}
+#talk .content-box .float-box .underline span {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 2rem);
+  display: block;
+  height: 1rem;
+  border-radius: 0.5rem;
+  filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.25));
 }
