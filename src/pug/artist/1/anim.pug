@@ -1,10 +1,6 @@
 html 
     head 
         // power by https://codepen.io/sharnajh/pen/YzXOGpm
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/react/16.13.1/umd/react.production.min.js") 
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.1/umd/react-dom.production.min.js")
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js")
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.4/randomColor.min.js") 
         style.
             :root body {
             background: black;
@@ -45,6 +41,10 @@ html
             }
     body 
         #root
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/react/16.13.1/umd/react.production.min.js") 
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.1/umd/react-dom.production.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.4/randomColor.min.js") 
         script.
             function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; } // A feature I've been wanting to test out since the first time I looked through Anime.js docs
             class App extends React.Component {
