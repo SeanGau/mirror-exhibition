@@ -56,7 +56,7 @@
     color: #000;
     background: #f2f2f2;
 }
-</style></head><body><div class="tiles"><div class="tile"><div class="animation">Test</div></div><div class="tile fliph"><div class="animation">Test</div></div><div class="tile flipv"><div class="animation">Test</div></div><div class="tile fliph flipv2"><div class="animation">Test
+</style></head><body><div class="tiles"><div class="tile"><div class="animation">Dream</div></div><div class="tile fliph"><div class="animation">Dream</div></div><div class="tile flipv"><div class="animation">Dream</div></div><div class="tile fliph flipv2"><div class="animation">Dream
 </div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"></script><script>var elements = document.querySelectorAll(".animation");
 var timestamp = null;
 var lastMouseX = null;
@@ -80,7 +80,6 @@ document.body.addEventListener("mousemove", function(e) {
     timestamp = now;
     lastMouseX = e.screenX;
     lastMouseY = e.screenY;
-    console.log(speedX, speedY);
 });
 
 anime({

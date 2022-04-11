@@ -139,7 +139,7 @@ block script
             }
             $("#teams .bar").each(function(id, el){
                 $(this).addClass("d-none")
-                if((id!=3 &&id+2 > nextId) || (id==3 && nextId>1)) {
+                if((id!=3 && id+2 > nextId) || (id==3 && nextId>1)) {
                     $(this).removeClass("d-none")
                 }
             })
