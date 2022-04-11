@@ -34,7 +34,7 @@ block body
                 .bar.bg-team-4(data-toggle-team="4")
                     .underline.
             .control-prev
-                .bar.d-none(data-toggle-team="0")
+                .bar.d-none(data-toggle-team="1")
                     .underline.
             .col-md-4.team
                 h1 展覽團隊
@@ -90,31 +90,31 @@ block body
                         td 有点文化
 
             .col-md-8.team-page#team-page-4: .box-big
-                table 
-                    tr 
-                        th(style="min-width: 6rem") 指導單位
-                        td
-                            img(src="/assets/logo/文化部.png", alt="")
-                            img(src="/assets/logo/工藝中心.png", alt="")
-                    tr 
-                        th(style="min-width: 5rem") 主辦單位
-                        td
-                            img(src="/assets/logo/TASA.png", alt="")
-                    tr 
-                        th(style="min-width: 5rem") 策展協力
-                        td
-                            img(src="/assets/logo/自己人.png", alt="")
-                    tr 
-                        th(style="min-width: 5rem") 媒體協力
-                        td
-                            img(src="/assets/logo/artouch.png", alt="")
-                            img(src="/assets/logo/arttime.png", alt="")
-                    tr 
-                        th(style="min-width: 5rem") 場地協力
-                        td
-                            img(src="/assets/logo/或者書店.png", alt="")
-                            img(src="/assets/logo/節點.png", alt="")
-                            img(src="/assets/logo/了了空間.png", alt="")
+                .container-fluid
+                    .row
+                        .col-md-auto 指導單位
+                        .col
+                            img(src="/assets/logo/文化部.png" alt="")
+                            img(src="/assets/logo/工藝中心.png" alt="")
+                    .row 
+                        .col-md-auto 主辦單位
+                        .col
+                            img(src="/assets/logo/TASA.png" alt="")
+                    .row 
+                        .col-md-auto 策展協力
+                        .col
+                            img(src="/assets/logo/自己人.png" alt="")
+                    .row 
+                        .col-md-auto 媒體協力
+                        .col
+                            img(src="/assets/logo/artouch.png" alt="")
+                            img(src="/assets/logo/arttime.png" alt="")
+                    .row 
+                        .col-md-auto 場地協力
+                        .col
+                            img(src="/assets/logo/或者書店.png" alt="")
+                            img(src="/assets/logo/節點.png" alt="")
+                            img(src="/assets/logo/了了空間.png" alt="")
 
 block script
     script.
@@ -144,12 +144,15 @@ block script
                 }
             })
             $("#teams .team-page").removeClass("active")
-            $("#teams").removeClass("bg-team-1")
-            $("#teams").removeClass("bg-team-2")
-            $("#teams").removeClass("bg-team-3")
-            $("#teams").removeClass("bg-team-4")
+            $("#teams").removeClass("bg-team-1 bg-team-2 bg-team-3 bg-team-4")
             $(`#team-page-${nextId}`).addClass("active")
             $("#teams").addClass(`bg-team-${nextId}`)
             $("#teams .bar .underline").removeClass("active")
             $(`#teams .bar .underline`).eq(nextId-1).addClass("active")
+            $("html, body").scrollTop($("#teams").offset().top)
+        })
+
+        $("#teams .bar").on("mouseenter", function(e) {
+            $("#teams .bar .underline").removeClass("active")
+            $(".underline", this).addClass("active")
         })
