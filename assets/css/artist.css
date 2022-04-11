@@ -123,7 +123,7 @@
   background: linear-gradient(270deg, #FFE8DA 50%, #D5FAFC 50%);
 }
 #works .carousel .carousel-control-next, #works .carousel .carousel-control-prev {
-  width: 8%;
+  width: 4rem;
 }
 #works .carousel .carousel-control-next-icon {
   background-image: url("/assets/angle-right-solid.svg");
@@ -165,6 +165,13 @@
 @media (max-width: 767px) {
   #works .disc {
     padding: 4rem 2rem;
+  }
+  #works .carousel .carousel-control-next, #works .carousel .carousel-control-prev {
+    width: 2rem;
+  }
+  #works .carousel .carousel-control-next-icon, #works .carousel .carousel-control-prev-icon {
+    width: 2.5rem;
+    height: 2.5rem;
   }
   #works .carousel .carousel-left, #works .carousel .carousel-right {
     padding: 2rem;

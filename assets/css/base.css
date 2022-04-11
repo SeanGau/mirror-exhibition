@@ -14,12 +14,18 @@ h1 {
 }
 
 body {
-  padding-top: 4rem;
+  position: relative;
   background-color: #FFF8E7;
   font-family: "Noto Sans TC", sans-serif;
+  font-weight: 300;
+}
+
+#bodyOffset {
+  height: 4rem;
 }
 
 .navbar.navbar-light {
+  z-index: 1050;
   height: 4rem !important;
   background-color: #FFFAEF;
   padding: 0.5rem 0.5rem;
@@ -35,6 +41,7 @@ body {
 .navbar.navbar-light a.navbar-brand {
   font-weight: bold;
   font-size: 2rem;
+  margin-right: 4rem;
   padding: 0;
 }
 .navbar.navbar-light a.nav-link {

@@ -1,0 +1,92 @@
+<html> <head> <!--power by https://codepen.io/henryegloff/pen/xxZegpW--><style>body {
+    text-align: center;
+    margin: 0;
+}
+
+.tiles {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    margin: 0 auto;
+}
+
+.tile {
+    float: left;
+    width: 50%;
+    height: 50%;
+    box-sizing: border-box;
+    font-size: 400px;
+    font-weight: bold;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+}
+
+.fliph {
+    transform: scaleX(-1); /* Standard */
+}
+
+.flipv {
+    transform: scaleY(-1); /* Standard */
+}
+
+.flipv2 {
+    transform: scaleY(-1); /* Standard */
+    transform: rotate(180deg); /* IE 6/7/8 */
+}
+
+.fliphv {
+    transform: rotate(90deg);
+}
+
+.link {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 0.75em 1.25em;
+    border-radius: 1.5em;
+    text-decoration: none;
+    transition: 0.3s;
+    color: #fff;
+    background: #000;
+    font-size: 0.938em;
+}
+
+.link:hover {
+    color: #000;
+    background: #f2f2f2;
+}
+</style></head><body><div class="tiles"><div class="tile"><div class="animation">Test</div></div><div class="tile fliph"><div class="animation">Test</div></div><div class="tile flipv"><div class="animation">Test</div></div><div class="tile fliph flipv2"><div class="animation">Test
+</div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"></script><script>var elements = document.querySelectorAll(".animation");
+var timestamp = null;
+var lastMouseX = null;
+var lastMouseY = null;
+
+document.body.addEventListener("mousemove", function(e) {
+    if (timestamp === null) {
+        timestamp = Date.now();
+        lastMouseX = e.screenX;
+        lastMouseY = e.screenY;
+        return;
+    }
+
+    var now = Date.now();
+    var dt =  now - timestamp + 1;
+    var dx = e.screenX - lastMouseX;
+    var dy = e.screenY - lastMouseY;
+    var speedX = Math.round(dx / dt * 100);
+    var speedY = Math.round(dy / dt * 100);
+
+    timestamp = now;
+    lastMouseX = e.screenX;
+    lastMouseY = e.screenY;
+    console.log(speedX, speedY);
+});
+
+anime({
+    targets: ".animation",
+    rotate: "1turn",
+    easing: "linear",
+    loop: true,
+    duration: 3000
+});</script></body></html>
