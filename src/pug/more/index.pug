@@ -11,7 +11,7 @@ block body
         a.bg-talk.nav-link(data-bs-toggle="pill" href="#talk")
             h3 講座
             span.
-    #exhibition.bg-exhibition
+    #exhibition.bg-exhibition.container-fluid
         .bg-1.content-box.row
             .col-md-auto
                 .title-box
@@ -39,7 +39,7 @@ block body
                 p 《鏡子》療癒工藝線上展呈現藝術家如何在工藝創作中汲取療癒力量。有別於以實體空間展出最終完成品的展覽形式，因應線上觀展特性，參展藝術家將工藝作品概念化，透過文字、影像和聲音呈現，引導觀眾一探帶來療癒的「創作過程」。
                 p 受或者工藝櫥窗邀請，規劃《鏡子》展覽番外篇，將播映衍生計畫《擁抱》，是結合舞蹈影像的紀錄片：以工藝類藝術家之創作過程出發，從聲動、觸動、時光、共生四子題切入，紀錄藝術家於創作過程中的轉折、因不同事件所產生的身體律動、感知及心境變化，並轉為舞蹈影像訴說。此外，現場也展出《鏡子》參與藝術家部分參展作品和其他系列的工藝作品，期待觀者不只透過線上展捕捉藝術創作的核心，也可親眼看到實體的質感。
                 
-    #talk.bg-talk
+    #talk.bg-talk.container-fluid
         .content-box.row.h-100.g-0 
             .col-4
                 a(href="https://www.accupass.com/go/tasatwmirror1" target="_blank"): .bg-1.float-box
@@ -107,6 +107,25 @@ block body
                     .row.mt-auto
                         .col-3.number 3
                         .col-9.underline.position-relative: span.
+    
+    #article.bg-article.container-fluid
+        .d-flex.flex-column.justify-content-center.align-items-center 
+            .title-box
+                h3 專文
+                span.
+            .article-list
+                a(href="#"): p 文章標題文章標題文章標題／作者名
+                a(href="#"): p 文章標題文章標題文章／作者名
+
+    #footer.bg-footer.container-fluid
+        .row.h-100.g-0
+            .col-6.d-flex.justify-content-center
+                .w-auto.pe-4: b 觀後問卷
+                div 請填寫<a href="#">線上問卷</a>，回饋您的寶貴意見。
+            .col-6.d-flex.justify-content-center
+                .w-auto.pe-4: b 聯絡我們
+                div 台灣藝文空間連線TASA協會<br>tasatw@gmail.com
+
 
 block script
     script.

@@ -4,6 +4,10 @@
     background-color: #F5EDE6
 .bg-talk
     background-color: #EFE3D8
+.bg-article
+    background-color: #979797
+.bg-footer
+    background-color: #B2ABA4
 .bg-1
     background-color: #D6CDC5
     .underline span
@@ -124,3 +128,36 @@ table
                 height: 1rem
                 border-radius: .5rem
                 filter: drop-shadow(0px 8px 24px rgba(#000, .25))
+
+#article
+    padding: 3rem
+    .title-box
+        z-index: 0
+        color: white
+        h3
+            z-index: 1
+            text-align: center
+        span
+            width: 4rem
+            display: block
+            height: 1rem
+            border-radius: .5rem
+            margin-top: -0.5rem
+            filter: drop-shadow(0px 8px 24px rgba(#000, .25))
+            background-color: #C7C7C7
+    .article-list
+        text-align: center
+        padding-top: 2.5rem
+        a:link, a:visited
+            color: #FFCADA
+            font-weight: bolder
+            &:hover
+                color: rgba(#FFCADA, .8)
+
+#footer
+    padding: 2.5rem
+    color: white
+    a:link, a:visited
+        color: white
+        &:hover
+            color: rgba(white, .8)

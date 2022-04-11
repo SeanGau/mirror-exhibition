@@ -6,6 +6,14 @@
   background-color: #EFE3D8;
 }
 
+.bg-article {
+  background-color: #979797;
+}
+
+.bg-footer {
+  background-color: #B2ABA4;
+}
+
 .bg-1 {
   background-color: #D6CDC5;
 }
@@ -155,4 +163,47 @@ table th {
   height: 1rem;
   border-radius: 0.5rem;
   filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.25));
+}
+
+#article {
+  padding: 3rem;
+}
+#article .title-box {
+  z-index: 0;
+  color: white;
+}
+#article .title-box h3 {
+  z-index: 1;
+  text-align: center;
+}
+#article .title-box span {
+  width: 4rem;
+  display: block;
+  height: 1rem;
+  border-radius: 0.5rem;
+  margin-top: -0.5rem;
+  filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.25));
+  background-color: #C7C7C7;
+}
+#article .article-list {
+  text-align: center;
+  padding-top: 2.5rem;
+}
+#article .article-list a:link, #article .article-list a:visited {
+  color: #FFCADA;
+  font-weight: bolder;
+}
+#article .article-list a:link:hover, #article .article-list a:visited:hover {
+  color: rgba(255, 202, 218, 0.8);
+}
+
+#footer {
+  padding: 2.5rem;
+  color: white;
+}
+#footer a:link, #footer a:visited {
+  color: white;
+}
+#footer a:link:hover, #footer a:visited:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
