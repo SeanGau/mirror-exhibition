@@ -1,6 +1,6 @@
 extends /_layout.pug
 block variables
-    - title = "陳向榮"
+    - title = "陳向榮‧向榮水果行"
 block head
     link(rel="stylesheet" href="/assets/css/artist.css?version="+timestamp)
     link(rel="stylesheet" href="/assets/css/artist4.css?version="+timestamp)
@@ -172,18 +172,4 @@ block body
                 p 陶藝創作者，生活及工作於台北。創作靈感來自日常生活，例如：市場、食物、植物等。透過個人創作形式的解構與轉化，試圖再現人們共同的生活經驗，引起觀者共感。雖然主要創作媒材為陶土，陳向榮也將陶作與其它異材質、現成物並置、組合，這些被大量且快速製造的日常生活物件反映當代現下的生活。陶作與其他物件之間的反差襯托了彼此，而陳向榮嘗試在這衝突之間捕捉和諧的可能性。
                 a(href="https://thefruitshop.co/" target="_blank") 更了解藝術家
 block script
-    script.
-        let myModal = new bootstrap.Modal(document.getElementById('workModal'), {})
-        $('.workbox').on('click', function(e) {
-            e.preventDefault()
-            let imgpath = $('img', this).attr('src')
-            console.log(imgpath)
-            //$('#workImage').css('background-image', `url("${imgpath}")`)
-            $('#workImage img').attr("src", imgpath)
-            if($(this).data("angle") == "p" && $(window).height() < $(window).width()) {
-                $('#workImage .img-box').addClass("h-100")
-            } else {
-                $('#workImage .img-box').removeClass("h-100")
-            }
-            myModal.toggle()
-        })
+    script(src="/assets/js/artist.js") 

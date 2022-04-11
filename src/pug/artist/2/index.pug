@@ -1,6 +1,6 @@
 extends /_layout.pug
 block variables
-    - title = "潘子村"
+    - title = "潘子村‧村 碟樂"
 block head
     link(rel="stylesheet" href="/assets/css/artist.css?version="+timestamp)
     link(rel="stylesheet" href="/assets/css/artist2.css?version="+timestamp)
@@ -218,18 +218,4 @@ block body
                 p 2022年1月，以”碟樂”一稱統合天鼓與手碟之製作經驗、文化背景，工作室更名「村 碟樂 Tzun’s Pan Sound Sculptures 」。
                 a(href="https://www.sinestudio.co/" target="_blank") 更了解藝術家
 block script
-    script.
-        let myModal = new bootstrap.Modal(document.getElementById('workModal'), {})
-        $('.workbox').on('click', function(e) {
-            e.preventDefault()
-            let imgpath = $('img', this).attr('src')
-            console.log(imgpath)
-            //$('#workImage').css('background-image', `url("${imgpath}")`)
-            $('#workImage img').attr("src", imgpath)
-            if($(this).data("angle") == "p" && $(window).height() < $(window).width()) {
-                $('#workImage .img-box').addClass("h-100")
-            } else {
-                $('#workImage .img-box').removeClass("h-100")
-            }
-            myModal.toggle()
-        })
+    script(src="/assets/js/artist.js") 

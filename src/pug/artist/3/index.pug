@@ -1,6 +1,6 @@
 extends /_layout.pug
 block variables
-    - title = "黃虹毓"
+    - title = "黃虹毓‧土星工作室"
 block head
     link(rel="stylesheet" href="/assets/css/artist.css?version="+timestamp)
     link(rel="stylesheet" href="/assets/css/artist3.css?version="+timestamp)
@@ -100,18 +100,4 @@ block body
                 p 陶藝創作者，現為土星工作室主理人，畢業於國立台南藝術大學應用藝術研究所。2015年至美國Baltimore Clayworks 駐村，2018年至荷蘭Sunday Morning, European Ceramic Work Center，是文化部選送文化人才出國駐村首位至此荷蘭陶藝中心之創作者。回國後投入土星工作室之空間建構、推廣陶藝之創作、藝術家協作計畫等。
                 a(href="https://jerry79725.easy.co/" target="_blank") 更了解藝術家
 block script
-    script.
-        let myModal = new bootstrap.Modal(document.getElementById('workModal'), {})
-        $('.workbox').on('click', function(e) {
-            e.preventDefault()
-            let imgpath = $('img', this).attr('src')
-            console.log(imgpath)
-            //$('#workImage').css('background-image', `url("${imgpath}")`)
-            $('#workImage img').attr("src", imgpath)
-            if($(this).data("angle") == "p" && $(window).height() < $(window).width()) {
-                $('#workImage .img-box').addClass("h-100")
-            } else {
-                $('#workImage .img-box').removeClass("h-100")
-            }
-            myModal.toggle()
-        })
+    script(src="/assets/js/artist.js") 
