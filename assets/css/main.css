@@ -8,7 +8,7 @@
 
 #main-video {
   background-color: #ECEBED;
-  padding-top: 5rem;
+  padding: 5rem;
 }
 #main-video .iframe-box {
   border-radius: 1rem;
@@ -16,33 +16,45 @@
   height: 40.5vw;
   width: 72vw;
 }
-#main-video .disc {
-  margin-top: 5rem;
-  text-align: center;
-}
-
-#main-mid {
-  background: linear-gradient(180deg, #ECEBED 50%, #FFF8E7 50%);
-}
 
 #main-bottom {
-  height: 80vh;
   background-color: #FFF8E7;
+  padding: 3rem 0;
 }
-
-#main-mid .box, #main-bottom .box {
+#main-bottom .disc h6 {
+  color: #999;
+  font-weight: lighter;
+  margin-bottom: 0.5rem;
+}
+#main-bottom .disc p {
+  font-weight: bolder;
+}
+#main-bottom .box {
   display: flex;
   flex-direction: column;
-  align-items: center;
   position: relative;
 }
-#main-mid .box .iframe-box, #main-bottom .box .iframe-box {
-  border-radius: 1rem;
+#main-bottom .box .iframe-box {
+  border-radius: 0.5rem;
   overflow: hidden;
   width: 100%;
-  height: 17vw;
+  height: 22vw;
 }
-#main-mid .box h6, #main-bottom .box h6 {
-  position: absolute;
-  bottom: -3rem;
+#main-bottom .box h6 {
+  padding-top: 1rem;
+}
+
+#footer {
+  background-color: #B2ABA4;
+  padding: 3rem 0;
+  color: white;
+}
+#footer b {
+  padding-right: 1.5rem;
+}
+#footer a:link, #footer a:visited {
+  color: white;
+}
+#footer a:link:hover, #footer a:visited:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
