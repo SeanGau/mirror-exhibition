@@ -25,22 +25,97 @@ block body
                 span.
             .col-md-8: .box-big
                 a 洪秉綺，獨立策展人與專業藝術行政，現任台灣藝文空間連線 TASA 協會理事長暨自己人策展團隊成員。曾任竹圍工作室營運總監、台北紅館主任。 畢業於英國倫敦金匠大學(Goldsmiths)文化產業碩士，研究游擊式文化在仕紳化空間的政治關係。關注在藝文環境支持系統、跨界跨領域合作、國際交流以及在地社群連結。展覽策劃主軸著重在透過不同的體感經驗來探究感知與情緒。
-        #teams.row.g-0.bg-color-3
+        #teams.row.g-0.bg-team-1
+            .control-box
+                .bar.bg-team-2(data-toggle-team="2")
+                    .underline.active
+                .bar.bg-team-3(data-toggle-team="3")
+                    .underline.
+                .bar.bg-team-4(data-toggle-team="4")
+                    .underline.
+            .control-prev
+                .bar.d-none(data-toggle-team="0")
+                    .underline.
             .col-md-4.team
                 h1 展覽團隊
                 span.
-            .col-md-8.team-page-1: .box-big
+            .col-md-8.team-page#team-page-1.active: .box-big
                 p <b>指導單位</b>文化部、國立台灣工藝研究發展中心
                 p <b>主辦單位</b>台灣藝文空間連線TASA協會
                 p <b>策展協力</b>自己人策展團隊
                 p <b>媒體協力</b>典藏Artouch、Arttime藝術網
                 p <b>場地協力</b>或者工藝櫥窗、節點、了了空間
-            .col-md-8.team-page-2.d-none: .box-big
-                p <b>指導單位</b>文化部、國立台灣工藝研究發展中心
-                p <b>主辦單位</b>台灣藝文空間連線TASA協會
-                p <b>策展協力</b>自己人策展團隊
-                p <b>媒體協力</b>典藏Artouch、Arttime藝術網
-                p <b>場地協力</b>或者工藝櫥窗、節點、了了空間
+            .col-md-8.team-page#team-page-2: .box-big
+                table
+                    tr
+                        th(style="min-width: 4.5rem") 策展人
+                        td 洪秉綺
+                    tr
+                        th 藝術家
+                        td
+                            p 王筱璦・王筱璦金工藝術
+                            p 林秀蘋(思良)・BONTE好物金工
+                            p 陳向榮・向榮水果行
+                            p 康雅筑・織物地圖
+                            p 張博傑・真真鑲嵌玻璃研究所
+                            p 黃虹毓・土星工作室
+                            p 潘子村・村 碟樂
+                            p 賴信佑・光山行漆器工藝
+
+            .col-md-8.team-page#team-page-3: .box-big
+                table
+                    tr
+                        th(style="min-width: 10rem") 展覽執行
+                        td 冉挹芬、許絲婷
+                    tr
+                        th 口述影像專案執行
+                        td 趙欣怡、複耳工作室、洪秉綺、陳佳蘭
+                    tr
+                        th 配音師
+                        td 陳彥鈞
+                    tr
+                        th 口述影像諮詢顧問
+                        td 趙欣怡、許家峰、曾允凡
+                    tr
+                        th 行銷宣傳
+                        td 譚如芳
+                    tr
+                        th 影片製作
+                        td 舞蹈生態系創意團隊
+                    tr
+                        th 翻譯
+                        td 陳宜艷
+                    tr
+                        th 網站設計
+                        td 有点文化
+
+            .col-md-8.team-page#team-page-4: .box-big
+                table 
+                    tr 
+                        th(style="min-width: 6rem") 指導單位
+                        td
+                            img(src="/assets/logo/文化部.png", alt="")
+                            img(src="/assets/logo/工藝中心.png", alt="")
+                    tr 
+                        th(style="min-width: 5rem") 主辦單位
+                        td
+                            img(src="/assets/logo/TASA.png", alt="")
+                    tr 
+                        th(style="min-width: 5rem") 策展協力
+                        td
+                            img(src="/assets/logo/自己人.png", alt="")
+                    tr 
+                        th(style="min-width: 5rem") 媒體協力
+                        td
+                            img(src="/assets/logo/artouch.png", alt="")
+                            img(src="/assets/logo/arttime.png", alt="")
+                    tr 
+                        th(style="min-width: 5rem") 場地協力
+                        td
+                            img(src="/assets/logo/或者書店.png", alt="")
+                            img(src="/assets/logo/節點.png", alt="")
+                            img(src="/assets/logo/了了空間.png", alt="")
+
 block script
     script.
         let randStr = ["原初", "投射", "轉化"]
@@ -50,4 +125,31 @@ block script
             let s = randStr[v]
             $("h1", this).text(s)
             nowv = v
+        })
+        $("#teams .bar").on("click", function(e) {
+            e.preventDefault()
+            let nextId = $(this).data("toggle-team")
+            if(nextId == 0) {
+                let currentId = parseInt($("#teams .team-page.active").attr("id").slice(-1))
+                if(currentId > 2) {
+                    nextId = currentId - 1
+                } else {
+                    nextId = 1
+                }
+            }
+            $("#teams .bar").each(function(id, el){
+                $(this).addClass("d-none")
+                if((id!=3 &&id+2 > nextId) || (id==3 && nextId>1)) {
+                    $(this).removeClass("d-none")
+                }
+            })
+            $("#teams .team-page").removeClass("active")
+            $("#teams").removeClass("bg-team-1")
+            $("#teams").removeClass("bg-team-2")
+            $("#teams").removeClass("bg-team-3")
+            $("#teams").removeClass("bg-team-4")
+            $(`#team-page-${nextId}`).addClass("active")
+            $("#teams").addClass(`bg-team-${nextId}`)
+            $("#teams .bar .underline").removeClass("active")
+            $(`#teams .bar .underline`).eq(nextId-1).addClass("active")
         })
