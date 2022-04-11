@@ -24,8 +24,8 @@
   position: relative;
   cursor: pointer;
   display: flex;
-  height: 30vw;
-  width: 20vw;
+  height: 48vh;
+  width: 32vh;
 }
 #top-anim .anim-card div {
   z-index: 1;
@@ -60,7 +60,7 @@
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  transform: scale(0.8);
+  transform: scale(0.9);
   filter: blur(5vw);
   background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
   opacity: 1;
@@ -180,11 +180,6 @@
 #rows .box-big {
   padding: 3rem 4rem;
 }
-#rows .box-big div {
-  height: calc(37vw - 4.5rem);
-  border-radius: 1rem;
-  overflow: hidden;
-}
 
 @keyframes scale {
   0% {
@@ -263,10 +258,12 @@
   font-weight: 400;
   vertical-align: top;
 }
+#teams #team-page-4 .row > div, #teams #team-page-4 img {
+  margin-bottom: 1rem;
+}
 #teams #team-page-4 img {
   height: 2rem;
   margin-right: 2rem;
-  margin-bottom: 1rem;
 }
 
 @media (max-width: 767px) {
