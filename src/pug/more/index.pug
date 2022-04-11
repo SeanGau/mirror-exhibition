@@ -130,11 +130,12 @@ block body
 block script
     script.
         $("body").attr("data-bs-target", "#moreNav");
-        $("body").attr("data-bs-offset", "140");
+        $("body").attr("data-bs-offset", "300");
+        $("body").attr("data-bs-spy", "scroll");
         $("#moreNav .nav-link").on("click", function(e) {
             e.preventDefault()
-            $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top - 139}, 50)
+            $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top - 139}, 40)
         })
         $(".float-box").on("click", function(e) {
-            $("html, body").animate({scrollTop: $("#talk").offset().top - 139}, 50)
+            $("html, body").animate({scrollTop: $("#talk").offset().top - 139}, 40)
         })

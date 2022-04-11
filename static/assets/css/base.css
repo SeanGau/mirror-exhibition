@@ -39,6 +39,7 @@ body {
   font-weight: 500;
 }
 .navbar.navbar-light a.navbar-brand {
+  font-family: "Noto Sans", sans-serif;
   font-weight: bold;
   font-size: 2rem;
   margin-right: 4rem;

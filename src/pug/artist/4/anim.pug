@@ -1,113 +1,101 @@
 html 
     head 
-        //power by https://codepen.io/henryegloff/pen/xxZegpW
+        // power by https://codepen.io/sharnajh/pen/YzXOGpm
         style.
-            body {
-                text-align: center;
-                margin: 0;
+            :root body {
+            background: black;
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             }
-
-            .tiles {
-                height: 100vh;
-                height: calc(var(--vh, 1vh) * 100);
-                margin: 0 auto;
+            :root body #grid {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+            justify-content: center;
             }
-
-            .tile {
-                float: left;
-                width: 50%;
-                height: 50%;
-                box-sizing: border-box;
-                font-size: 400px;
-                font-weight: bold;
-                overflow: hidden;
-                margin: 0;
-                padding: 0;
-                font-family: serif;
+            :root body #grid .grid-item {
+            min-width: 100%;
+            min-height: 100%;
+            background-color: white;
+            cursor: pointer;
+            position: relative;
             }
-
-            .fliph {
-                transform: scaleX(-1); /* Standard */
+            :root body #grid .grid-item:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            outline: 3px ridge gray;
+            display: block;
             }
-
-            .flipv {
-                transform: scaleY(-1); /* Standard */
+            :root body #grid .grid-item:hover {
+            opacity: 0.8;
             }
-
-            .flipv2 {
-                transform: scaleY(-1); /* Standard */
-                transform: rotate(180deg); /* IE 6/7/8 */
-            }
-
-            .fliphv {
-                transform: rotate(90deg);
-            }
-
-            .link {
-                position: absolute;
-                bottom: 20px;
-                right: 20px;
-                padding: 0.75em 1.25em;
-                border-radius: 1.5em;
-                text-decoration: none;
-                transition: 0.3s;
-                color: #fff;
-                background: #000;
-                font-size: 0.938em;
-            }
-
-            .link:hover {
-                color: #000;
-                background: #f2f2f2;
-            }
-
-    body
-        .tiles
-            .tile
-                .animation.
-                    Test
-            .tile.fliph
-                .animation.
-                    Test
-            .tile.flipv
-                .animation.
-                    Test
-            .tile.fliph.flipv2
-                .animation.
-                    Test
-            
+    body 
+        #root
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/react/16.13.1/umd/react.production.min.js") 
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.1/umd/react-dom.production.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.4/randomColor.min.js") 
         script.
-            var elements = document.querySelectorAll(".animation");
-            var timestamp = null;
-            var lastMouseX = null;
-            var lastMouseY = null;
+            function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; } // A feature I've been wanting to test out since the first time I looked through Anime.js docs
+            class App extends React.Component {
+                constructor(...args) {
+                    super(...args); _defineProperty(this, "state",
+                        {
+                            columns: 0,
+                            rows: 0,
+                            total: 1
+                        }); _defineProperty(this, "handleStagger",
+                            i => {
+                                const { columns, rows } = this.state;
+                                const el = i.target.id;
+                                anime({
+                                    targets: ".grid-item",
+                                    backgroundColor: randomColor(),
+                                    delay: anime.stagger(50, { grid: [columns, rows], from: el })
+                                });
 
-            document.body.addEventListener("mousemove", function(e) {
-                if (timestamp === null) {
-                    timestamp = Date.now();
-                    lastMouseX = e.screenX;
-                    lastMouseY = e.screenY;
-                    return;
+                            }); _defineProperty(this, "getGridSize",
+
+                                () => {
+                                    const columns = Math.floor(document.body.clientWidth / 50);
+                                    const rows = Math.floor(document.body.clientHeight / 50);
+
+                                    this.setState({ columns, rows, total: rows * columns });
+                                    anime({
+                                        targets: ".grid-item",
+                                        backgroundColor: "#fff",
+                                        duration: 0,
+                                        easing: "linear"
+                                    });
+
+                                });
                 }
 
-                var now = Date.now();
-                var dt =  now - timestamp + 1;
-                var dx = e.screenX - lastMouseX;
-                var dy = e.screenY - lastMouseY;
-                var speedX = Math.round(dx / dt * 100);
-                var speedY = Math.round(dy / dt * 100);
-
-                timestamp = now;
-                lastMouseX = e.screenX;
-                lastMouseY = e.screenY;
-                console.log(speedX, speedY);
-            });
-
-            anime({
-                targets: ".animation",
-                rotate: "1turn",
-                easing: "linear",
-                loop: true,
-                duration: 3000
-            });
+                componentDidMount() {
+                    this.getGridSize();
+                    window.addEventListener("resize", this.getGridSize);
+                }
+                render() {
+                    const { total, columns, rows } = this.state;
+                    //console.log([columns, rows], total);
+                    return /*#__PURE__*/(
+                        React.createElement("div", { id: "grid" },
+                            [...Array(total)].map((x, i) => /*#__PURE__*/
+                                React.createElement("div", {
+                                    className: "grid-item",
+                                    id: i,
+                                    onClick: i => this.handleStagger(i)
+                                }))));
+                }
+            }
+            ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElementById("root"));

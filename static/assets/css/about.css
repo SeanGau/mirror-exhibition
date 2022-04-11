@@ -20,6 +20,7 @@
   justify-content: center;
 }
 #top-anim .anim-card {
+  margin-top: 3rem;
   position: relative;
   cursor: pointer;
   display: flex;
@@ -79,13 +80,18 @@
   background: linear-gradient(0deg, rgba(125, 142, 213, 0) 0%, rgb(199, 205, 255) 50%, rgba(125, 142, 213, 0) 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
+}
+#top-anim h6 {
+  color: black;
+  margin-top: 2rem;
+  z-index: 1;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
 }
 
 #rows .about, #rows .curator, #rows .team {
-  padding: 4rem 3rem;
+  padding: 3.25rem 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,7 +114,7 @@
   height: 1rem;
   border-radius: 0.5rem;
   margin-top: -1rem;
-  filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 6px 18px rgba(0, 0, 0, 0.25));
   width: 12.5rem;
 }
 #rows .bg-color-1 {
@@ -142,12 +148,16 @@
   background-color: #EEDDCD;
 }
 #rows .box-big {
-  padding: 4rem;
+  padding: 3rem 4rem;
 }
 #rows .box-big div {
-  height: calc(36vw - 4rem);
+  height: calc(37vw - 4.5rem);
   border-radius: 1rem;
   overflow: hidden;
+}
+
+#teams .team-page-1 b {
+  padding-right: 1.5rem;
 }
 
 @media (max-width: 767px) {
