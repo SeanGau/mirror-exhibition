@@ -1,11 +1,12 @@
 <html> <head> <!--power by https://codepen.io/henryegloff/pen/xxZegpW--><style>body {
     text-align: center;
     margin: 0;
+    overflow: hidden;
 }
 
 .tiles {
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    height: 80vh;
+    border: 10vh solid black;
     margin: 0 auto;
 }
 
@@ -14,7 +15,7 @@
     width: 50%;
     height: 50%;
     box-sizing: border-box;
-    font-size: 400px;
+    font-size: calc(100px + 15vw);
     font-weight: bold;
     overflow: hidden;
     margin: 0;
@@ -39,29 +40,59 @@
     transform: rotate(90deg);
 }
 
-.link {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding: 0.75em 1.25em;
-    border-radius: 1.5em;
-    text-decoration: none;
-    transition: 0.3s;
-    color: #fff;
-    background: #000;
-    font-size: 0.938em;
+.slider {
+-webkit-appearance: none;
+width: 50%;
+margin: auto;
+position: relative;
+bottom: 5vh;
+height: 10px;
+border-radius: 5px;
+background: white;
+outline: none;
+opacity: 0.7;
+-webkit-transition: .2s;
+transition: opacity .2s;
 }
 
-.link:hover {
-    color: #000;
-    background: #f2f2f2;
+.slider:hover {
+opacity: 1;
 }
-</style></head><body><div class="tiles"><div class="tile"><div class="animation">Dream</div></div><div class="tile fliph"><div class="animation">Dream</div></div><div class="tile flipv"><div class="animation">Dream</div></div><div class="tile fliph flipv2"><div class="animation">Dream
-</div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"></script><script>var elements = document.querySelectorAll(".animation");
+
+.slider::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 25px;
+height: 25px;
+border-radius: 12.5px;
+background: #BD8AFD;
+cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+width: 25px;
+height: 25px;
+border-radius: 12.5px;
+background: #BD8AFD;
+cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .tile {
+        writing-mode: vertical-rl;
+    }
+}
+</style></head><body><div class="tiles"><div class="tile"><div class="animation">Dream</div></div><div class="tile fliph"><div class="animation">Dream</div></div><div class="tile flipv"><div class="animation">Dream</div></div><div class="tile fliph flipv2"><div class="animation">Dream</div></div></div><input class="slider" type="range" min="50" max="80" value="50" oninput="valChange(this.value)"/><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"></script><script>var elements = document.querySelectorAll(".animation");
 var timestamp = null;
 var lastMouseX = null;
 var lastMouseY = null;
-
+var speed = 50;
+function valChange(val) {
+    speed = val;
+    var el = document.querySelectorAll('.animation');
+    anime.remove(el);
+    play();
+}
 document.body.addEventListener("mousemove", function(e) {
     if (timestamp === null) {
         timestamp = Date.now();
@@ -81,11 +112,17 @@ document.body.addEventListener("mousemove", function(e) {
     lastMouseX = e.screenX;
     lastMouseY = e.screenY;
 });
-
-anime({
-    targets: ".animation",
-    rotate: "1turn",
-    easing: "linear",
-    loop: true,
-    duration: 3000
-});</script></body></html>
+function play() {
+    var el = document.querySelectorAll('.animation');
+    anime({
+        targets: el,
+        rotate: "+=180deg",
+        easing: "linear",
+        loop: false,
+        duration: 30*(100-speed),
+        complete: () => {
+            play();
+        }
+    });
+}
+play()</script></body></html>

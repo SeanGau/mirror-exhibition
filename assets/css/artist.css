@@ -22,46 +22,6 @@
   bottom: -1.5rem;
 }
 
-.modal-content {
-  background-color: transparent;
-}
-.modal-content #workImage {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 80%;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.modal-content #workImage .img-box {
-  position: relative;
-  height: 100%;
-}
-.modal-content #workImage img {
-  max-height: 100%;
-  max-width: 100%;
-  border-radius: 3rem;
-  filter: drop-shadow(0px 6px 40px rgba(0, 0, 0, 0.5));
-}
-.modal-content #close {
-  display: block;
-  position: absolute;
-  background-color: white;
-  right: 1rem;
-  top: 1rem;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  line-height: 0.85rem;
-  transition: 0.3s;
-}
-.modal-content #close:hover {
-  color: #7C3AED;
-}
-
 .works .disc, .works .about, .works .artist {
   padding: 4rem 3rem;
 }
@@ -124,10 +84,10 @@
   height: 3rem;
 }
 .works .carousel .carousel-left div {
-  border-radius: 3rem 0 0 3rem;
+  border-radius: var(--radius-value) 0 0 var(--radius-value);
 }
 .works .carousel .carousel-right div {
-  border-radius: 0 3rem 3rem 0;
+  border-radius: 0 var(--radius-value) var(--radius-value) 0;
 }
 .works .carousel .carousel-left, .works .carousel .carousel-right {
   padding: 4rem;
@@ -145,7 +105,7 @@
 }
 .works .box-big div {
   height: calc(37vw - 4.5rem);
-  border-radius: 3rem;
+  border-radius: var(--radius-value);
   overflow: hidden;
 }
 .works .box-big div img {
@@ -160,7 +120,7 @@
 }
 
 @media (max-width: 767px) {
-  .modal-content #workImage {
+  .modal-content #workImageBox {
     height: auto;
   }
 

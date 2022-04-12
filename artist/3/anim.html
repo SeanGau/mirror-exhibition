@@ -38,7 +38,7 @@ body {
 .range__slider__path {
     fill: #6EA5D6;
     opacity: .5;
-}</style></head><body onresize="resize()"><!--  Wrapper for the range input slider --><div class="range__wrapper"><!--  The real input, it will be hidden, but updated properly with Javascript --><!--  For a production usage, you may want to add a label, and also put it inside a form --><input class="range__input" type="range" min="10" max="90" value="64"/><!--  SVG elements --><svg class="range__slider" width="100%" height="100%"><defs><clipPath id="range__slider__clip-path"><path class="range__slider__path" d="M 0 1023 l 1024 0 l 0 1023 l -1024 0 Z"></path></clipPath></defs><path class="range__slider__path" d="M 0 1023 l 1024 0 l 0 1023 l -1024 0 Z"></path></svg></div></body><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"> </script><script>// Variables to use later
+}</style></head><body onresize="resize()"><!--  Wrapper for the range input slider --><div class="range__wrapper"><!--  The real input, it will be hidden, but updated properly with Javascript --><!--  For a production usage, you may want to add a label, and also put it inside a form --><input class="range__input" type="range" min="10" max="90" value="30"/><!--  SVG elements --><svg class="range__slider" width="100%" height="100%"><defs><clipPath id="range__slider__clip-path"><path class="range__slider__path" d="M 0 1023 l 1024 0 l 0 1023 l -1024 0 Z"></path></clipPath></defs><path class="range__slider__path" d="M 0 1023 l 1024 0 l 0 1023 l -1024 0 Z"></path></svg></div></body><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"> </script><script>// Variables to use later
 var rangeWrapper = document.querySelector('.range__wrapper');
 var rangeInput = document.querySelector('.range__input');
 var rangeSliderPaths = document.querySelectorAll('.range__slider__path');
@@ -139,6 +139,7 @@ function mouseDown(e) {
 
 // Handle `mousemove` and `touchmove` events, calculating values to morph the slider `path` and translate values properly
 function mouseMove(e) {
+    e.preventDefault();
     if (mouseY) {
         pageX = e.targetTouches ? e.targetTouches[0].pageX : e.pageX;
         pageY = e.targetTouches ? e.targetTouches[0].pageY : e.pageY;
@@ -167,10 +168,10 @@ function mouseUp() {
 }
 
 // Events listeners
-rangeWrapper.addEventListener('mousedown', mouseDown);
-rangeWrapper.addEventListener('touchstart', mouseDown);
-rangeWrapper.addEventListener('mousemove', mouseMove);
-rangeWrapper.addEventListener('touchmove', mouseMove);
-rangeWrapper.addEventListener('mouseup', mouseUp);
-rangeWrapper.addEventListener('mouseleave', mouseUp);
-rangeWrapper.addEventListener('touchend', mouseUp);</script></html>
+rangeSliderPaths[1].addEventListener('mousedown', mouseDown);
+rangeSliderPaths[1].addEventListener('touchstart', mouseDown);
+rangeSliderPaths[1].addEventListener('mousemove', mouseMove);
+rangeSliderPaths[1].addEventListener('touchmove', mouseMove);
+rangeSliderPaths[1].addEventListener('mouseup', mouseUp);
+rangeSliderPaths[1].addEventListener('mouseleave', mouseUp);
+rangeSliderPaths[1].addEventListener('touchend', mouseUp);</script></html>
