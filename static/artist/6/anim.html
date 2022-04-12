@@ -1,33 +1,1664 @@
-<html> <head><style>html, body {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: #DDD;
+<html> <head> <!--power by https://codepen.io/howlingwolf/pen/ojPPwN--><style>/*Colors */
+div:nth-child(100) {
+    top                    : -200px;
+    left                   : -200px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 200px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-3600deg);
+    transform              : rotate(-3600deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 10s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 10s;
 }
-.wrapper {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+div:nth-child(99) {
+    top                    : -198px;
+    left                   : -198px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 198px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-3564deg);
+    transform              : rotate(-3564deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 9.9s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 9.9s;
 }
-#numberbox {
-    text-align: center;
-    background-color: #FFF;
-    border-radius: 1rem;
-    padding: 2rem 6rem;
-    font-size: 4rem;
-    filter: drop-shadow(2px 4px 4px #AAA);
-    font-family: monospace;
-    font-weight: bold;
-}</style></head><body><div class="wrapper"><div id="numberbox">00:00:00:00</div></div><script>function padzero(p) {
-    return new Array(2 - (p + '').length + 1).join('0') + p;
+
+div:nth-child(98) {
+    top                    : -196px;
+    left                   : -196px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 196px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-3528deg);
+    transform              : rotate(-3528deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 9.8s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 9.8s;
 }
-let ms = 162;
-setInterval(function () {
-    ms-=1;
-    if(ms < 0) {
-        ms = 162
-    } 
-    document.getElementById("numberbox").innerText = `00:00:0${parseInt(ms/100)}:${padzero(ms%100)}`
-}, 10)</script></body></html>
+
+div:nth-child(97) {
+    top                    : -194px;
+    left                   : -194px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 194px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-3492deg);
+    transform              : rotate(-3492deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 9.7s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 9.7s;
+}
+
+div:nth-child(96) {
+    top                    : -192px;
+    left                   : -192px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 192px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-3456deg);
+    transform              : rotate(-3456deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 9.6s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 9.6s;
+}
+
+div:nth-child(95) {
+    top                    : -190px;
+    left                   : -190px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 190px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-3420deg);
+    transform              : rotate(-3420deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 9.5s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 9.5s;
+}
+
+div:nth-child(94) {
+    top                    : -188px;
+    left                   : -188px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 188px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-3384deg);
+    transform              : rotate(-3384deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 9.4s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 9.4s;
+}
+
+div:nth-child(93) {
+    top                    : -186px;
+    left                   : -186px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 186px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-3348deg);
+    transform              : rotate(-3348deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 9.3s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 9.3s;
+}
+
+div:nth-child(92) {
+    top                    : -184px;
+    left                   : -184px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 184px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-3312deg);
+    transform              : rotate(-3312deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 9.2s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 9.2s;
+}
+
+div:nth-child(91) {
+    top                    : -182px;
+    left                   : -182px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 182px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-3276deg);
+    transform              : rotate(-3276deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 9.1s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 9.1s;
+}
+
+div:nth-child(90) {
+    top                    : -180px;
+    left                   : -180px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 180px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-3240deg);
+    transform              : rotate(-3240deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 9s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 9s;
+}
+
+div:nth-child(89) {
+    top                    : -178px;
+    left                   : -178px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 178px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-3204deg);
+    transform              : rotate(-3204deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 8.9s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 8.9s;
+}
+
+div:nth-child(88) {
+    top                    : -176px;
+    left                   : -176px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 176px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-3168deg);
+    transform              : rotate(-3168deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 8.8s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 8.8s;
+}
+
+div:nth-child(87) {
+    top                    : -174px;
+    left                   : -174px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 174px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-3132deg);
+    transform              : rotate(-3132deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 8.7s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 8.7s;
+}
+
+div:nth-child(86) {
+    top                    : -172px;
+    left                   : -172px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 172px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-3096deg);
+    transform              : rotate(-3096deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 8.6s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 8.6s;
+}
+
+div:nth-child(85) {
+    top                    : -170px;
+    left                   : -170px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 170px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-3060deg);
+    transform              : rotate(-3060deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 8.5s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 8.5s;
+}
+
+div:nth-child(84) {
+    top                    : -168px;
+    left                   : -168px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 168px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-3024deg);
+    transform              : rotate(-3024deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 8.4s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 8.4s;
+}
+
+div:nth-child(83) {
+    top                    : -166px;
+    left                   : -166px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 166px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2988deg);
+    transform              : rotate(-2988deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 8.3s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 8.3s;
+}
+
+div:nth-child(82) {
+    top                    : -164px;
+    left                   : -164px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 164px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2952deg);
+    transform              : rotate(-2952deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 8.2s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 8.2s;
+}
+
+div:nth-child(81) {
+    top                    : -162px;
+    left                   : -162px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 162px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2916deg);
+    transform              : rotate(-2916deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 8.1s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 8.1s;
+}
+
+div:nth-child(80) {
+    top                    : -160px;
+    left                   : -160px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 160px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2880deg);
+    transform              : rotate(-2880deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 8s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 8s;
+}
+
+div:nth-child(79) {
+    top                    : -158px;
+    left                   : -158px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 158px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2844deg);
+    transform              : rotate(-2844deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 7.9s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 7.9s;
+}
+
+div:nth-child(78) {
+    top                    : -156px;
+    left                   : -156px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 156px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2808deg);
+    transform              : rotate(-2808deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 7.8s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 7.8s;
+}
+
+div:nth-child(77) {
+    top                    : -154px;
+    left                   : -154px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 154px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2772deg);
+    transform              : rotate(-2772deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 7.7s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 7.7s;
+}
+
+div:nth-child(76) {
+    top                    : -152px;
+    left                   : -152px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 152px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2736deg);
+    transform              : rotate(-2736deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 7.6s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 7.6s;
+}
+
+div:nth-child(75) {
+    top                    : -150px;
+    left                   : -150px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 150px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2700deg);
+    transform              : rotate(-2700deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 7.5s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 7.5s;
+}
+
+div:nth-child(74) {
+    top                    : -148px;
+    left                   : -148px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 148px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2664deg);
+    transform              : rotate(-2664deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 7.4s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 7.4s;
+}
+
+div:nth-child(73) {
+    top                    : -146px;
+    left                   : -146px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 146px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2628deg);
+    transform              : rotate(-2628deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 7.3s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 7.3s;
+}
+
+div:nth-child(72) {
+    top                    : -144px;
+    left                   : -144px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 144px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2592deg);
+    transform              : rotate(-2592deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 7.2s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 7.2s;
+}
+
+div:nth-child(71) {
+    top                    : -142px;
+    left                   : -142px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 142px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2556deg);
+    transform              : rotate(-2556deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 7.1s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 7.1s;
+}
+
+div:nth-child(70) {
+    top                    : -140px;
+    left                   : -140px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 140px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2520deg);
+    transform              : rotate(-2520deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 7s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 7s;
+}
+
+div:nth-child(69) {
+    top                    : -138px;
+    left                   : -138px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 138px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2484deg);
+    transform              : rotate(-2484deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 6.9s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 6.9s;
+}
+
+div:nth-child(68) {
+    top                    : -136px;
+    left                   : -136px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 136px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2448deg);
+    transform              : rotate(-2448deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 6.8s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 6.8s;
+}
+
+div:nth-child(67) {
+    top                    : -134px;
+    left                   : -134px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 134px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2412deg);
+    transform              : rotate(-2412deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 6.7s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 6.7s;
+}
+
+div:nth-child(66) {
+    top                    : -132px;
+    left                   : -132px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 132px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2376deg);
+    transform              : rotate(-2376deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 6.6s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 6.6s;
+}
+
+div:nth-child(65) {
+    top                    : -130px;
+    left                   : -130px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 130px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2340deg);
+    transform              : rotate(-2340deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 6.5s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 6.5s;
+}
+
+div:nth-child(64) {
+    top                    : -128px;
+    left                   : -128px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 128px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2304deg);
+    transform              : rotate(-2304deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 6.4s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 6.4s;
+}
+
+div:nth-child(63) {
+    top                    : -126px;
+    left                   : -126px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 126px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2268deg);
+    transform              : rotate(-2268deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 6.3s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 6.3s;
+}
+
+div:nth-child(62) {
+    top                    : -124px;
+    left                   : -124px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 124px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2232deg);
+    transform              : rotate(-2232deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 6.2s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 6.2s;
+}
+
+div:nth-child(61) {
+    top                    : -122px;
+    left                   : -122px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 122px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2196deg);
+    transform              : rotate(-2196deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 6.1s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 6.1s;
+}
+
+div:nth-child(60) {
+    top                    : -120px;
+    left                   : -120px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 120px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2160deg);
+    transform              : rotate(-2160deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 6s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 6s;
+}
+
+div:nth-child(59) {
+    top                    : -118px;
+    left                   : -118px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 118px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2124deg);
+    transform              : rotate(-2124deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 5.9s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 5.9s;
+}
+
+div:nth-child(58) {
+    top                    : -116px;
+    left                   : -116px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 116px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2088deg);
+    transform              : rotate(-2088deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 5.8s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 5.8s;
+}
+
+div:nth-child(57) {
+    top                    : -114px;
+    left                   : -114px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 114px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2052deg);
+    transform              : rotate(-2052deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 5.7s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 5.7s;
+}
+
+div:nth-child(56) {
+    top                    : -112px;
+    left                   : -112px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 112px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-2016deg);
+    transform              : rotate(-2016deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 5.6s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 5.6s;
+}
+
+div:nth-child(55) {
+    top                    : -110px;
+    left                   : -110px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 110px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1980deg);
+    transform              : rotate(-1980deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 5.5s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 5.5s;
+}
+
+div:nth-child(54) {
+    top                    : -108px;
+    left                   : -108px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 108px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1944deg);
+    transform              : rotate(-1944deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 5.4s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 5.4s;
+}
+
+div:nth-child(53) {
+    top                    : -106px;
+    left                   : -106px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 106px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1908deg);
+    transform              : rotate(-1908deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 5.3s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 5.3s;
+}
+
+div:nth-child(52) {
+    top                    : -104px;
+    left                   : -104px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 104px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1872deg);
+    transform              : rotate(-1872deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 5.2s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 5.2s;
+}
+
+div:nth-child(51) {
+    top                    : -102px;
+    left                   : -102px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 102px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1836deg);
+    transform              : rotate(-1836deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 5.1s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 5.1s;
+}
+
+div:nth-child(50) {
+    top                    : -100px;
+    left                   : -100px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 100px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1800deg);
+    transform              : rotate(-1800deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 5s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 5s;
+}
+
+div:nth-child(49) {
+    top                    : -98px;
+    left                   : -98px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 98px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1764deg);
+    transform              : rotate(-1764deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 4.9s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 4.9s;
+}
+
+div:nth-child(48) {
+    top                    : -96px;
+    left                   : -96px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 96px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1728deg);
+    transform              : rotate(-1728deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 4.8s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 4.8s;
+}
+
+div:nth-child(47) {
+    top                    : -94px;
+    left                   : -94px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 94px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1692deg);
+    transform              : rotate(-1692deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 4.7s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 4.7s;
+}
+
+div:nth-child(46) {
+    top                    : -92px;
+    left                   : -92px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 92px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1656deg);
+    transform              : rotate(-1656deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 4.6s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 4.6s;
+}
+
+div:nth-child(45) {
+    top                    : -90px;
+    left                   : -90px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 90px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1620deg);
+    transform              : rotate(-1620deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 4.5s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 4.5s;
+}
+
+div:nth-child(44) {
+    top                    : -88px;
+    left                   : -88px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 88px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1584deg);
+    transform              : rotate(-1584deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 4.4s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 4.4s;
+}
+
+div:nth-child(43) {
+    top                    : -86px;
+    left                   : -86px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 86px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1548deg);
+    transform              : rotate(-1548deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 4.3s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 4.3s;
+}
+
+div:nth-child(42) {
+    top                    : -84px;
+    left                   : -84px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 84px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1512deg);
+    transform              : rotate(-1512deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 4.2s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 4.2s;
+}
+
+div:nth-child(41) {
+    top                    : -82px;
+    left                   : -82px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 82px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1476deg);
+    transform              : rotate(-1476deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 4.1s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 4.1s;
+}
+
+div:nth-child(40) {
+    top                    : -80px;
+    left                   : -80px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 80px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1440deg);
+    transform              : rotate(-1440deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 4s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 4s;
+}
+
+div:nth-child(39) {
+    top                    : -78px;
+    left                   : -78px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 78px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1404deg);
+    transform              : rotate(-1404deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 3.9s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 3.9s;
+}
+
+div:nth-child(38) {
+    top                    : -76px;
+    left                   : -76px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 76px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1368deg);
+    transform              : rotate(-1368deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 3.8s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 3.8s;
+}
+
+div:nth-child(37) {
+    top                    : -74px;
+    left                   : -74px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 74px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1332deg);
+    transform              : rotate(-1332deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 3.7s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 3.7s;
+}
+
+div:nth-child(36) {
+    top                    : -72px;
+    left                   : -72px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 72px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1296deg);
+    transform              : rotate(-1296deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 3.6s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 3.6s;
+}
+
+div:nth-child(35) {
+    top                    : -70px;
+    left                   : -70px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 70px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1260deg);
+    transform              : rotate(-1260deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 3.5s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 3.5s;
+}
+
+div:nth-child(34) {
+    top                    : -68px;
+    left                   : -68px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 68px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1224deg);
+    transform              : rotate(-1224deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 3.4s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 3.4s;
+}
+
+div:nth-child(33) {
+    top                    : -66px;
+    left                   : -66px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 66px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1188deg);
+    transform              : rotate(-1188deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 3.3s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 3.3s;
+}
+
+div:nth-child(32) {
+    top                    : -64px;
+    left                   : -64px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 64px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1152deg);
+    transform              : rotate(-1152deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 3.2s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 3.2s;
+}
+
+div:nth-child(31) {
+    top                    : -62px;
+    left                   : -62px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 62px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1116deg);
+    transform              : rotate(-1116deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 3.1s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 3.1s;
+}
+
+div:nth-child(30) {
+    top                    : -60px;
+    left                   : -60px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 60px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1080deg);
+    transform              : rotate(-1080deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 3s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 3s;
+}
+
+div:nth-child(29) {
+    top                    : -58px;
+    left                   : -58px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 58px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1044deg);
+    transform              : rotate(-1044deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 2.9s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 2.9s;
+}
+
+div:nth-child(28) {
+    top                    : -56px;
+    left                   : -56px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 56px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-1008deg);
+    transform              : rotate(-1008deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 2.8s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 2.8s;
+}
+
+div:nth-child(27) {
+    top                    : -54px;
+    left                   : -54px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 54px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-972deg);
+    transform              : rotate(-972deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 2.7s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 2.7s;
+}
+
+div:nth-child(26) {
+    top                    : -52px;
+    left                   : -52px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 52px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-936deg);
+    transform              : rotate(-936deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 2.6s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 2.6s;
+}
+
+div:nth-child(25) {
+    top                    : -50px;
+    left                   : -50px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 50px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-900deg);
+    transform              : rotate(-900deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 2.5s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 2.5s;
+}
+
+div:nth-child(24) {
+    top                    : -48px;
+    left                   : -48px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 48px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-864deg);
+    transform              : rotate(-864deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 2.4s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 2.4s;
+}
+
+div:nth-child(23) {
+    top                    : -46px;
+    left                   : -46px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 46px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-828deg);
+    transform              : rotate(-828deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 2.3s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 2.3s;
+}
+
+div:nth-child(22) {
+    top                    : -44px;
+    left                   : -44px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 44px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-792deg);
+    transform              : rotate(-792deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 2.2s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 2.2s;
+}
+
+div:nth-child(21) {
+    top                    : -42px;
+    left                   : -42px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 42px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-756deg);
+    transform              : rotate(-756deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 2.1s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 2.1s;
+}
+
+div:nth-child(20) {
+    top                    : -40px;
+    left                   : -40px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 40px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-720deg);
+    transform              : rotate(-720deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 2s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 2s;
+}
+
+div:nth-child(19) {
+    top                    : -38px;
+    left                   : -38px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 38px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-684deg);
+    transform              : rotate(-684deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 1.9s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 1.9s;
+}
+
+div:nth-child(18) {
+    top                    : -36px;
+    left                   : -36px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 36px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-648deg);
+    transform              : rotate(-648deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 1.8s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 1.8s;
+}
+
+div:nth-child(17) {
+    top                    : -34px;
+    left                   : -34px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 34px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-612deg);
+    transform              : rotate(-612deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 1.7s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 1.7s;
+}
+
+div:nth-child(16) {
+    top                    : -32px;
+    left                   : -32px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 32px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-576deg);
+    transform              : rotate(-576deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 1.6s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 1.6s;
+}
+
+div:nth-child(15) {
+    top                    : -30px;
+    left                   : -30px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 30px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-540deg);
+    transform              : rotate(-540deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 1.5s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 1.5s;
+}
+
+div:nth-child(14) {
+    top                    : -28px;
+    left                   : -28px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 28px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-504deg);
+    transform              : rotate(-504deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 1.4s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 1.4s;
+}
+
+div:nth-child(13) {
+    top                    : -26px;
+    left                   : -26px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 26px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-468deg);
+    transform              : rotate(-468deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 1.3s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 1.3s;
+}
+
+div:nth-child(12) {
+    top                    : -24px;
+    left                   : -24px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 24px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-432deg);
+    transform              : rotate(-432deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 1.2s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 1.2s;
+}
+
+div:nth-child(11) {
+    top                    : -22px;
+    left                   : -22px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 22px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-396deg);
+    transform              : rotate(-396deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 1.1s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 1.1s;
+}
+
+div:nth-child(10) {
+    top                    : -20px;
+    left                   : -20px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 20px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-360deg);
+    transform              : rotate(-360deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 1s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 1s;
+}
+
+div:nth-child(9) {
+    top                    : -18px;
+    left                   : -18px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 18px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-324deg);
+    transform              : rotate(-324deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 0.9s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 0.9s;
+}
+
+div:nth-child(8) {
+    top                    : -16px;
+    left                   : -16px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 16px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-288deg);
+    transform              : rotate(-288deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 0.8s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 0.8s;
+}
+
+div:nth-child(7) {
+    top                    : -14px;
+    left                   : -14px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 14px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-252deg);
+    transform              : rotate(-252deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 0.7s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 0.7s;
+}
+
+div:nth-child(6) {
+    top                    : -12px;
+    left                   : -12px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 12px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-216deg);
+    transform              : rotate(-216deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 0.6s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 0.6s;
+}
+
+div:nth-child(5) {
+    top                    : -10px;
+    left                   : -10px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 10px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-180deg);
+    transform              : rotate(-180deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 0.5s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 0.5s;
+}
+
+div:nth-child(4) {
+    top                    : -8px;
+    left                   : -8px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 8px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-144deg);
+    transform              : rotate(-144deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 0.4s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 0.4s;
+}
+
+div:nth-child(3) {
+    top                    : -6px;
+    left                   : -6px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 6px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-108deg);
+    transform              : rotate(-108deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 0.3s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 0.3s;
+}
+
+div:nth-child(2) {
+    top                    : -4px;
+    left                   : -4px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 4px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-72deg);
+    transform              : rotate(-72deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 0.2s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 0.2s;
+}
+
+div:nth-child(1) {
+    top                    : -2px;
+    left                   : -2px;
+    box-shadow             : inset 20px 0 20px rgba(0, 255, 131, 0.6), inset -20px 0 50px rgba(0, 100, 255, 0.5), inset 0 -20px 50px rgba(205, 121, 155, 0.6), inset 0 20px 20px rgba(255, 0, 0, 0.6), 0 0 75px rgba(255, 121, 0, 0.2);
+    padding                : 2px;
+    border-radius          : 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style        : preserve-3d;
+    -webkit-transform      : rotate(-36deg);
+    transform              : rotate(-36deg);
+    -webkit-animation      : swirl 4s ease infinite alternate;
+    -webkit-animation-delay: 0.1s;
+    animation              : swirl 4s ease infinite alternate;
+    animation-delay        : 0.1s;
+}
+
+div {
+    position: absolute;
+}
+
+section {
+    position: absolute;
+    top     : 50%;
+    left    : 50%;
+}
+
+body {
+    background-color: black;
+    margin          : 0;
+    padding         : 0;
+    overflow        : hidden;
+}
+
+@-webkit-keyframes swirl {
+    0% {
+        opacity          : 1;
+        -webkit-transform: rotateZ(0);
+        transform        : rotateZ(0) scale(0.5);
+    }
+
+    50% {
+        opacity          : 0;
+        -webkit-transform: rotate(90deg);
+        transform        : rotate(90deg);
+    }
+
+    100% {
+        opacity          : 1;
+        -webkit-transform: rotate(180deg) rotateZ(360deg);
+        transform        : rotate(180deg) rotateZ(360deg) scale(1);
+    }
+}
+
+@keyframes swirl {
+    0% {
+        opacity          : 1;
+        -webkit-transform: rotateZ(0);
+        transform        : rotateZ(0);
+    }
+
+    50% {
+        opacity          : 0;
+        -webkit-transform: rotate(90deg);
+        transform        : rotate(90deg);
+    }
+
+    100% {
+        opacity          : 1;
+        -webkit-transform: rotate(180deg) rotateZ(360deg);
+        transform        : rotate(360deg) rotateZ(360deg) scale(1);
+    }
+}
+
+@media (max-width: 767px) {
+    section {
+        transform: scale(.8);
+    }
+}
+</style></head><body><section><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></section></body></html>
