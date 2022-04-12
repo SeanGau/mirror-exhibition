@@ -94,7 +94,7 @@ table th {
 }
 #exhibition .content-box {
   min-height: calc(100vh - 14.5rem);
-  border-radius: 3rem 3rem 0 0;
+  border-radius: var(--radius-value) var(--radius-value) 0 0;
 }
 #exhibition .content-box .col-md-auto {
   padding: 4rem 0 4rem 4rem;
@@ -133,10 +133,10 @@ table th {
   text-decoration: none;
 }
 #talk .content-box .bg-1 {
-  border-radius: 0 0 0 3rem;
+  border-radius: 0 0 0 var(--radius-value);
 }
 #talk .content-box .bg-3 {
-  border-radius: 0 0 3rem 0;
+  border-radius: 0 0 var(--radius-value) 0;
 }
 #talk .content-box .float-box {
   display: flex;
@@ -230,7 +230,7 @@ table th {
     border-radius: 0;
   }
   #talk .content-box .bg-3 {
-    border-radius: 0 0 3rem 3rem;
+    border-radius: 0 0 var(--radius-value) var(--radius-value);
   }
 
   #footer .col-md-6 {

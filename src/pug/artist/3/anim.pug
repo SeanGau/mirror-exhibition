@@ -48,7 +48,7 @@ html
         .range__wrapper
             //  The real input, it will be hidden, but updated properly with Javascript 
             //  For a production usage, you may want to add a label, and also put it inside a form 
-            input.range__input(type='range' min='10' max='90' value='64')
+            input.range__input(type='range' min='10' max='90' value='30')
             //  SVG elements 
             svg.range__slider(width='100%' height='100%')
                 defs
@@ -158,6 +158,7 @@ html
 
         // Handle `mousemove` and `touchmove` events, calculating values to morph the slider `path` and translate values properly
         function mouseMove(e) {
+            e.preventDefault();
             if (mouseY) {
                 pageX = e.targetTouches ? e.targetTouches[0].pageX : e.pageX;
                 pageY = e.targetTouches ? e.targetTouches[0].pageY : e.pageY;
@@ -186,10 +187,10 @@ html
         }
 
         // Events listeners
-        rangeWrapper.addEventListener('mousedown', mouseDown);
-        rangeWrapper.addEventListener('touchstart', mouseDown);
-        rangeWrapper.addEventListener('mousemove', mouseMove);
-        rangeWrapper.addEventListener('touchmove', mouseMove);
-        rangeWrapper.addEventListener('mouseup', mouseUp);
-        rangeWrapper.addEventListener('mouseleave', mouseUp);
-        rangeWrapper.addEventListener('touchend', mouseUp);
+        rangeSliderPaths[1].addEventListener('mousedown', mouseDown);
+        rangeSliderPaths[1].addEventListener('touchstart', mouseDown);
+        rangeSliderPaths[1].addEventListener('mousemove', mouseMove);
+        rangeSliderPaths[1].addEventListener('touchmove', mouseMove);
+        rangeSliderPaths[1].addEventListener('mouseup', mouseUp);
+        rangeSliderPaths[1].addEventListener('mouseleave', mouseUp);
+        rangeSliderPaths[1].addEventListener('touchend', mouseUp);

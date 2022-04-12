@@ -38,7 +38,7 @@
   overflow: hidden;
   height: calc(37vw - 4.5rem);
   width: calc(37vw - 4.5rem);
-  border-radius: 1rem;
+  border-radius: var(--radius-value);
   overflow: hidden;
 }
 #carouselImg .carousel-item > div img {

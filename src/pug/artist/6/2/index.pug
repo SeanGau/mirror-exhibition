@@ -19,18 +19,8 @@ block body
             h3 心
             span.
     #goback
-        a(href="/artist/6")
+        a(href="/artist/6#works")
             img.w-100(src="/assets/goback.svg", alt="", srcset="")
-    .modal.fade#workModal(tabindex='-1' aria-hidden='true')
-        .modal-dialog.modal-fullscreen
-            .modal-content
-                .modal-body.d-flex.justify-content-center.align-items.center
-                    #workImage: div.img-box
-                        img(src="", alt="", srcset="")
-                        a#close(type='button' data-bs-dismiss='modal' aria-label='Close')
-                            svg.w-100.h-100(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='currentColor')
-                                // ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. 
-                                path(d='M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z')
     #tab-content.tab-content
         #tab-1.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="tab-1-nav")
             .slogan.align-items-center.text-center.py-5
@@ -331,31 +321,31 @@ block body
                             div
                                 iframe.w-100.h-100(src='https://www.youtube.com/embed/I3nTatxT4sU?rel=0&modestbranding=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
                         .box-big
-                            p(style="white-space: pre").
-                                風吹來母親的聲音｜計劃發起/藝術家 林秀蘋 
-                                聲音錄製/採集/聲音導演 林秀蘋 
-                                聲音設計｜余楊心平 YU YANG SIN PING
-                                即興獨舞 ｜ 編舞家王怡湘 Wang I Hsiang
-                                攝影 林秀蘋 徐荺婷
-                                剪輯/聲音剪輯 徐荺婷
-                                短片音樂作曲 林孟萱 
-
+                            p.
+                                風吹來母親的聲音｜計劃發起/藝術家 林秀蘋<br>
+                                聲音錄製/採集/聲音導演 林秀蘋<br>
+                                聲音設計｜余楊心平 YU YANG SIN PING<br>
+                                即興獨舞 ｜ 編舞家王怡湘 Wang I Hsiang<br>
+                                攝影 林秀蘋 徐荺婷<br>
+                                剪輯/聲音剪輯 徐荺婷<br>
+                                短片音樂作曲 林孟萱
+                            p.
                                 A film by 林秀蘋 
-
-                                ｜參與錄製者｜
-                                家族
-                                楊李月裡 楊阿春 林 琳
-                                施慧端 洪翎
-                                林瑋馨 張語慈 
-                                盧慧年、王冠東
-                                鄔麗綺 何靖媛 
-                                張李安梅 陳張婉蒨
-                                廖芳珍 李宛玲
-                                傅淑美 蕭雅萍
-
-                                個人 
-                                李昱瑩、林宥綸、邱小華、劉芊妘、金質靈
-                                袁念慈、李虹旻、吳純嫻、王怡湘、盧郁汶
+                            p.
+                                ｜參與錄製者｜<br>
+                                家族<br>
+                                楊李月裡 楊阿春 林 琳<br>
+                                施慧端 洪翎<br>
+                                林瑋馨 張語慈<br>
+                                盧慧年、王冠東<br>
+                                鄔麗綺 何靖媛 <br>
+                                張李安梅 陳張婉蒨<br>
+                                廖芳珍 李宛玲<br>
+                                傅淑美 蕭雅萍<br>
+                            p.
+                                個人<br>
+                                李昱瑩、林宥綸、邱小華、劉芊妘、金質靈<br>
+                                袁念慈、李虹旻、吳純嫻、王怡湘、盧郁汶<br>
                                 劉于仙、吳柔衣、游千瑩、周邦蓉、戴若梅 、謝徐鳳玉、許春蘭
 block script
     script(src="/assets/js/artist.js")

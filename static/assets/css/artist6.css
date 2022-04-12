@@ -143,7 +143,7 @@
   height: 100%;
   width: 100%;
   padding: 3rem;
-  border-radius: 3rem;
+  border-radius: var(--radius-value);
   position: relative;
 }
 .works .outer-box .box-left h3, .works .outer-box .box-right h3 {
