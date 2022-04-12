@@ -1,6 +1,5 @@
 @import _variables.sass
 
-
 @keyframes spin
     0%
         --rotate: 0deg
@@ -224,8 +223,11 @@
             margin-right: 2rem
 
 @media (max-width: 767px)
-    #works
+    #teams
+        .team-page
+            display: block
+        .control-box, .control-prev
+            display: none
+    #teams, #rows
         .box-big
-            padding: 2rem
-            div
-                height: calc(56vw - 2rem)
+            padding: 2.5rem

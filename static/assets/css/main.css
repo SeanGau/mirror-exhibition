@@ -58,3 +58,21 @@
 #footer a:link:hover, #footer a:visited:hover {
   color: rgba(255, 255, 255, 0.8);
 }
+
+@media (max-width: 767px) {
+  #main-video {
+    padding: 3rem 0.75rem;
+  }
+  #main-video .iframe-box {
+    width: 100%;
+    height: 52vw;
+  }
+
+  #main-bottom .box .iframe-box {
+    height: 52vw;
+  }
+
+  #footer .col-md-5 {
+    margin-bottom: 3rem;
+  }
+}

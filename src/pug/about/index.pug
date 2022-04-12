@@ -45,7 +45,7 @@ block body
                 p <b>策展協力</b>自己人策展團隊
                 p <b>媒體協力</b>典藏Artouch、Arttime藝術網
                 p <b>場地協力</b>或者工藝櫥窗、節點、了了空間
-            .col-md-8.team-page#team-page-2: .box-big
+            .col-md-8.team-page.bg-team-2#team-page-2: .box-big
                 table
                     tr
                         th(style="min-width: 4.5rem") 策展人
@@ -62,7 +62,7 @@ block body
                             p 潘子村・村 碟樂
                             p 賴信佑・光山行漆器工藝
 
-            .col-md-8.team-page#team-page-3: .box-big
+            .col-md-8.team-page.bg-team-3#team-page-3: .box-big
                 table
                     tr
                         th(style="min-width: 10rem") 展覽執行
@@ -89,7 +89,7 @@ block body
                         th 網站設計
                         td 有点文化
 
-            .col-md-8.team-page#team-page-4: .box-big
+            .col-md-8.team-page.bg-team-4#team-page-4: .box-big
                 .container-fluid
                     .row
                         .col-md-auto 指導單位
@@ -126,6 +126,7 @@ block script
             $("h1", this).text(s)
             nowv = v
         })
+
         $("#teams .bar").on("click", function(e) {
             e.preventDefault()
             let nextId = $(this).data("toggle-team")

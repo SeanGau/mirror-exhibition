@@ -267,10 +267,14 @@
 }
 
 @media (max-width: 767px) {
-  #works .box-big {
-    padding: 2rem;
+  #teams .team-page {
+    display: block;
   }
-  #works .box-big div {
-    height: calc(56vw - 2rem);
+  #teams .control-box, #teams .control-prev {
+    display: none;
+  }
+
+  #teams .box-big, #rows .box-big {
+    padding: 2.5rem;
   }
 }

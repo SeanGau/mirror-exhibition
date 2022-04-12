@@ -40,7 +40,7 @@ table
         min-width: 5rem
         vertical-align: top
 
-.nav-link
+#moreNav .nav-link
     display: flex
     flex-direction: column
     align-items: center
@@ -158,7 +158,29 @@ table
 #footer
     padding: 2.5rem
     color: white
+    .me-4
+        width: 4.5rem
+    .m-0
+        flex: 1
     a:link, a:visited
         color: white
         &:hover
             color: rgba(white, .8)
+
+@media (max-width: 767px)
+    #exhibition, #talk
+        padding: 1.5rem
+        .content-box
+            .col-md-auto, .col
+                padding: 1.5rem
+    #talk
+        .content-box
+            .float-box
+                padding: 1.5rem
+            .bg-1
+                border-radius: 0
+            .bg-3
+                border-radius: 0 0 3rem 3rem
+    #footer
+        .col-md-6
+            margin-bottom: 1rem
