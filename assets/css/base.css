@@ -28,8 +28,13 @@ body {
   z-index: 1050;
   height: 4rem !important;
   background-color: #FFFAEF;
-  padding: 0.5rem 0.5rem;
   filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.1));
+}
+.navbar.navbar-light .container-fluid {
+  background-color: #FFFAEF;
+}
+.navbar.navbar-light .container-fluid .collapse.show {
+  padding-bottom: 1rem;
 }
 .navbar.navbar-light .link-box {
   height: min-content;
@@ -66,7 +71,6 @@ body {
   border-bottom: 2px solid #7C3AED;
 }
 .navbar.navbar-light a.btn {
-  margin-left: 1.5rem;
   height: min-content;
   filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.1));
 }

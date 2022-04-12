@@ -60,7 +60,7 @@ table th {
   vertical-align: top;
 }
 
-.nav-link {
+#moreNav .nav-link {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,11 +72,11 @@ table th {
   text-align: center;
   cursor: pointer;
 }
-.nav-link h3 {
+#moreNav .nav-link h3 {
   line-height: 4rem;
   color: rgba(68, 68, 68, 0.25) !important;
 }
-.nav-link span {
+#moreNav .nav-link span {
   width: 4rem;
   display: block;
   height: 1rem;
@@ -85,7 +85,7 @@ table th {
   filter: drop-shadow(0px 6px 18px rgba(0, 0, 0, 0.25));
   background-color: #D1C9C1;
 }
-.nav-link.active h3 {
+#moreNav .nav-link.active h3 {
   color: #444 !important;
 }
 
@@ -202,9 +202,38 @@ table th {
   padding: 2.5rem;
   color: white;
 }
+#footer .me-4 {
+  width: 4.5rem;
+}
+#footer .m-0 {
+  flex: 1;
+}
 #footer a:link, #footer a:visited {
   color: white;
 }
 #footer a:link:hover, #footer a:visited:hover {
   color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 767px) {
+  #exhibition, #talk {
+    padding: 1.5rem;
+  }
+  #exhibition .content-box .col-md-auto, #exhibition .content-box .col, #talk .content-box .col-md-auto, #talk .content-box .col {
+    padding: 1.5rem;
+  }
+
+  #talk .content-box .float-box {
+    padding: 1.5rem;
+  }
+  #talk .content-box .bg-1 {
+    border-radius: 0;
+  }
+  #talk .content-box .bg-3 {
+    border-radius: 0 0 3rem 3rem;
+  }
+
+  #footer .col-md-6 {
+    margin-bottom: 1rem;
+  }
 }
