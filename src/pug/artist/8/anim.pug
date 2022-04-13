@@ -3,7 +3,7 @@ html
         //power by https://codepen.io/henryegloff/pen/xxZegpW
         style.
             html, body {
-                background-color: #d1dcde;
+                background-color: #363636;
                 margin: 0;
             }
             #bg, #overlay {
@@ -17,6 +17,7 @@ html
                 display: none;
                 z-index: 2;
                 background-image: url("/assets/artist/8/父親的漆陶杯_anim.jpg");
+                background-color: #d1dcde;
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center center;
@@ -131,11 +132,11 @@ html
                     data[i]     = avg; // red
                     data[i + 1] = avg; // green
                     data[i + 2] = avg; // blue
-                    if(avg < 150 && avg > 50) {
+                    if(avg < 130 && avg > 90) {
                         counter++;
                     }
                 }
-                //console.log(counter);
+                console.log(counter);
                 if(counter  < 10) {
                     clearInterval(myInterval);
                     $("#bg").fadeIn(2000);

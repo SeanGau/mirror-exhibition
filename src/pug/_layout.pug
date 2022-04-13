@@ -92,6 +92,10 @@ html(lang="zh-Hant-TW")
             $("#artistDropdownMenuLink").on("mouseenter", function(e) {
                     dropdown.show()
             })
+            $("#artistDropdownMenuLink").on("click", function(e) {
+                    e.preventDefault()
+                    dropdown.show()
+            })
             $(".dropdown-menu").on("mouseleave", function(e) {
                     dropdown.hide()
             })
