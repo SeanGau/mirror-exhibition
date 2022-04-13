@@ -1,16 +1,3 @@
-@keyframes spin {
-  0% {
-    --rotate: 0deg;
-  }
-  100% {
-    --rotate: 360deg;
-  }
-}
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
-}
 #top-anim {
   height: calc(100vh - 4rem);
   background-color: #222533;
@@ -20,6 +7,7 @@
   justify-content: center;
 }
 #top-anim .anim-card {
+  --rotate: 132deg;
   margin-top: 3rem;
   position: relative;
   cursor: pointer;
@@ -28,6 +16,7 @@
   width: 32vh;
 }
 #top-anim .anim-card div {
+  position: relative;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -49,7 +38,6 @@
   position: absolute;
   top: -1%;
   left: -2%;
-  animation: spin 2.5s linear infinite;
 }
 #top-anim .anim-card::after {
   position: absolute;
@@ -65,7 +53,6 @@
   background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
   opacity: 1;
   transition: opacity 0.5s;
-  animation: spin 2.5s linear infinite;
 }
 #top-anim .anim-card:hover {
   transition: 1s;
@@ -216,7 +203,7 @@
   position: relative;
 }
 #teams .control-prev .bar .underline, #teams .control-box .bar .underline {
-  align-self: end;
+  margin-top: auto;
   display: block;
   height: 0.5rem;
   border-radius: 0.25rem;
