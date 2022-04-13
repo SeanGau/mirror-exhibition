@@ -61,17 +61,23 @@
 
 @media (max-width: 767px) {
   #main-video {
-    padding: 3rem 0.75rem;
+    padding: 3rem 2rem;
   }
   #main-video .iframe-box {
     width: 100%;
-    height: 52vw;
+    height: calc(52vw - 1rem);
   }
 
+  #main-bottom {
+    padding: 3rem 2rem;
+  }
   #main-bottom .box .iframe-box {
-    height: 52vw;
+    height: calc(52vw - 1rem);
   }
 
+  #footer {
+    padding: 3rem 2rem;
+  }
   #footer .col-md-5 {
     margin-bottom: 3rem;
   }

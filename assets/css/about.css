@@ -12,8 +12,8 @@
   position: relative;
   cursor: pointer;
   display: flex;
-  height: 48vh;
-  width: 32vh;
+  height: 36vw;
+  width: 24vw;
 }
 #top-anim .anim-card div {
   position: relative;
@@ -54,14 +54,14 @@
   opacity: 1;
   transition: opacity 0.5s;
 }
-#top-anim .anim-card:hover {
+#top-anim .anim-card.active {
   transition: 1s;
 }
-#top-anim .anim-card:hover::before, #top-anim .anim-card:hover::after {
+#top-anim .anim-card.active::before, #top-anim .anim-card.active::after {
   animation: none;
   opacity: 0;
 }
-#top-anim .anim-card:hover h1 {
+#top-anim .anim-card.active h1 {
   transition: 1s;
   opacity: 1;
   background: linear-gradient(0deg, rgba(125, 142, 213, 0) 0%, rgb(199, 205, 255) 50%, rgba(125, 142, 213, 0) 100%);
@@ -259,6 +259,14 @@
   }
 }
 @media (max-width: 767px) {
+  #top-anim .anim-card {
+    height: 60vw;
+    width: 40vw;
+  }
+  #top-anim .anim-card::after {
+    filter: blur(10vw);
+  }
+
   #teams .team-page {
     display: block;
   }
