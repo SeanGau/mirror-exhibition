@@ -1,0 +1,39 @@
+.bg-color-1
+    background-color: #F6E9D0
+.bg-color-2
+    background-color: #EFE3D8
+    &.about span
+        width: 10rem
+        background-color: #D1C9C1
+.bg-color-3
+    background-color: #D6CDC5
+    &.artist span
+        width: 12.5rem
+        background-color: #EEDDCD
+.bg-color-4
+    background-color: #D0C9D6
+.bg-color-5
+    background-color: #D5FAFC
+.bg-color-6
+    background-color: #ECEBED
+
+#carouselImg
+    .carousel-item
+        padding: 4rem
+        > div
+            margin: auto
+            overflow: hidden
+            height: calc(37vw - 4.5rem)
+            width: calc(37vw - 4.5rem)
+            img
+                object-position: center center
+                object-fit: cover
+            border-radius: var(--radius-value)
+            overflow: hidden
+
+@media (max-width: 767px)
+    #carouselImg .carousel-item
+        padding: 2rem
+        > div
+            height: calc(54vw - 2rem)
+            width: calc(54vw - 2rem)

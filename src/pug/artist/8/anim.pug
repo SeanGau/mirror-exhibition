@@ -1,0 +1,152 @@
+html 
+    head 
+        //power by https://codepen.io/henryegloff/pen/xxZegpW
+        style.
+            body {
+                text-align: center;
+                margin: 0;
+                overflow: hidden;
+            }
+
+            .tiles {
+                height: 80vh;
+                border: 10vh solid black;
+                margin: 0 auto;
+            }
+
+            .tile {
+                pointer-events: none;
+                float: left;
+                width: 50%;
+                height: 50%;
+                box-sizing: border-box;
+                font-size: calc(100px + 15vw);
+                font-weight: bold;
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+                font-family: serif;
+            }
+
+            .fliph {
+                transform: scaleX(-1); /* Standard */
+            }
+
+            .flipv {
+                transform: scaleY(-1); /* Standard */
+            }
+
+            .flipv2 {
+                transform: scaleY(-1); /* Standard */
+                transform: rotate(180deg); /* IE 6/7/8 */
+            }
+
+            .fliphv {
+                transform: rotate(90deg);
+            }
+
+            .slider {
+            -webkit-appearance: none;
+            width: 50%;
+            margin: auto;
+            position: relative;
+            bottom: 5vh;
+            height: 10px;
+            border-radius: 5px;
+            background: white;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            }
+
+            .slider:hover {
+            opacity: 1;
+            }
+
+            .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 12.5px;
+            background: #BD8AFD;
+            cursor: pointer;
+            }
+
+            .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 12.5px;
+            background: #BD8AFD;
+            cursor: pointer;
+            }
+
+            @media (max-width: 767px) {
+                .tile {
+                    writing-mode: vertical-rl;
+                }
+            }
+
+    body
+        .tiles
+            .tile
+                .animation.
+                    Dream
+            .tile.fliph
+                .animation.
+                    Dream
+            .tile.flipv
+                .animation.
+                    Dream
+            .tile.fliph.flipv2
+                .animation.
+                    Dream
+        input.slider(type='range' min='50' max='80' value='50' oninput="valChange(this.value)")
+            
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js")
+        script.
+            var elements = document.querySelectorAll(".animation");
+            var timestamp = null;
+            var lastMouseX = null;
+            var lastMouseY = null;
+            var speed = 50;
+            function valChange(val) {
+                speed = val;
+                var el = document.querySelectorAll('.animation');
+                anime.remove(el);
+                play();
+            }
+            document.body.addEventListener("mousemove", function(e) {
+                if (timestamp === null) {
+                    timestamp = Date.now();
+                    lastMouseX = e.screenX;
+                    lastMouseY = e.screenY;
+                    return;
+                }
+
+                var now = Date.now();
+                var dt =  now - timestamp + 1;
+                var dx = e.screenX - lastMouseX;
+                var dy = e.screenY - lastMouseY;
+                var speedX = Math.round(dx / dt * 100);
+                var speedY = Math.round(dy / dt * 100);
+
+                timestamp = now;
+                lastMouseX = e.screenX;
+                lastMouseY = e.screenY;
+            });
+            function play() {
+                var el = document.querySelectorAll('.animation');
+                anime({
+                    targets: el,
+                    rotate: "+=180deg",
+                    easing: "linear",
+                    loop: false,
+                    duration: 30*(100-speed),
+                    complete: () => {
+                        play();
+                    }
+                });
+            }
+            play()
