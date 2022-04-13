@@ -243,7 +243,7 @@
 }
 #teams .team-page table th {
   font-weight: 400;
-  vertical-align: top;
+  vertical-align: baseline;
 }
 #teams #team-page-4 .row > div, #teams #team-page-4 img {
   margin-bottom: 1rem;
