@@ -61,7 +61,7 @@
 
 @media (max-width: 767px) {
   #main-video {
-    padding: 3rem 2rem;
+    padding: 3rem 1.5rem;
   }
   #main-video .iframe-box {
     width: 100%;
@@ -69,14 +69,14 @@
   }
 
   #main-bottom {
-    padding: 3rem 2rem;
+    padding: 3rem 1.5rem;
   }
   #main-bottom .box .iframe-box {
     height: calc(52vw - 1rem);
   }
 
   #footer {
-    padding: 3rem 2rem;
+    padding: 3rem 1.5rem;
   }
   #footer .col-md-5 {
     margin-bottom: 3rem;
