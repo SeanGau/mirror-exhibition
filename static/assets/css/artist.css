@@ -9,7 +9,8 @@
   background-color: #222533;
   position: relative;
 }
-.slogan h2, .slogan p {
+.slogan h2, .slogan h3, .slogan p {
+  font-weight: 400;
   background: linear-gradient(90deg, rgba(255, 239, 239, 0.723958) 0%, rgba(248, 255, 206, 0.64) 23.74%, rgba(179, 237, 255, 0.723958) 60.77%, rgba(199, 205, 255, 0.6) 80.75%, rgba(199, 205, 255, 0.6) 85.85%);
   background-clip: text;
   -webkit-background-clip: text;

@@ -1,0 +1,57 @@
+.bg-color-1 {
+  background-color: #F6E9D0;
+}
+
+.bg-color-2 {
+  background-color: #EFE3D8;
+}
+.bg-color-2.about span {
+  width: 10rem;
+  background-color: #D1C9C1;
+}
+
+.bg-color-3 {
+  background-color: #D6CDC5;
+}
+.bg-color-3.artist span {
+  width: 12.5rem;
+  background-color: #EEDDCD;
+}
+
+.bg-color-4 {
+  background-color: #D0C9D6;
+}
+
+.bg-color-5 {
+  background-color: #D5FAFC;
+}
+
+.bg-color-6 {
+  background-color: #ECEBED;
+}
+
+#carouselImg .carousel-item {
+  padding: 4rem;
+}
+#carouselImg .carousel-item > div {
+  margin: auto;
+  overflow: hidden;
+  height: calc(37vw - 4.5rem);
+  width: calc(37vw - 4.5rem);
+  border-radius: var(--radius-value);
+  overflow: hidden;
+}
+#carouselImg .carousel-item > div img {
+  object-position: center center;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  #carouselImg .carousel-item {
+    padding: 2rem;
+  }
+  #carouselImg .carousel-item > div {
+    height: calc(54vw - 2rem);
+    width: calc(54vw - 2rem);
+  }
+}
