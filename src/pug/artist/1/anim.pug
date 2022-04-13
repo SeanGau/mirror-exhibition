@@ -36,6 +36,9 @@ html
                 ms-=1;
                 if(ms < 0) {
                     ms = 162
-                } 
-                document.getElementById("numberbox").innerText = `00:00:0${parseInt(ms/100)}:${padzero(ms%100)}`
+                    document.getElementById("numberbox").innerText = `00:00:0${parseInt(ms/100)}:${padzero(ms%100)}`
+                }
+                if(ms < 150) {
+                    document.getElementById("numberbox").innerText = `00:00:0${parseInt(ms/100)}:${padzero(ms%100)}`
+                }
             }, 10)
