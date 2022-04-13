@@ -1,16 +1,5 @@
 @import _variables.sass
 
-@keyframes spin
-    0%
-        --rotate: 0deg
-    100%
-        --rotate: 360deg
-
-@property --rotate
-    syntax: "<angle>"
-    initial-value: 132deg
-    inherits: false
-
 #top-anim
     height: calc(100vh - 4rem)
     background-color: #222533
@@ -19,6 +8,7 @@
     align-items: center
     justify-content: center
     .anim-card
+        --rotate: 132deg
         margin-top: 3rem
         position: relative
         cursor: pointer
@@ -26,6 +16,7 @@
         height: 48vh
         width: 32vh
         div
+            position: relative
             z-index: 1
             display: flex
             align-items: center
@@ -46,7 +37,6 @@
             position: absolute
             top: -1%
             left: -2%
-            animation: spin 2.5s linear infinite
 
         &::after
             position: absolute
@@ -62,7 +52,6 @@
             background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2)
             opacity: 1
             transition: opacity .5s
-            animation: spin 2.5s linear infinite
 
         &:hover
             transition: 1s
@@ -180,7 +169,7 @@
             display: inline-flex
             position: relative
             .underline
-                align-self: end
+                margin-top: auto
                 display: block
                 height: .5rem
                 border-radius: .25rem

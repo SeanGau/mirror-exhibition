@@ -33,6 +33,7 @@ gulp.task('server', function () {
     connect.server({
         port: 3000,
         livereload: true,
+        host: '::',
         root: 'static'
     })
     build();

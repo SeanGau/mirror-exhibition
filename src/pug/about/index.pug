@@ -126,6 +126,11 @@ block script
             $("h1", this).text(s)
             nowv = v
         })
+        var rotval = 132
+        setInterval(function() {
+            $(".anim-card").css("--rotate", `${rotval}deg`)
+            rotval+=1
+        }, 15)
 
         $("#teams .bar").on("click", function(e) {
             e.preventDefault()
