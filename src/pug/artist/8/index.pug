@@ -47,11 +47,3 @@ block body
                 a(href="https://www.kousancraft.com.tw/" target="_blank") 更了解藝術家
 block script
     script(src="/assets/js/artist.js")
-    script.
-        let carouselDisc = new bootstrap.Carousel($("#carouselDisc").first(), {
-        })
-        $("#carouselImg").on("slide.bs.carousel", function(e) {
-            console.log(e)
-            carouselDisc.to(e.to)
-            carouselDisc.pause()
-        })

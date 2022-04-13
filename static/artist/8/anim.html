@@ -66,6 +66,7 @@ function setImageAccordingToAspectRatio(imageObj) {
 
 imageObj.onload = function() {
     setImageAccordingToAspectRatio(imageObj);
+    myInterval = setInterval(checkPath, 200);
 }
 imageObj.src = "/assets/artist/8/overlay_bg.png";
 
@@ -128,6 +129,4 @@ function checkPath() {
         clearInterval(myInterval);
         $("#bg").fadeIn(2000);
     }
-};
-
-myInterval = setInterval(checkPath, 200);</script></body></html>
+};</script></body></html>
