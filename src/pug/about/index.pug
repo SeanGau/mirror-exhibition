@@ -105,40 +105,42 @@ block body
                     .row
                         .col-md-auto 指導單位
                         .col
-                            img(src="/assets/logo/文化部.png" alt="")
-                            img(src="/assets/logo/工藝中心.png" alt="")
+                            img.bigger(src="/assets/logo/文化部.png" alt="")
+                            img.smaller(src="/assets/logo/工藝中心.png" alt="")
                     .row 
                         .col-md-auto 主辦單位
                         .col
-                            img(src="/assets/logo/TASA.png" alt="")
+                            img.bigger(src="/assets/logo/TASA.png" alt="")
                     .row 
                         .col-md-auto 策展協力
                         .col
-                            img(src="/assets/logo/自己人.png" alt="")
+                            img.bigger(src="/assets/logo/自己人.png" alt="")
                     .row 
                         .col-md-auto 媒體協力
                         .col
-                            img(src="/assets/logo/artouch.png" alt="")
-                            img(src="/assets/logo/arttime.png" alt="")
+                            img.smaller(src="/assets/logo/artouch.png" alt="")
+                            img.bigger(src="/assets/logo/arttime.png" alt="")
                     .row 
                         .col-md-auto 場地協力
                         .col
                             img(src="/assets/logo/或者工藝櫥窗.png" alt="")
-                            img(src="/assets/logo/節點.png" alt="")
+                            img.smaller(src="/assets/logo/節點.png" alt="")
                             img(src="/assets/logo/了了空間.png" alt="")
 
 block script
     script.
         let randStr = ["原初", "投射", "轉化"]
         let nowv = 0
+        let counter = [0, 0, 0]
         function showCard(e) {
             e.preventDefault();
             let v = (nowv + 1 + parseInt(Math.random()*2))%3
+            counter[v]+=1
             let s = randStr[v]
+            //console.log(counter)
             $("h1", this).text(s)
             nowv = v
             $(this).addClass("active")
-            rotval = 132
         }
         function hideCard() {
             $(this).removeClass("active")
@@ -153,7 +155,7 @@ block script
         var rotval = 132
         setInterval(function() {
             $(".anim-card").css("--rotate", `${rotval}deg`)
-            rotval+=1
+            rotval=(rotval+1)%360
         }, 15)
 
         $("#teams .bar").on("click", function(e) {
