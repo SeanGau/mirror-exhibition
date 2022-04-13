@@ -11,13 +11,17 @@ p
     text-align: justify
     text-justify: inter-word
 
+a:focus, button:focus
+    box-shadow: none !important
+
 .text-center p
     text-align: center
 
 .btn-purple
     background-color: #EDE9FE
+    border: 2px solid transparent
     &:hover
-        outline: 2px solid $color-link
+        border: 2px solid $color-link
 
 body
     position: relative
@@ -78,11 +82,20 @@ body
         background-color: transparent
 
 #helpModal
+    transition: .3s
     background-color: white
     background-image: url("/assets/overlay.png")
     background-size: cover
     background-position: center center
 
+.modal-backdrop.fade
+    pointer-events: none
+    -webkit-backdrop-filter: blur(5px)
+    backdrop-filter: blur(5px)
+    background-color: rgba(0, 0, 0, .5)
+.modal-backdrop.show
+    opacity: 1
+    
 .modal-content
     background-color: transparent
     #workImageBox

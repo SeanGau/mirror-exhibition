@@ -120,12 +120,25 @@ block script
     script.
         let randStr = ["原初", "投射", "轉化"]
         let nowv = 0
-        $(".anim-card").on("mouseenter", function(e) {
+        function showCard(e) {
+            e.preventDefault();
             let v = (nowv + 1 + parseInt(Math.random()*2))%3
             let s = randStr[v]
             $("h1", this).text(s)
             nowv = v
+            $(this).addClass("active")
+            rotval = 132
+        }
+        function hideCard() {
+            $(this).removeClass("active")
+        }
+        $(".anim-card").on({
+            "mouseenter": showCard,
+            "touchstart": showCard,
+            "mouseleave": hideCard,
+            "touchend": hideCard,
         })
+
         var rotval = 132
         setInterval(function() {
             $(".anim-card").css("--rotate", `${rotval}deg`)

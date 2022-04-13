@@ -13,8 +13,8 @@
         position: relative
         cursor: pointer
         display: flex
-        height: 48vh
-        width: 32vh
+        height: 36vw
+        width: 24vw
         div
             position: relative
             z-index: 1
@@ -53,7 +53,7 @@
             opacity: 1
             transition: opacity .5s
 
-        &:hover
+        &.active
             transition: 1s
             &::before, &::after
                 animation: none
@@ -216,6 +216,11 @@
         .team-page
             background-color: transparent
 @media (max-width: 767px)
+    #top-anim .anim-card
+        height: 60vw
+        width: 40vw
+        &::after
+            filter: blur(10vw)
     #teams
         .team-page
             display: block
