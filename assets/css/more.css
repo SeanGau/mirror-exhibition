@@ -199,14 +199,11 @@ table th {
 }
 
 #footer {
-  padding: 2.5rem;
+  padding: 5rem 2.5rem;
   color: white;
 }
 #footer .me-4 {
   width: 4.5rem;
-}
-#footer .m-0 {
-  flex: 1;
 }
 #footer a:link, #footer a:visited {
   color: white;
@@ -235,5 +232,8 @@ table th {
 
   #footer .col-md-6 {
     margin-bottom: 1rem;
+  }
+  #footer .m-0 {
+    flex: 1;
   }
 }
