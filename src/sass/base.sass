@@ -157,13 +157,13 @@ body
     background-size: cover
     background-position: center center
 
-.modal-backdrop.fade
-    pointer-events: none
-    -webkit-backdrop-filter: blur(5px)
-    backdrop-filter: blur(5px)
-    background-color: rgba(0, 0, 0, .5)
-.modal-backdrop.show
-    opacity: 1
+.modal-backdrop, .offcanvas-backdrop
+    &.fade
+        -webkit-backdrop-filter: blur(5px)
+        backdrop-filter: blur(5px)
+        background-color: rgba(0, 0, 0, .5)
+    &.show
+        opacity: 1
     
 .modal-content
     background-color: transparent
@@ -236,5 +236,3 @@ body
             margin-top: 3.8rem
     .offcanvas-backdrop
         margin-top: 4rem
-        ul.flex-row
-            padding-bottom: 1rem
