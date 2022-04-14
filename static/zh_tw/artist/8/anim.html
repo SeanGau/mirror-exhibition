@@ -77,7 +77,6 @@ ctx.lineCap = 'round';
 ctx.strokeStyle = '#fff684';
 
 function mouseMove(e) {
-    e.preventDefault();
     pageX = e.targetTouches ? e.targetTouches[0].pageX : e.pageX;
     pageY = e.targetTouches ? e.targetTouches[0].pageY : e.pageY;
     mouse.x = pageX - this.offsetLeft;
@@ -85,6 +84,13 @@ function mouseMove(e) {
 };
 
 function mouseDown(e) {
+    pageX = e.targetTouches ? e.targetTouches[0].pageX : e.pageX;
+    pageY = e.targetTouches ? e.targetTouches[0].pageY : e.pageY;
+    mouse.x = pageX - this.offsetLeft;
+    mouse.y = pageY - this.offsetTop;
+    if(mouse.x/canvas.width > 0.2 && mouse.x/canvas.width < 0.8 && mouse.y/canvas.height > 0.2 && mouse.y/canvas.height < 0.8) {
+        e.preventDefault();
+    }
     ctx.globalCompositeOperation = "destination-out";
     ctx.beginPath();
     ctx.moveTo(mouse.x, mouse.y);
