@@ -93,6 +93,7 @@
   margin-bottom: 0.25rem;
 }
 #rows .about h1, #rows .curator h1, #rows .team h1 {
+  text-align: center;
   line-height: 2rem;
   z-index: 1;
 }
