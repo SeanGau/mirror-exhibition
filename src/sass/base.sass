@@ -36,17 +36,74 @@ body
     letter-spacing: 0.5px
     font-family: 'Noto Sans TC', sans-serif
     font-weight: 300
+    overflow: auto
+
+#loading
+    position: fixed
+    height: 100%
+    width: 100%
+    z-index: 9999999999
+    -webkit-backdrop-filter: blur(100px)
+    backdrop-filter: blur(100px)
+    background-color: rgba(#FFE2AA, .25)
+    img
+        position: absolute
+        height: 6rem
+        margin: auto
+        left: calc(50% - 3rem)
+        top: calc(50% - 3rem)
+
 
 #bodyOffset
     height: 4rem
 
 .navbar.navbar-light
     z-index: 1050
-    height: 4rem !important
     background-color: #FFFAEF
-    filter: drop-shadow(0px 4px 12px rgba(#000, .1))
-    .container-fluid
-        background-color: #FFFAEF
+    .navbar-toggler-burger
+        height: 2.5rem
+        width: 3rem
+        padding: 0
+        position: relative
+        span
+            position: absolute
+            top: calc(50% - 1.5px)
+            left: calc(50% - 1rem)
+            display: block
+            width: 2rem
+            height: 3px
+            background-color: #666
+            border-radius: 2px
+            transition: .3s
+            &::before
+                content: ""
+                position: absolute
+                margin-top: -8px
+                display: block
+                width: 2rem
+                height: 3px
+                background-color: #666
+                border-radius: 2px
+                transition: .3s
+            &::after
+                content: ""
+                position: absolute
+                margin-top: 8px
+                display: block
+                width: 2rem
+                height: 3px
+                background-color: #666
+                border-radius: 2px
+                transition: .3s
+        &.clicked 
+            span
+                background-color: transparent
+                &::before
+                    transform: translate(0px, 7.5px) rotate(45deg)
+                &::after
+                    transform: translate(0px, -7.5px) rotate(-45deg)
+                
+
     .link-box
         height: min-content
         padding-top: .25rem
@@ -64,8 +121,6 @@ body
             margin: .25rem .5rem
             transition: 0s
             outline: 0
-        &.dropdown-item
-            padding: .25rem .5rem
         &.nav-link, &.dropdown-item
             &:focus
                 color: #333
@@ -78,22 +133,22 @@ body
             height: min-content
             filter: drop-shadow(0px 4px 12px rgba(#000, .1))
             
-.dropdown-menu
-    background-color: #FFFAEF
-    border: 0
-    padding: 1rem 2rem
-    margin-left: -1.5rem !important
-    .dropdown-item:focus, .dropdown-item:hover
-        background-color: transparent
-    &.lang-dropdown
-        right: 0
-        left: auto
-        padding: 1rem
-        min-width: 5rem
-        .dropdown-item
-            &:hover
-                color: $color-link !important
-                border-color: transparent !important
+    .dropdown-menu
+        background-color: #FFFAEF
+        border: 0
+        padding: 1rem 2rem
+        margin-left: -2rem !important
+        .dropdown-item:focus, .dropdown-item:hover
+            background-color: transparent
+        &.lang-dropdown
+            right: 0
+            left: auto
+            padding: 1rem
+            min-width: 5rem
+            .dropdown-item
+                &:hover
+                    color: $color-link !important
+                    border-color: transparent !important
 
 #helpModal
     transition: .3s
@@ -163,10 +218,22 @@ body
             color: $color-link
             background-color: rgba(white, 1)
 
+@media (min-width: 768px)
+    .navbar.navbar-light
+        height: 4rem !important
+        filter: drop-shadow(0px 4px 12px rgba(#000, .1))
+
 @media (max-width: 767px)
     :root
         --radius-value: 2rem
     #navbarNav
-        transition: .15s
+        //transition: .3s ease-in-out
+        &.offcanvas
+            max-width: 101%
+            height: max-content
+            background-color: #FFFAEF
+            margin-top: 3.8rem
+    .offcanvas-backdrop
+        margin-top: 4rem
         ul.flex-row
             padding-bottom: 1rem

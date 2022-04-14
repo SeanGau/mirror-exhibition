@@ -47,6 +47,24 @@ body {
   letter-spacing: 0.5px;
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 300;
+  overflow: auto;
+}
+
+#loading {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 9999999999;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+  background-color: rgba(255, 226, 170, 0.25);
+}
+#loading img {
+  position: absolute;
+  height: 6rem;
+  margin: auto;
+  left: calc(50% - 3rem);
+  top: calc(50% - 3rem);
 }
 
 #bodyOffset {
@@ -55,12 +73,55 @@ body {
 
 .navbar.navbar-light {
   z-index: 1050;
-  height: 4rem !important;
   background-color: #FFFAEF;
-  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.1));
 }
-.navbar.navbar-light .container-fluid {
-  background-color: #FFFAEF;
+.navbar.navbar-light .navbar-toggler-burger {
+  height: 2.5rem;
+  width: 3rem;
+  padding: 0;
+  position: relative;
+}
+.navbar.navbar-light .navbar-toggler-burger span {
+  position: absolute;
+  top: calc(50% - 1.5px);
+  left: calc(50% - 1rem);
+  display: block;
+  width: 2rem;
+  height: 3px;
+  background-color: #666;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.navbar.navbar-light .navbar-toggler-burger span::before {
+  content: "";
+  position: absolute;
+  margin-top: -8px;
+  display: block;
+  width: 2rem;
+  height: 3px;
+  background-color: #666;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.navbar.navbar-light .navbar-toggler-burger span::after {
+  content: "";
+  position: absolute;
+  margin-top: 8px;
+  display: block;
+  width: 2rem;
+  height: 3px;
+  background-color: #666;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.navbar.navbar-light .navbar-toggler-burger.clicked span {
+  background-color: transparent;
+}
+.navbar.navbar-light .navbar-toggler-burger.clicked span::before {
+  transform: translate(0px, 7.5px) rotate(45deg);
+}
+.navbar.navbar-light .navbar-toggler-burger.clicked span::after {
+  transform: translate(0px, -7.5px) rotate(-45deg);
 }
 .navbar.navbar-light .link-box {
   height: min-content;
@@ -83,9 +144,6 @@ body {
   transition: 0s;
   outline: 0;
 }
-.navbar.navbar-light a.dropdown-item {
-  padding: 0.25rem 0.5rem;
-}
 .navbar.navbar-light a.nav-link:focus, .navbar.navbar-light a.dropdown-item:focus {
   color: #333;
 }
@@ -100,23 +158,22 @@ body {
   height: min-content;
   filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.1));
 }
-
-.dropdown-menu {
+.navbar.navbar-light .dropdown-menu {
   background-color: #FFFAEF;
   border: 0;
   padding: 1rem 2rem;
-  margin-left: -1.5rem !important;
+  margin-left: -2rem !important;
 }
-.dropdown-menu .dropdown-item:focus, .dropdown-menu .dropdown-item:hover {
+.navbar.navbar-light .dropdown-menu .dropdown-item:focus, .navbar.navbar-light .dropdown-menu .dropdown-item:hover {
   background-color: transparent;
 }
-.dropdown-menu.lang-dropdown {
+.navbar.navbar-light .dropdown-menu.lang-dropdown {
   right: 0;
   left: auto;
   padding: 1rem;
   min-width: 5rem;
 }
-.dropdown-menu.lang-dropdown .dropdown-item:hover {
+.navbar.navbar-light .dropdown-menu.lang-dropdown .dropdown-item:hover {
   color: #7C3AED !important;
   border-color: transparent !important;
 }
@@ -200,15 +257,28 @@ body {
   background-color: white;
 }
 
+@media (min-width: 768px) {
+  .navbar.navbar-light {
+    height: 4rem !important;
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.1));
+  }
+}
 @media (max-width: 767px) {
   :root {
     --radius-value: 2rem;
   }
 
-  #navbarNav {
-    transition: 0.15s;
+  #navbarNav.offcanvas {
+    max-width: 101%;
+    height: max-content;
+    background-color: #FFFAEF;
+    margin-top: 3.8rem;
   }
-  #navbarNav ul.flex-row {
+
+  .offcanvas-backdrop {
+    margin-top: 4rem;
+  }
+  .offcanvas-backdrop ul.flex-row {
     padding-bottom: 1rem;
   }
 }

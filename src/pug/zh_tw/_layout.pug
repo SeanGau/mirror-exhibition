@@ -6,9 +6,9 @@ block head
 block body
     nav.navbar.navbar-expand-md.navbar-light.fixed-top: .container-fluid
         a.navbar-brand.ms-2.ps-1(href="/"+lang) Mirror
-        button.navbar-toggler(data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='#navbarNav' aria-expanded='false' aria-label='Toggle navigation')
-            span.navbar-toggler-icon
-        #navbarNav.collapse.navbar-collapse
+        a.navbar-toggler-burger(data-bs-toggle='offcanvas' data-bs-target='#navbarNav' aria-controls='#navbarNav')
+            span.
+        #navbarNav.offcanvas.offcanvas-end(tabindex='-1'): .offcanvas-body
             ul.navbar-nav.link-box.me-auto
                 li.nav-item: a.nav-link(href='/'+lang+'/about') 鏡子線上展
                 li.nav-item.dropdown
