@@ -16,12 +16,13 @@ p {
 }
 
 th {
-  vertical-align: baseline;
+  vertical-align: top;
   font-weight: 400;
+  border-right: 1rem solid transparent;
 }
 
 td {
-  vertical-align: baseline;
+  vertical-align: top;
 }
 
 a:focus, button:focus {
@@ -111,6 +112,16 @@ body {
 }
 .dropdown-menu .dropdown-item:focus, .dropdown-menu .dropdown-item:hover {
   background-color: transparent;
+}
+.dropdown-menu.lang-dropdown {
+  right: 0;
+  left: auto;
+  padding: 1rem;
+  min-width: 5rem;
+}
+.dropdown-menu.lang-dropdown .dropdown-item:hover {
+  color: #7C3AED !important;
+  border-color: transparent !important;
 }
 
 #helpModal {
