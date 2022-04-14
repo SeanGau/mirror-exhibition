@@ -11,4 +11,6 @@ html(lang="zh-Hant-TW")
             var userLang = navigator.language || navigator.userLanguage; 
             if(userLang.indexOf('zh') >= 0) {
                 window.location.replace("/zh_tw")
+            } else {
+                window.location.replace("/en")
             }
