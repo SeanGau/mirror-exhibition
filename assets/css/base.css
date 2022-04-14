@@ -186,14 +186,12 @@ body {
   background-position: center center;
 }
 
-.modal-backdrop.fade {
-  pointer-events: none;
+.modal-backdrop.fade, .offcanvas-backdrop.fade {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0.5);
 }
-
-.modal-backdrop.show {
+.modal-backdrop.show, .offcanvas-backdrop.show {
   opacity: 1;
 }
 
@@ -278,8 +276,5 @@ body {
 
   .offcanvas-backdrop {
     margin-top: 4rem;
-  }
-  .offcanvas-backdrop ul.flex-row {
-    padding-bottom: 1rem;
   }
 }
