@@ -87,6 +87,10 @@ table th {
   color: #444 !important;
 }
 
+.en #moreNav .nav-link span {
+  width: 8rem;
+}
+
 #exhibition {
   padding: 3rem;
 }
@@ -120,6 +124,10 @@ table th {
   margin-left: -0.5rem;
   filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.25));
   background-color: #EFE3D8;
+}
+
+.en #exhibition .content-box .title-box span {
+  width: 14.5rem;
 }
 
 #talk {

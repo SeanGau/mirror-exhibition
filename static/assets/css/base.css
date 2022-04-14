@@ -62,9 +62,6 @@ body {
 .navbar.navbar-light .container-fluid {
   background-color: #FFFAEF;
 }
-.navbar.navbar-light .container-fluid .collapse.show {
-  padding-bottom: 1rem;
-}
 .navbar.navbar-light .link-box {
   height: min-content;
   padding-top: 0.25rem;
@@ -206,5 +203,12 @@ body {
 @media (max-width: 767px) {
   :root {
     --radius-value: 2rem;
+  }
+
+  #navbarNav {
+    transition: 0.15s;
+  }
+  #navbarNav ul.flex-row {
+    padding-bottom: 1rem;
   }
 }
