@@ -1,6 +1,65 @@
 #top-anim {
+  position: relative;
   height: calc(100vh - 4rem);
   background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+#intro-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  display: flex;
+}
+#intro-overlay .topeye, #intro-overlay .bottomeye {
+  display: block;
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+#intro-overlay .bottomeye {
+  top: 50%;
+}
+#intro-overlay .textbox {
+  background-color: rgba(255, 255, 255, 0.25);
+  text-align: center;
+  display: block;
+  margin: auto;
+  width: max-content;
+  border-radius: 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 3rem;
+  z-index: 1;
+}
+#intro-overlay .textbox p {
+  font-weight: 400;
+  opacity: 0;
+  text-align: center;
+  margin-bottom: 0;
+  background: linear-gradient(90deg, rgba(255, 239, 239, 0.723958) 0%, rgba(248, 255, 206, 0.64) 23.74%, rgba(179, 237, 255, 0.723958) 60.77%, rgba(199, 205, 255, 0.6) 80.75%, rgba(199, 205, 255, 0.6) 85.85%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#intro-overlay .textbox button {
+  color: #666;
+  opacity: 0;
+  margin-top: 3rem;
+  padding: 0.5rem 3rem;
+  background: #EBF3FF;
+  box-shadow: inset -8px -8px 16px #FFFFFF, inset 8px 8px 16px #D0D3D7;
+  border-radius: 2rem;
+}
+#intro-overlay .textbox button:hover {
+  transition: 0.3s;
+  filter: brightness(0.9);
 }
 
 .slogan {

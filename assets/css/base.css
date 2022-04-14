@@ -72,7 +72,7 @@ body {
 }
 
 .navbar.navbar-light {
-  z-index: 1050;
+  z-index: 1056;
   background-color: #FFFAEF;
 }
 .navbar.navbar-light .navbar-toggler-burger {
@@ -176,6 +176,10 @@ body {
 .navbar.navbar-light .dropdown-menu.lang-dropdown .dropdown-item:hover {
   color: #7C3AED !important;
   border-color: transparent !important;
+}
+
+#workModal {
+  z-index: 1058;
 }
 
 #helpModal {
