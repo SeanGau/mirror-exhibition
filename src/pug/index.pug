@@ -8,9 +8,11 @@ html(lang="zh-Hant-TW")
         link(rel="shortcut icon" type="image/png" href="/assets/favicon.png")
     body   
         script.
+            window.location.replace("/zh_tw")
+            /*
             var userLang = navigator.language || navigator.userLanguage; 
             if(userLang.indexOf('zh') >= 0) {
                 window.location.replace("/zh_tw")
             } else {
                 window.location.replace("/en")
-            }
+            }*/
