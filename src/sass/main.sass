@@ -1,9 +1,99 @@
 @import _variables.sass
 #main-top
     height: calc(100vh - 4rem)
-    .col-4
-        background-position: center center
-        background-size: cover
+    width: 100%
+    margin: 0
+    padding: 0
+    background-color: #FFE8DA
+    position: relative
+    overflow: hidden
+    .box-left
+        background-color: #FFF8E7
+        &.mirror
+            left: 33.33%
+            filter: brightness(0.85) saturate(0.5)
+            &::after
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                height: 100%
+                width: 100%
+                background-color: rgba(0, 80, 255, 0.1)
+    .box-center
+        background-color: #FEC0CB
+        &.mirror
+            left: 66.66%
+            filter: brightness(0.9) saturate(0.8)
+            &::after
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                height: 100%
+                width: 100%
+                background-color: rgba(0, 80, 255, 0.2)
+    .box-right
+        background-color: #7FCFF4
+        &.mirror
+            left: 33.33%
+            filter: brightness(0.9) saturate(0.4)
+            &::after
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                height: 100%
+                width: 100%
+                background-color: rgba(0, 100, 255, 0.3)
+    .box-left, .box-center, .box-right
+        height: calc(100vh - 4rem)
+        width: 33.33%
+        display: inline-block
+        position: relative
+        svg
+            height: auto
+            position: absolute
+            > *
+                cursor: pointer
+                pointer-events: fill
+        &.real
+            z-index: 2
+        &.mirror
+            z-index: 0
+            display: none
+            position: absolute
+            transform: scaleX(-1)
+            &.show
+                display: inline-block
+    .artist-3
+        width: 100%
+        top: 0
+    .artist-4
+        width: 80%
+        left: 0
+        top: 42%
+    .artist-5
+        width: 80%
+        right: 0
+        bottom: 0
+    .artist-6
+        width: 100%
+        left: 0
+        top: -15%
+    .artist-8
+        width: 100%
+        left: 0
+        bottom: 0
+    .artist-1
+        width: 80%
+        left: 10%
+        top: 0
+    .artist-27
+        width: 100%
+        left: 0
+        bottom: 0
+        
 #main-video
     background-color: #ECEBED
     padding: 5rem
@@ -45,6 +135,10 @@
             color: rgba(white, .8)
 
 @media (max-width: 767px)
+    #main-top
+        height: 55vw
+        .box-left, .box-center, .box-right
+            height: 55vw
     #main-video
         padding: 3rem 1.5rem
         .iframe-box
