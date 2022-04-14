@@ -353,3 +353,6 @@ append script
         $("#playaudio").on("click", function(e) {
             $("#audio")[0].play()
         })
+        $("#moreNav .nav-link").on("click", function(e) {
+            $("html, body").animate({scrollTop: 0}, 40)
+        })
