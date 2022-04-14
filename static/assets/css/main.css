@@ -176,6 +176,40 @@
   #main-top .box-left, #main-top .box-center, #main-top .box-right {
     height: 55vw;
   }
+  #main-top .artist-3 {
+    width: 100%;
+    top: 0;
+  }
+  #main-top .artist-4 {
+    width: 100%;
+    left: 0;
+    top: 35%;
+  }
+  #main-top .artist-5 {
+    width: 100%;
+    right: 0;
+    bottom: 0;
+  }
+  #main-top .artist-6 {
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  #main-top .artist-8 {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+  #main-top .artist-1 {
+    width: 100%;
+    left: 0%;
+    top: 0;
+  }
+  #main-top .artist-27 {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
 
   #main-video {
     padding: 3rem 1.5rem;
