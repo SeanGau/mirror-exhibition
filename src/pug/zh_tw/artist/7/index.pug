@@ -3,10 +3,19 @@ append variables
     - title = "張博傑‧真真鑲嵌玻璃研究所"
 append head
     link(rel="stylesheet" href="/assets/css/artist.css?version="+timestamp)
-    link(rel="stylesheet" href="/assets/css/artist4.css?version="+timestamp)
+    link(rel="stylesheet" href="/assets/css/artist7.css?version="+timestamp)
 append body
     #top-anim
-        iframe.w-100.h-100(src='https://www.youtube.com/embed/wjwdxoMe4ZY?rel=0&modestbranding=1&playsinline=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+        #player.w-100.h-100
+        #intro-overlay
+            .topeye
+            .bottomeye
+            .textbox
+                p 您可以關掉周圍的燈光
+                p 戴上耳機
+                p 靜下心
+                p 影片約五分鐘
+                button.btn#startanim 開始
     .slogan.align-items-center.text-center
         h3 以雙手真摯的溫度回應世界與自我；在重複的規律性中，發現光明亮。
         h6 張博傑
@@ -32,3 +41,57 @@ append body
                 a(href="https://www.zhenzhenlab.com/" target="_blank") 更了解藝術家
 append script
     script(src="/assets/js/artist.js") 
+    script(src='https://www.youtube.com/iframe_api')
+    script.
+        let player, iframe
+
+        $(function(){
+            anime({
+                targets: ['#intro-overlay .textbox p', '#startanim'],
+                opacity: 1,
+                easing: 'easeInQuad',
+                duration: 5000,
+                delay: anime.stagger(3000)
+            })
+        })
+        $("#startanim").on("click", function(e){
+            $("#intro-overlay .textbox").fadeOut(1000)
+            anime({
+                targets: '#intro-overlay .topeye',
+                translateY: "-100%",
+                duration: 3000,
+                easing: 'easeInOutQuad',
+            })
+            anime({
+                targets: '#intro-overlay .bottomeye',
+                translateY: "100%",
+                duration: 3000,
+                easing: 'easeInOutQuad',
+                complete: function(anim) {
+                    $("#intro-overlay").fadeOut(1000, function(e) {
+                        player.playVideo();//won't work on mobile
+
+                        var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+                        if (requestFullScreen) {
+                            requestFullScreen.bind(iframe)();
+                        }
+                    })
+                }
+            })
+        })
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '',
+                width: '300',
+                videoId: 'wjwdxoMe4ZY',
+                events: {
+                    'onReady': onPlayerReady
+                }
+            })
+        }
+
+        function onPlayerReady(event) {
+            var player = event.target;
+            iframe = $('#player')[0];
+        }

@@ -7,6 +7,12 @@ append head
 append body
     #top-anim
         iframe.w-100.h-100(src="anim.html", frameborder="0") 
+        #intro-overlay
+            .topeye
+            .bottomeye
+            .textbox
+                p 請嘗試點選任一原點
+                button.btn#startanim 開始
     .slogan.align-items-center.text-center
         h3 用理型純粹卻溫柔的奇異輪廓，波波振送著天籟之鳴，運載、轉譯著天來之音。
         h6 潘子村
@@ -208,4 +214,32 @@ append body
                 p 2022年1月，以"碟樂"一稱統合天鼓與手碟之製作經驗、文化背景，工作室更名「村 碟樂 Tzun’s Pan Sound Sculptures 」。
                 a(href="https://www.sinestudio.co/" target="_blank") 更了解藝術家
 append script
-    script(src="/assets/js/artist.js") 
+    script(src="/assets/js/artist.js")
+    script.
+        $(function(){
+            anime({
+                targets: ['#intro-overlay .textbox p', '#startanim'],
+                opacity: 1,
+                easing: 'easeInQuad',
+                duration: 2000,
+                delay: anime.stagger(1000)
+            })
+        })
+        $("#startanim").on("click", function(e){
+            $("#intro-overlay .textbox").fadeOut(300)
+            anime({
+                targets: '#intro-overlay .topeye',
+                translateY: "-100%",
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            })
+            anime({
+                targets: '#intro-overlay .bottomeye',
+                translateY: "100%",
+                duration: 1000,
+                easing: 'easeInOutQuad',
+                complete: function(anim) {
+                    $("#intro-overlay").fadeOut(500, function(e) {})
+                }
+            })
+        })
