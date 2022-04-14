@@ -1,0 +1,49 @@
+extends /en/_layout.pug
+append variables
+    - title = "賴信佑‧光山行漆器工藝"
+append head
+    link(rel="stylesheet" href="/assets/css/artist.css?version="+timestamp)
+    link(rel="stylesheet" href="/assets/css/artist8.css?version="+timestamp)
+append body
+    #top-anim
+        iframe.w-100.h-100(src="anim.html", frameborder="0") 
+    .slogan.align-items-center.text-center
+        h3 打破的東西不會自行復原，只有決定開始修復了之後，才有機會慢慢的拼湊成形。
+        h6 賴信佑
+    .works
+        .row.g-0
+            .col-md-4: .disc 
+                p.small 2022‧8.5 x 8.5 x 8 cm
+                h2 父親的漆陶杯
+                p 樹漆、素燒陶、土、金粉
+            .col-md-8.bg-color-5
+                .box-big: div: a.workbox(data-angle="p" href="#")
+                    img.d-block.h-100.w-100(src='/assets/artist/8/父親的漆陶杯.jpg')
+        .row.g-0
+            .col-md-4.bg-color-1: .disc 
+                p.small 2022‧8.5 x 8.5 x 5 cm
+                h2 阿公的堆漆盒
+                p 推漆 、土、金粉
+            .col-md-8.bg-color-4
+                .box-big: div: a.workbox(data-angle="p" href="#")
+                    img.d-block.h-100.w-100(src='/assets/artist/8/阿公的堆漆盒.jpg')
+
+        .row.g-0
+            .col-md-4.bg-color-2.about
+                h1 創作概念
+                span.
+            .col-md-8.bg-color-6: .box-big
+                p 這是父親與阿公作品的修復，我相信器物跟人一直都是聯繫著的，正因如此對人的思念也能夠移情到器物上，透過修復器物來達成自我療癒的過程。
+                p 打破的東⻄不會自行復原，只有決定開始修復了之後，才有機會慢慢的拼湊成形，過程即使漫長，但總有一天能修復完成，器物如此、感情也是如此。
+                p 我們家的父子關係不是特別親密，彼此都不擅於表達自己真正的想法，經常在爭執的過程中互相傷害。在父親與阿公都離開了之後，我才瞭解了這世界上的所有事情都是必然的、都導向同一個必然的結果，不管是再怎麼珍惜的東⻄，該打破的時候就是會被打破，器物也許不受時間影響能很仔細的修復還原，但人的生命有終點，一旦錯過了時間就再也無法復原，以此作品表達對父親與阿公的思念。
+                    
+        .row.g-0
+            .col-md-4.bg-color-3.artist
+                h1 藝術家介紹
+                span.
+            .col-md-8.bg-color-6: .box-big
+                p: b 賴信佑‧光山行漆器工藝
+                p 1986年生於台中，2003年開始學習漆器，師承爺爺賴高山、父親賴作明，於2011年開始專職漆藝創作及授課。2016年，賴信佑重組光山行公司，將傳統漆工藝結合設計與現代元素，讓大家能透過使用，感受漆器的美好，體會「用即是美」、「用物見心」的核心價值，期望讓漆器重新回到生活。
+                a(href="https://www.kousancraft.com.tw/" target="_blank") 更了解藝術家
+append script
+    script(src="/assets/js/artist.js")

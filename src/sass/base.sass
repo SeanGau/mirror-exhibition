@@ -12,10 +12,11 @@ p
     text-justify: inter-word
 
 th
-    vertical-align: baseline
+    vertical-align: top
     font-weight: 400
+    border-right: 1rem solid transparent
 td 
-    vertical-align: baseline
+    vertical-align: top
 
 a:focus, button:focus
     box-shadow: none !important
@@ -86,6 +87,15 @@ body
     margin-left: -2rem !important
     .dropdown-item:focus, .dropdown-item:hover
         background-color: transparent
+    &.lang-dropdown
+        right: 0
+        left: auto
+        padding: 1rem
+        min-width: 5rem
+        .dropdown-item
+            &:hover
+                color: $color-link !important
+                border-color: transparent !important
 
 #helpModal
     transition: .3s

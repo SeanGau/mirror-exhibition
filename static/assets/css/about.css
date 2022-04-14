@@ -238,25 +238,25 @@
 #teams .team-page table {
   margin-top: 0;
 }
-#teams .team-page table td, #teams .team-page table th {
+#teams .team-page table tr {
   border-bottom: 1rem solid transparent;
 }
 #teams .team-page table th {
   font-weight: 400;
-  vertical-align: baseline;
 }
-#teams #team-page-4 .row > div, #teams #team-page-4 img {
-  margin-bottom: 1rem;
-}
-#teams #team-page-4 img {
+#teams .team-page img {
   height: 2rem;
   margin-right: 2rem;
+  margin-bottom: 1rem;
 }
-#teams #team-page-4 img.smaller {
+#teams .team-page img.smaller {
   height: 1.5rem;
 }
-#teams #team-page-4 img.bigger {
+#teams .team-page img.bigger {
   height: 2.5rem;
+}
+#teams #team-page-1 {
+  padding-right: 8rem;
 }
 
 @media (min-width: 768px) {
@@ -275,6 +275,9 @@
 
   #teams .team-page {
     display: block;
+  }
+  #teams #team-page-1 {
+    padding-right: 0;
   }
   #teams .control-box, #teams .control-prev {
     display: none;

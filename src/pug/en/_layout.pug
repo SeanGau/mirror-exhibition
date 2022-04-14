@@ -1,0 +1,80 @@
+extends /_base.pug
+block variables
+    - lang='en';
+block head
+    title #{title} - Mirror — An Online Exhibition about the Craft of Healing
+block body
+    nav.navbar.navbar-expand-md.navbar-light.fixed-top: .container-fluid
+        a.navbar-brand.ms-2.ps-1(href="/") Mirror
+        button.navbar-toggler(data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='#navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav.link-box.me-auto
+                li.nav-item: a.nav-link(href='/'+lang+'/about') Exhibition
+                li.nav-item.dropdown
+                    a.nav-link#artistDropdownMenuLink(href='#' data-bs-toggle="dropdown" aria-expanded="false") Artists
+                    ul.dropdown-menu(aria-labelledby="artistDropdownMenuLink")
+                        li
+                            a.dropdown-item(href='/'+lang+'/artist/1') WANG Hsiao-Ai
+                            a.dropdown-item(href='/'+lang+'/artist/2') PAN Tzu-Tsun / Tzun's Pan Sound Sculptures
+                            a.dropdown-item(href='/'+lang+'/artist/3') HUANG Hung-Yu / Tu Xing Studio
+                            a.dropdown-item(href='/'+lang+'/artist/4') CHEN Hsian-Jung / The Fruit Shop
+                            a.dropdown-item(href='/'+lang+'/artist/5') KANG Ya-Chu / Textile Map
+                            a.dropdown-item(href='/'+lang+'/artist/6') LIN Hsiu-Ping / BONTE Handmade Jewelry
+                            a.dropdown-item(href='/'+lang+'/artist/7') CHANG Po-Chien / zhēnzhēn Stained Glass Lab
+                            a.dropdown-item(href='/'+lang+'/artist/8') LAI Hsin-You / Kousan Craft
+                li.nav-item: a.nav-link(href='/'+lang+'/more') More
+            ul.navbar-nav.link-box.flex-row
+                li.nav-item: a.ms-3.btn.btn-purple(href='https://player.soundon.fm/p/25079601-f138-48b3-868b-9e2be7886ca7' target="_blank") 🎧Close your eyes and listen
+                li.nav-item: a.ms-4.btn.btn-purple(href='#' data-bs-toggle="modal" data-bs-target="#helpModal") 🦄
+                li.nav-item.dropdown
+                    a.ms-4.btn.btn-purple#langDropdownLink(href='#' data-bs-toggle="dropdown" aria-expanded="false") 🌍
+                    ul.dropdown-menu.lang-dropdown(aria-labelledby="langDropdownLink")
+                        li
+                            a.dropdown-item(href='#' data-lang-target="/zh_tw") 中文
+                            a.dropdown-item(href='#' data-lang-target="/en") ENGLISH
+    #bodyOffset
+    .modal.fade#workModal(tabindex='-1' aria-hidden='true')
+        .modal-dialog.modal-fullscreen
+            .modal-content
+                .modal-body.d-flex.justify-content-center.align-items.center
+                    #workImageBox: div.img-box
+                        img(src="", alt="", srcset="")
+                        a.close-button(data-bs-dismiss='modal' aria-label='Close')
+                            svg.w-100.h-100(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='currentColor')
+                                // ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. 
+                                path(d='M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z')
+    
+    .modal.fade#helpModal(tabindex='-1' aria-hidden='true')
+        .modal-dialog.modal-fullscreen
+            .modal-content
+                .modal-body.d-flex.justify-content-center.align-items.center
+                    #helpBox
+                        div.text-center.d-none.d-md-block
+                            h4 Welcome to Mirror: An On-line Exhibition about the Craft of Healing.
+                            h4 Eight artists explore the meaning of healing either through artworks or concepts.
+                            p.
+                                Click whichever geometric graphic on the front page to enter the individual artist room.<br>
+                                In each room, an interactive zone will show up first, by scrolling down you can see the artworks.
+                            p.
+                                Click Mirror in the top left corner of the screen can bring you back to the front page.<br>
+                                Click Artist in the menu bar on top can also choose a different room.
+                            p Click the 🦄 icon to expand this guide again.
+                            p Please put on your headphone, settle down and feel the exhibition in your way.
+                        div.text-center.d-block.d-md-none
+                            h5 Welcome to Mirror: An On-line Exhibition about the Craft of Healing.
+                            h5 Eight artists explore the meaning of healing either through artworks or concepts.
+                            p.
+                                Best viewed with desktop web browser.<br>
+                                Tap whichever geometric graphic on the front page to enter the individual artist room.<br>
+                                In each room, an interactive zone will show up first, by scrolling down you can see the artworks.
+                            p.
+                                Tap Mirror in the top left corner of the screen can bring you back to the front page.<br>
+                                Tap the menu icon ☰ in the top right of the screen, then tap Artist can choose to a different room.
+                            p Tap 🦄 to expand this guide again.
+                            p Please put on your headphone, settle down and feel the exhibition in your way.
+
+                        a.close-button(data-bs-dismiss='modal' aria-label='Close')
+                            svg.w-100.h-100(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='currentColor')
+                                // ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. 
+                                path(d='M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z')

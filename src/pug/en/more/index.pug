@@ -1,0 +1,141 @@
+extends /en/_layout.pug
+append variables
+    - title = "More"
+append head
+    link(rel="stylesheet" href="/assets/css/more.css?version="+timestamp)
+append body
+    nav#moreNav.nav.fixed-top
+        a.bg-exhibition.nav-link.active(data-bs-toggle="pill" href="#exhibition")
+            h3 Exhibition
+            span.
+        a.bg-talk.nav-link(data-bs-toggle="pill" href="#talk")
+            h3 Artist Talk
+            span.
+    #exhibition.bg-exhibition
+        .bg-1.content-box.row.g-0
+            .col-md-auto
+                .title-box
+                    small A Pop-up exhibition 
+                    h3 Mirror X OR Craft Life
+                    span.
+                table
+                    tr
+                        th Date
+                        td Fri. Apr. 15th - Sat. Apr. 30th, 2022
+                    tr
+                        th Venue
+                        td 3rd Floor, Or Craft Life<br>(No. 75, Zhongyang Road, Hsinchu City)
+                    tr
+                        th Participatory Artists
+                        td.
+                            WANG Hsiao-Ai<br>
+                            LIN Hsiu-Ping‧BONTE Handmade Jewelry<br>
+                            KANG Ya-Chu‧Textile Map<br>
+                            CHANG Po-Chien‧zhēnzhēn Stained Glass Lab<br>
+                            HUANG Hung-Yu‧Tu Xing Studio<br>
+                            PAN Tzu-Tsun‧Tzun's Pan Sound Sculptures<br>
+                            LAI Hsin-You‧Kousan Craft
+            .col
+                p Mirror — An Online Exhibition about the Craft of Healing shows how artists derive healing power from craft practice. Departing from the exhibition manner in which the final product of art is displayed in a physical space, the participating artists conceptualize craft works and present them through text, video and sound, in an online exhibition. They lead the audience to explore the “creative process” that brings about healing.
+                p Invited by the OR Craft Life, the curatorial team has planned an extra part of the exhibition, Mirror X OR Craft Life: A Pop-up exhibition ,in which the combination of documentary and dance video work of the derivative project “Embrace” is broadcast. Starting from the creative process of craft artists, the video pitched the topic from four sub-topics, which are Sound, Touch, Time, and Symbiosis. It documents the transition of the artist throughout the creative process, as well as the changes in body rhythm, perception and mood caused by different incidents, turning it into a dance video to be narrated. Further, some of the works from the participating artists in Mirror and their other series of handicraft works are also displayed on site. We hope the audience can not only take on the core value of these artistic practice through the form of online exhibition, but also see the physical texture of these works in person.
+                
+    #talk.bg-talk
+        .content-box.row.h-100.g-0 
+            .col-md-4
+                a(href="https://www.accupass.com/go/tasatwmirror1" target="_blank"): .bg-1.float-box
+                    h3 Let's explore the reason of being healed with artists
+                    table
+                        tr
+                            th 
+                            td 14:30-16:00, Saturday April 23rd, 2022
+                        tr
+                            th Venue
+                            td Or Craft Life<br>(No. 75, Zhongyang Rd., East Dist., Hsinchu City)
+                        tr
+                            th Speaker
+                            td.
+                                WANG Hsiao-Ai, LIN Hsiu-Ping, CHEN Hsian-Jung
+                        tr
+                            th Moderator
+                            td Iris, Ping-Chi HUNG
+                        tr
+                            th Link
+                            td(style="text-decoration: underline") Free online signup
+                    .row.mt-auto
+                        .col-3.number 1
+                        .col-9.underline.position-relative: span.
+            .col-md-4
+                a(href="https://www.accupass.com/go/tasatwmirror2" target="_blank"): .bg-2.float-box
+                    h3 The necessary "process" of facing ourselves
+                    table
+                        tr
+                            th 時間
+                            td 5/1 (日) 14:30-16:00 
+                        tr
+                            th 地點
+                            td 節點<br>(台南市永福路二段84號 永福國小旁)
+                        tr
+                            th 與談人
+                            td 黃虹毓・土星工作室、賴信佑・光山行漆器工藝
+                        tr
+                            th 主持人
+                            td 洪秉綺
+                        tr
+                            th 活動連結
+                            td(style="text-decoration: underline") 線上報名
+                    .row.mt-auto
+                        .col-3.number 2
+                        .col-9.underline.position-relative: span.
+            .col-md-4
+                a(href="https://www.accupass.com/go/tasatwmirror3" target="_blank"): .bg-3.float-box
+                    h3 Step into the mode of meditation
+                    table
+                        tr
+                            th 時間
+                            td 5/7 (六) 14:30-16:00 
+                        tr
+                            th 地點
+                            td 了了空間 liáu liáu Art Space<br>(台北市士林區中興街24號1F)
+                        tr
+                            th 與談人
+                            td 康雅筑・織物地圖、張博傑・真真鑲嵌玻璃研究所、潘子村・村 碟樂
+                        tr
+                            th 主持人
+                            td 洪秉綺
+                        tr
+                            th 活動連結
+                            td(style="text-decoration: underline") 線上報名
+                    .row.mt-auto
+                        .col-3.number 3
+                        .col-9.underline.position-relative: span.
+    
+    #article.bg-article.container-fluid
+        .d-flex.flex-column.justify-content-center.align-items-center 
+            .title-box
+                h3 專文
+                span.
+            .article-list
+                a(href="#article"): p 敬請期待
+
+    #footer.bg-footer.container-fluid
+        .row.h-100.g-0
+            .col-md-6.d-flex.justify-content-md-center
+                .me-4: b 觀後問卷
+                .m-0 請填寫<a href="https://www.surveycake.com/s/WKeRB" target="_blank">線上問卷</a>，回饋您的寶貴意見。
+            .col-md-6.d-flex.justify-content-md-center
+                .me-4: b 聯絡我們
+                .m-0 台灣藝文空間連線TASA協會<br><i>service@tasatw.org</i>
+
+
+append script
+    script.
+        $("body").attr("data-bs-target", "#moreNav");
+        $("body").attr("data-bs-offset", "300");
+        $("body").attr("data-bs-spy", "scroll");
+        $("#moreNav .nav-link").on("click", function(e) {
+            e.preventDefault()
+            $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top - 139}, 40)
+        })
+        $(".float-box").on("click", function(e) {
+            $("html, body").animate({scrollTop: $("#talk").offset().top - 139}, 40)
+        })

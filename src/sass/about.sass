@@ -199,21 +199,20 @@
             display: block
         table
             margin-top: 0
-            td, th
+            tr
                 border-bottom: 1rem solid transparent
             th
                 font-weight: 400
-                vertical-align: baseline
-    #team-page-4
-        .row > div, img
-            margin-bottom: 1rem
         img
             height: 2rem
             margin-right: 2rem
+            margin-bottom: 1rem
         img.smaller
             height: 1.5rem
         img.bigger
             height: 2.5rem
+    #team-page-1
+        padding-right: 8rem
 
 @media (min-width: 768px)
     #teams
@@ -228,6 +227,8 @@
     #teams
         .team-page
             display: block
+        #team-page-1
+            padding-right: 0
         .control-box, .control-prev
             display: none
     #teams, #rows

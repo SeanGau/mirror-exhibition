@@ -1,0 +1,51 @@
+extends /en/_layout.pug
+append variables
+    - title = "林秀蘋(思良)‧BONTE好物金工"
+append head
+    link(rel="stylesheet" href="/assets/css/artist.css?version="+timestamp)
+    link(rel="stylesheet" href="/assets/css/artist6.css?version="+timestamp)
+append body
+    #top-sketch
+        img.w-100.h-auto(src="/assets/artist/6/女人三.jpg")
+    #goback
+        a(href="/"+lang+"/artist/6#works")
+            img.w-100(src="/assets/goback.svg", alt="", srcset="")
+    .slogan.align-items-center.text-center.py-5
+        p 2014年心中有個聲音：「要不，做一條關於子宮的項鍊？」
+        p 當我聽見內在的提問時，開始對於子宮產生了巨大的好奇心，我好奇自己的身體，為何我從來沒想過這件事？子宮對於女性又是什麼呢？背後又有什麼樣的故事？如果我連自己的子宮都不了解，該如何做出這一條子宮項鍊，要用什麼材質，什麼技法，畫不出草稿，當下有個靈感，也許可以邀請朋友們一起彩繪子宮，看看會發生什麼事？
+        p 而這條子宮項鍊順利創作出來，同時生命也帶領我走向另一個創作的可能性。
+        p.
+            孕｜我們最初在子宮的生命能量。<br>
+            綻｜如花的綻放開展，女人走在自己的路上，自在美麗。<br>
+            巢｜女人創造自己的家，屬於自己的巢與位置。
+    .works
+        .row.g-0
+            .col-md-4: .disc 
+                p.small 2014‧23 x 28 x 3 cm
+                h2 孕
+                p 999銀線、腰果漆、金箔、黑檀木、鍍18K
+            .col-md-8.bg-color-8
+                .box-big.w-100
+                    div: a.workbox(data-angle="")
+                        img.w-100.h-100(src="/assets/artist/6/孕.jpg", alt="", srcset="")
+        .row.g-0
+            .col-md-4.bg-color-1: .disc 
+                p.small 2015‧10 x 15 x 1 cm
+                h2 綻
+                p 999銀線、台灣肖楠木
+            .col-md-8.bg-color-9
+                .box-big.w-100
+                    div: a.workbox(data-angle="")
+                        img.w-100.h-100(src="/assets/artist/6/綻.jpg", alt="", srcset="")
+        .row.g-0
+            .col-md-4: .disc 
+                p.small 2015‧5 x 6 x 3.5 cm
+                h2 巢
+                p 999銀線
+            .col-md-8.bg-color-8
+                .box-big.w-100
+                    div: a.workbox(data-angle="")
+                        img.w-100.h-100(src="/assets/artist/6/巢.jpg", alt="", srcset="")
+        
+append script
+    script(src="/assets/js/artist.js")

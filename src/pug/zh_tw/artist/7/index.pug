@@ -1,0 +1,34 @@
+extends /zh_tw/_layout.pug
+append variables
+    - title = "張博傑‧真真鑲嵌玻璃研究所"
+append head
+    link(rel="stylesheet" href="/assets/css/artist.css?version="+timestamp)
+    link(rel="stylesheet" href="/assets/css/artist4.css?version="+timestamp)
+append body
+    #top-anim
+        iframe.w-100.h-100(src='https://www.youtube.com/embed/wjwdxoMe4ZY?rel=0&modestbranding=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+    .slogan.align-items-center.text-center
+        h3 以雙手真摯的溫度回應世界與自我；在重複的規律性中，發現光明亮。
+        h6 張博傑
+    .works
+        .row.g-0
+            .col-md-4.bg-color-2.about
+                h1 創作概念
+                span.
+            .col-md-8.bg-color-6: .box-big
+                p: b Relight+NOISE
+                p 以雙手真摯的溫度回應世界與自我。 
+                p 透過雙手創作來認識「物」的製作方式、材料特性、工藝製程，從雙手得到的感知與理解中，感受另一層意識的切面。在使用雙手製作時我可以獲得完全的意識空白，又或是因為重複性的身體動作，讓自己獲得穩定的狀態。如同海浪般的韻律，又似白噪音，能讓我進入睡眠。而在睡去的瞬間，創作有如鑰匙一般地啟動夢境，使我展開奇幻的旅程。
+                p 在作品「Relight+NOISE」裡，我使用攝影機的對焦與散焦，讓傳統花紋的光產生有如夢境般的視覺效果，配合用黑膠唱針刮出花紋本身的聲響，創作出白噪光音的閱讀方式，在這五分鐘，你可以把周圍的燈光關掉，讓螢幕本身的光芒與音場環繞著你。
+                p 重複的規律性，如同時間在每一個開燈與關燈之間渡過，從中獲得鑰匙時，發現光明亮。
+        .row.g-0
+            .col-md-4.bg-color-3.artist
+                h1 藝術家介紹
+                span.
+            .col-md-8.bg-color-6: .box-big
+                p: b 真真鑲嵌玻璃研究所
+                p 在這樣的世代中，我們用雙手真摯的溫度回應。
+                p 真真zhēnzhēn，一個創造「光」的研究室，透過創作的過程之中，與傳統鑲嵌玻璃工藝接軌，希冀利用作品傳達出「慢」、「惜」、「新」等現代日漸消逝的美好態度。 以手工訂製燈具為主要服務內容，透過主題展覽推進工藝的各種可能性，在每一次與藝術家共同合作專案，以品牌即是平台的概念，探索未知的創作範圍，共同抵達於光的前方。
+                a(href="https://www.zhenzhenlab.com/" target="_blank") 更了解藝術家
+append script
+    script(src="/assets/js/artist.js") 

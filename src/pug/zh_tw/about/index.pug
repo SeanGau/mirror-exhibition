@@ -1,0 +1,190 @@
+extends /zh_tw/_layout.pug
+append variables
+    - title = "鏡子線上展"
+append head
+    link(rel="stylesheet" href="/assets/css/about.css?version="+timestamp)
+append body
+    #top-anim
+        .anim-card: div: h1 原初
+        h6 Mirror
+    #rows
+        .row.g-0.bg-color-1
+            .col-md-4.about
+                h1 策展論述
+                span.
+            .col-md-8: .box-big
+                h6.mb-4 《鏡子》療癒工藝線上展
+                p: i 「學著觀察與感受生命，換言之就是培養想像力。因為在這個世界上依然存在著奇蹟；因為生活是，而且永遠都會是一個謎。你要覺察到這點。」− 約瑟夫．阿爾伯斯
+                p 《鏡子》療癒工藝線上展邀請8位藝術家回看自己創作的核心，試著將情緒感官化，以直觀的方式產出。在哲學思辨中更認識自己，在光影中尋找歸屬感，在冥想中紀錄生活的不同情境與狀態，也思考面對關係的修復，如何讓受傷的心走向癒合。在原初、投射和轉化之間來回走動。
+                p 過程中藝術家藉由雙手形塑手中的物件和內心的樣貌，專注感受手中的真實感，以重覆的動作和身體的力量，在作品上留下獨有的印記。作品的最終樣貌也表現藝術家的自主性、投注的時間與心力。有趣的是創作中的未知總是帶來許多驚喜，也許是因為信任內在的指引，才能不斷地前行。
+                p 藝術創作的本質也就是對於美的探究，以及面對自己的探索，進而從中了解自己。如果能夠把這樣的核心概念帶給觀者，觸發他們的共感，進而願意面對自己的情緒，達到整合，那療癒的真諦也就此發生。
+                p 在這個線上展中，我們期望作品就等同於是一面鏡子。當藝術家在面對作品時，作品反映了創作者的內心，以及在過程中的自我成長。當觀眾面向作品時， 除了獲得感官上的體驗外，也期待可以反射出觀者心中最深層的回應。  
+        .row.g-0.bg-color-2
+            .col-md-4.curator
+                h1 關於策展人
+                span.
+            .col-md-8: .box-big
+                p.m-0 洪秉綺，獨立策展人與專業藝術行政，現任台灣藝文空間連線 TASA 協會理事長暨自己人策展團隊成員。曾任竹圍工作室營運總監、台北紅館主任。 畢業於英國倫敦金匠大學(Goldsmiths)文化產業碩士，研究游擊式文化在仕紳化空間的政治關係。關注在藝文環境支持系統、跨界跨領域合作、國際交流以及在地社群連結。展覽策劃主軸著重在透過不同的體感經驗來探究感知與情緒。
+        #teams.row.g-0.bg-team-1
+            .control-box
+                .bar.bg-team-2(data-toggle-team="2")
+                    .underline.active
+                .bar.bg-team-3(data-toggle-team="3")
+                    .underline.
+                .bar.bg-team-4(data-toggle-team="4")
+                    .underline.
+            .control-prev
+                .bar.d-none(data-toggle-team="1")
+                    .underline.
+            .col-md-4.team
+                h1 展覽團隊
+                span.
+            .col-md-8.team-page#team-page-1.active: .box-big
+                table
+                    tr
+                        th(style="width: 6rem") 指導單位
+                        td 文化部、國立台灣工藝研究發展中心
+                    tr
+                        th 主辦單位
+                        td 台灣藝文空間連線TASA協會
+                    tr
+                        th 策展協力
+                        td 自己人策展團隊
+                    tr
+                        th 媒體協力
+                        td 典藏Artouch、Arttime藝術網
+                    tr
+                        th 場地協力
+                        td 或者工藝櫥窗、節點、了了空間
+            .col-md-8.team-page.bg-team-2#team-page-2: .box-big
+                table
+                    tr
+                        th(style="min-width: 4.5rem") 策展人
+                        td 洪秉綺
+                    tr
+                        th 藝術家
+                        td
+                            p 王筱璦・王筱璦金工藝術
+                            p 林秀蘋(思良)・BONTE好物金工
+                            p 陳向榮・向榮水果行
+                            p 康雅筑・織物地圖
+                            p 張博傑・真真鑲嵌玻璃研究所
+                            p 黃虹毓・土星工作室
+                            p 潘子村・村 碟樂
+                            p 賴信佑・光山行漆器工藝
+
+            .col-md-8.team-page.bg-team-3#team-page-3: .box-big
+                table
+                    tr
+                        th(style="min-width: 10rem") 展覽執行
+                        td 冉挹芬、許絲婷
+                    tr
+                        th 口述影像專案執行
+                        td 趙欣怡、複耳工作室、洪秉綺、陳佳蘭
+                    tr
+                        th 配音師
+                        td 陳彥鈞
+                    tr
+                        th 口述影像諮詢顧問
+                        td 趙欣怡、許家峰、曾允凡
+                    tr
+                        th 行銷宣傳
+                        td 譚如芳
+                    tr
+                        th 影片製作
+                        td 舞蹈生態系創意團隊
+                    tr
+                        th 翻譯
+                        td 陳宜艷
+                    tr
+                        th 網站設計
+                        td 有点文化
+
+            .col-md-8.team-page.bg-team-4#team-page-4: .box-big
+                .container-fluid
+                    .row
+                        .col-md-auto 指導單位
+                        .col
+                            img.bigger(src="/assets/logo/文化部.png" alt="")
+                            img.smaller(src="/assets/logo/工藝中心.png" alt="")
+                    .row 
+                        .col-md-auto 主辦單位
+                        .col
+                            img.bigger(src="/assets/logo/TASA.png" alt="")
+                    .row 
+                        .col-md-auto 策展協力
+                        .col
+                            img.bigger(src="/assets/logo/自己人.png" alt="")
+                    .row 
+                        .col-md-auto 媒體協力
+                        .col
+                            img.smaller(src="/assets/logo/artouch.png" alt="")
+                            img.bigger(src="/assets/logo/arttime.png" alt="")
+                    .row 
+                        .col-md-auto 場地協力
+                        .col
+                            img(src="/assets/logo/或者工藝櫥窗.png" alt="")
+                            img.smaller(src="/assets/logo/節點.png" alt="")
+                            img(src="/assets/logo/了了空間.png" alt="")
+
+append script
+    script.
+        let randStr = ["原初", "投射", "轉化"]
+        let nowv = 0
+        let counter = [0, 0, 0]
+        function showCard(e) {
+            e.preventDefault();
+            let v = (nowv + 1 + parseInt(Math.random()*2))%3
+            counter[v]+=1
+            let s = randStr[v]
+            //console.log(counter)
+            $("h1", this).text(s)
+            nowv = v
+            $(this).addClass("active")
+        }
+        function hideCard() {
+            $(this).removeClass("active")
+        }
+        $(".anim-card").on({
+            "mouseenter": showCard,
+            "touchstart": showCard,
+            "mouseleave": hideCard,
+            "touchend": hideCard,
+        })
+
+        var rotval = 132
+        setInterval(function() {
+            $(".anim-card").css("--rotate", `${rotval}deg`)
+            rotval=(rotval+1)%360
+        }, 15)
+
+        $("#teams .bar").on("click", function(e) {
+            e.preventDefault()
+            let nextId = $(this).data("toggle-team")
+            if(nextId == 0) {
+                let currentId = parseInt($("#teams .team-page.active").attr("id").slice(-1))
+                if(currentId > 2) {
+                    nextId = currentId - 1
+                } else {
+                    nextId = 1
+                }
+            }
+            $("#teams .bar").each(function(id, el){
+                $(this).addClass("d-none")
+                if((id!=3 && id+2 > nextId) || (id==3 && nextId>1)) {
+                    $(this).removeClass("d-none")
+                }
+            })
+            $("#teams .team-page").removeClass("active")
+            $("#teams").removeClass("bg-team-1 bg-team-2 bg-team-3 bg-team-4")
+            $(`#team-page-${nextId}`).addClass("active")
+            $("#teams").addClass(`bg-team-${nextId}`)
+            $("#teams .bar .underline").removeClass("active")
+            $(`#teams .bar .underline`).eq(nextId-1).addClass("active")
+            $("html, body").scrollTop($("#teams").offset().top)
+        })
+
+        $("#teams .bar").on("mouseenter", function(e) {
+            $("#teams .bar .underline").removeClass("active")
+            $(".underline", this).addClass("active")
+        })

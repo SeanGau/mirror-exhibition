@@ -51,13 +51,11 @@ h3 {
   z-index: 1;
 }
 
-table td, table th {
+table tr {
   border-top: 1.5rem solid transparent;
 }
 table th {
-  font-weight: 500;
   min-width: 5rem;
-  vertical-align: baseline;
 }
 
 #moreNav .nav-link {

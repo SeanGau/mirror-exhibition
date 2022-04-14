@@ -1,0 +1,133 @@
+<html> <head> <!--power by https://codepen.io/henryegloff/pen/xxZegpW--><style>html, body {
+    background-color: #363636;
+    margin: 0;
+}
+#bg, #overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+#bg {
+    display: none;
+    z-index: 2;
+    background-image: url("/assets/artist/8/父親的漆陶杯_anim.jpg");
+    background-color: #d1dcde;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#overlay {
+    z-index: 0;
+    background-image: url("/assets/artist/8/overlay2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#c {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+</style></head><body><div id="bg"></div><div id="overlay"></div><canvas id="c"></canvas><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><script>var canvas = document.getElementById("c");
+canvas.width = document.body.scrollWidth;
+canvas.height = document.body.scrollHeight;
+var ctx = canvas.getContext("2d");
+var mouse = {x: 0, y: 0};
+var imageObj = new Image();
+
+function setImageAccordingToAspectRatio(imageObj) {
+    var horizontalStart, verticalStart, newHeight, newWidth;
+    var imageWidthToHeightRatio = imageObj.width / imageObj.height;
+    var canvasWidthToHeightRatio = canvas.width / canvas.height;
+
+    if(imageWidthToHeightRatio > canvasWidthToHeightRatio) {
+        newWidth = canvas.width;
+        newHeight = imageObj.height * (newWidth / imageObj.width);
+        horizontalStart = 0;
+        verticalStart = (canvas.height - newHeight)/2;
+    }
+
+    else if(imageWidthToHeightRatio < canvasWidthToHeightRatio) {
+        newHeight = canvas.height;
+        newWidth = imageObj.width * (newHeight / imageObj.height);
+        horizontalStart = (canvas.width - newWidth)/2;
+        verticalStart = 0;
+    }
+    else {
+        newHeight = canvas.height;
+        newWidth = canvas.width;
+        horizontalStart = 0;
+        verticalStart = 0;
+    }
+    ctx.drawImage(imageObj, horizontalStart, verticalStart, newWidth, newHeight);
+};
+
+imageObj.onload = function() {
+    setImageAccordingToAspectRatio(imageObj);
+    myInterval = setInterval(checkPath, 200);
+}
+imageObj.src = "/assets/artist/8/overlay_bg.png";
+
+ctx.lineWidth = (canvas.width + canvas.height) /60;
+ctx.lineJoin = 'round';
+ctx.lineCap = 'round';
+ctx.strokeStyle = '#fff684';
+
+function mouseMove(e) {
+    e.preventDefault();
+    pageX = e.targetTouches ? e.targetTouches[0].pageX : e.pageX;
+    pageY = e.targetTouches ? e.targetTouches[0].pageY : e.pageY;
+    mouse.x = pageX - this.offsetLeft;
+    mouse.y = pageY - this.offsetTop;
+};
+
+function mouseDown(e) {
+    ctx.globalCompositeOperation = "destination-out";
+    ctx.beginPath();
+    ctx.moveTo(mouse.x, mouse.y);
+
+    canvas.addEventListener('mousemove', onPaint);
+    canvas.addEventListener('touchmove', onPaint);
+};
+
+function onPaint(e) {
+    ctx.lineTo(mouse.x, mouse.y);
+    ctx.stroke();
+};
+
+function mouseUp(e) {
+    ctx.globalCompositeOperation = "source-over";
+    canvas.removeEventListener('mousemove', onPaint);
+    canvas.removeEventListener('touchmove', onPaint);
+}
+
+canvas.addEventListener('mousedown', mouseDown);
+canvas.addEventListener('touchstart', mouseDown);
+canvas.addEventListener('mousemove', mouseMove);
+canvas.addEventListener('touchmove', mouseMove);
+canvas.addEventListener('mouseup', mouseUp);
+canvas.addEventListener('mouseleave', mouseUp);
+canvas.addEventListener('touchend', mouseUp);
+
+function checkPath() {
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const data = imageData.data;
+    var counter = 0;
+    for (var i = 0; i < data.length; i += 4) {
+        var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+        data[i]     = avg; // red
+        data[i + 1] = avg; // green
+        data[i + 2] = avg; // blue
+        if(avg < 130 && avg > 90) {
+            counter++;
+        }
+    }
+    console.log(counter);
+    if(counter  < 10) {
+        clearInterval(myInterval);
+        $("#bg").fadeIn(2000);
+    }
+};</script></body></html>

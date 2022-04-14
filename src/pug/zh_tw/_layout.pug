@@ -1,0 +1,85 @@
+extends /_base.pug
+block variables
+    - lang='zh_tw';
+block head
+    title #{title} - 《鏡子》療癒工藝線上展
+block body
+    nav.navbar.navbar-expand-md.navbar-light.fixed-top: .container-fluid
+        a.navbar-brand.ms-2.ps-1(href="/") Mirror
+        button.navbar-toggler(data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='#navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav.link-box.me-auto
+                li.nav-item: a.nav-link(href='/'+lang+'/about') 鏡子線上展
+                li.nav-item.dropdown
+                    a.nav-link#artistDropdownMenuLink(href='#' data-bs-toggle="dropdown" aria-expanded="false") 藝術家
+                    ul.dropdown-menu(aria-labelledby="artistDropdownMenuLink")
+                        li
+                            a.dropdown-item(href='/'+lang+'/artist/1') 王筱璦‧王筱璦金工藝術
+                            a.dropdown-item(href='/'+lang+'/artist/2') 潘子村‧村 碟樂
+                            a.dropdown-item(href='/'+lang+'/artist/3') 黃虹毓‧土星工作室
+                            a.dropdown-item(href='/'+lang+'/artist/4') 陳向榮‧向榮水果行
+                            a.dropdown-item(href='/'+lang+'/artist/5') 康雅筑‧織物地圖
+                            a.dropdown-item(href='/'+lang+'/artist/6') 林秀蘋(思良)‧BONTE好物金工
+                            a.dropdown-item(href='/'+lang+'/artist/7') 張博傑‧真真鑲嵌玻璃研究所
+                            a.dropdown-item(href='/'+lang+'/artist/8') 賴信佑‧光山行漆器工藝
+                li.nav-item: a.nav-link(href='/'+lang+'/more') 了解更多
+            ul.navbar-nav.link-box.flex-row
+                li.nav-item: a.ms-3.btn.btn-purple(href='https://player.soundon.fm/p/25079601-f138-48b3-868b-9e2be7886ca7' target="_blank") 🎧閉上眼聽展覽
+                li.nav-item: a.ms-4.btn.btn-purple(href='#' data-bs-toggle="modal" data-bs-target="#helpModal") 🦄
+                li.nav-item.dropdown
+                    a.ms-4.btn.btn-purple#langDropdownLink(href='#' data-bs-toggle="dropdown" aria-expanded="false") 🌍
+                    ul.dropdown-menu.lang-dropdown(aria-labelledby="langDropdownLink")
+                        li
+                            a.dropdown-item(href='#' data-lang-target="/zh_tw") 中文
+                            a.dropdown-item(href='#' data-lang-target="/en") ENGLISH
+    #bodyOffset
+    .modal.fade#workModal(tabindex='-1' aria-hidden='true')
+        .modal-dialog.modal-fullscreen
+            .modal-content
+                .modal-body.d-flex.justify-content-center.align-items.center
+                    #workImageBox: div.img-box
+                        img(src="", alt="", srcset="")
+                        a.close-button(data-bs-dismiss='modal' aria-label='Close')
+                            svg.w-100.h-100(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='currentColor')
+                                // ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. 
+                                path(d='M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z')
+    
+    .modal.fade#helpModal(tabindex='-1' aria-hidden='true')
+        .modal-dialog.modal-fullscreen
+            .modal-content
+                .modal-body.d-flex.justify-content-center.align-items.center
+                    #helpBox
+                        div.text-center.d-none.d-md-block
+                            h4 歡迎你／妳來到《鏡子》療癒工藝線上展
+                            h4 八位參展藝術家，或以作品、或以概念，來探索療癒真諦
+                            p.
+                                首頁點選任一幾何圖形可進入個別藝術家展間<br>
+                                展間將先出現概念互動區，往下滑可欣賞作品
+                            p.
+                                左上方點選「Mirror」可回到首頁<br>
+                                點選「藝術家」亦可轉換展間
+                            h4 忘記了？別擔心~
+                            p 右上方點選「🦄」可再度展開本說明
+                            p 請戴上耳機，靜下心自由地感受
+                        div.text-center.d-block.d-md-none
+                            h5 歡迎你／妳來到
+                            h5 《鏡子》療癒工藝線上展。
+                            h5 八位參展藝術家，或以作品、或以概念，來探索療癒真諦。
+                            p.
+                                推薦以電腦版瀏覽本展覽。<br>
+                                首頁點選任一幾何圖形<br>
+                                可進入個別藝術家展間。<br>
+                                展間將先出現概念互動區，<br>
+                                往下滑可欣賞作品。
+                            p.
+                                左上方點選「Mirror」可回到首頁。<br>
+                                右上方「☰」點選「藝術家」亦可轉換展間
+                            h4 忘記了？別擔心~
+                            p 點選「🦄」可再度展開本說明
+                            p 請戴上耳機，靜下心自由地感受
+
+                        a.close-button(data-bs-dismiss='modal' aria-label='Close')
+                            svg.w-100.h-100(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='currentColor')
+                                // ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. 
+                                path(d='M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z')

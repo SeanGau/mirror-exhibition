@@ -1,0 +1,56 @@
+block variables
+doctype
+html(lang="zh-Hant-TW")
+    head
+        //網頁程式設計－位元創意有限公司
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        //meta(property="og:title" content="")
+        meta(property="og:image" content="/assets/overlay.png")
+        //meta(name="description" content="")
+        link(rel="shortcut icon" type="image/png" href="/assets/favicon.png")
+        link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous')
+        link(href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@300;500;700&family=Noto+Sans:wght@400;800&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="/assets/css/base.css?version="+timestamp)
+        block head
+    body(tabindex="0" class=lang)
+        block body      
+        script(src='https://code.jquery.com/jquery-3.6.0.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=' crossorigin='anonymous')        
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous')
+        script.
+            $(function() {
+                function checkLoad() {
+                    const lastVisit = localStorage.getItem('lastVisit')
+                    const now = new Date()
+                    if(lastVisit) {
+                        if(now.getTime() - lastVisit < 24*60*60*1000) 
+                            return
+                    }
+                    let helpModal = new bootstrap.Modal(document.getElementById('helpModal'), {})
+                    helpModal.show()
+                    localStorage.setItem('lastVisit', now.getTime())
+                }
+                checkLoad()
+            })
+
+            var dropdown = new bootstrap.Dropdown(document.getElementById('artistDropdownMenuLink'), {});
+            $("#artistDropdownMenuLink").on("mouseenter", function(e) {
+                dropdown.show()
+            })
+            $("#artistDropdownMenuLink").on("click", function(e) {
+                e.preventDefault()
+                dropdown.show()
+            })
+            $(".dropdown-menu").on("mouseleave", function(e) {
+                dropdown.hide()
+            })
+            $(".lang-dropdown .dropdown-item").on("click", function(e) {
+                e.preventDefault()
+                var currentUrl = window.location.href
+                if(currentUrl.indexOf("/en") >= 0) {
+                    window.location.href = currentUrl.replace("/en", $(this).data("lang-target"))
+                } else {
+                    window.location.href = currentUrl.replace("/zh_tw", $(this).data("lang-target"))
+                }
+            })
+        block script

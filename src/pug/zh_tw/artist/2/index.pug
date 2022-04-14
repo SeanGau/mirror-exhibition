@@ -1,0 +1,211 @@
+extends /zh_tw/_layout.pug
+append variables
+    - title = "潘子村‧村 碟樂"
+append head
+    link(rel="stylesheet" href="/assets/css/artist.css?version="+timestamp)
+    link(rel="stylesheet" href="/assets/css/artist2.css?version="+timestamp)
+append body
+    #top-anim
+        iframe.w-100.h-100(src="anim.html", frameborder="0") 
+    .slogan.align-items-center.text-center
+        h3 用理型純粹卻溫柔的奇異輪廓，波波振送著天籟之鳴，運載、轉譯著天來之音。
+        h6 潘子村
+    .works
+        .row.g-0
+            .col-md-4: .disc 
+                p.small 2022‧16 x 6 cm
+                h2 恆生罄
+                p 黃銅
+                p.mt-4: b.
+                    一始。<br>
+                    萬物初始，無中生有，有道為一，一元復始。
+            .col-md-8
+                #carousel1.carousel.slide.w-100(data-bs-ride='false')
+                    .carousel-inner
+                        .carousel-item.active
+                            .row.g-0
+                                .col-6.carousel-left: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/01-01.jpg')
+                                .col-6.carousel-right: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/01-02.jpg')
+                        .carousel-item
+                            .row.g-0
+                                .col-6.carousel-left: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/01-03.jpg')
+                                .col-6.carousel-right: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/01-04.jpg')
+                    button.carousel-control-prev(data-bs-target='#carousel1' data-bs-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.visually-hidden Previous
+                    button.carousel-control-next(data-bs-target='#carousel1' data-bs-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.visually-hidden Next
+                .box-big.bg-color-6.w-100
+                    div
+                        iframe.w-100.h-100(src='https://www.youtube.com/embed/hq1IRICrL3Y?rel=0&modestbranding=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+        .row.g-0
+            .col-md-4.bg-color-1: .disc
+                p.small 2022‧16 x 6 cm
+                h2 迷你
+                p 不鏽鋼304
+                p.mt-4: b.
+                    空間。<br>
+                    六個音符，是構成音樂風格的最低限度，藉由將最常見的音階組合設計，濃縮成為在掌中的音樂文化與世界風景。
+            .col-md-8
+                #carousel2.carousel.slide.revert-bg.w-100(data-bs-ride='false')
+                    .carousel-inner
+                        .carousel-item.active
+                            .row.g-0
+                                .col-6.carousel-left: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/02-01.jpg')
+                                .col-6.carousel-right: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/02-02.jpg')
+                        .carousel-item
+                            .row.g-0
+                                .col-6.carousel-left: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/02-03.jpg')
+                                .col-6.carousel-right: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/02-04.jpg')
+                    button.carousel-control-prev(data-bs-target='#carousel2' data-bs-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.visually-hidden Previous
+                    button.carousel-control-next(data-bs-target='#carousel2' data-bs-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.visually-hidden Next
+                .box-big.bg-color-6.w-100
+                    div
+                        iframe.w-100.h-100(src='https://www.youtube.com/embed/Z8p6QCLL_6Q?rel=0&modestbranding=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+        .row.g-0
+            .col-md-4: .disc
+                p.small 2022‧26 x 10 cm
+                h2 四季
+                p 不鏽鋼316
+                p.mt-4: b.
+                    時間。<br>
+                    忠實設置碟樂20年歷史最常用的音列設計與音階，以四種風格代表四季樣貌，作為探索樂音宇宙的開始。
+            .col-md-8
+                #carousel3.carousel.slide.w-100(data-bs-ride='false')
+                    .carousel-inner
+                        .carousel-item.active
+                            .row.g-0
+                                .col-6.carousel-left: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/03-01.jpg')
+                                .col-6.carousel-right: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/03-02.jpg')
+                        .carousel-item
+                            .row.g-0
+                                .col-6.carousel-left: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/03-03.jpg')
+                                .col-6.carousel-right: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/03-04.jpg')
+                    button.carousel-control-prev(data-bs-target='#carousel3' data-bs-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.visually-hidden Previous
+                    button.carousel-control-next(data-bs-target='#carousel3' data-bs-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.visually-hidden Next
+                .box-big.bg-color-6.w-100
+                    div
+                        iframe.w-100.h-100(src='https://www.youtube.com/embed/W6Ru99LJ6D4?rel=0&modestbranding=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+        .row.g-0
+            .col-md-4.bg-color-1: .disc
+                p.small 2022‧36 x 11 cm
+                h2 天來
+                p 不鏽鋼316
+                p.mt-4: b.
+                    結合物理拍頻現象的雙層結構，及倍頻泛音的音片設計，創造出打破制約，綿延無盡的聲感新體驗。
+            .col-md-8
+                #carousel4.carousel.slide.revert-bg.w-100(data-bs-ride='false')
+                    .carousel-inner
+                        .carousel-item.active
+                            .row.g-0
+                                .col-6.carousel-left: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/04-01.jpg')
+                                .col-6.carousel-right: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/04-02.jpg')
+                        .carousel-item
+                            .row.g-0
+                                .col-6.carousel-left: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/04-03.jpg')
+                                .col-6.carousel-right: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/04-04.jpg')
+                    button.carousel-control-prev(data-bs-target='#carousel4' data-bs-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.visually-hidden Previous
+                    button.carousel-control-next(data-bs-target='#carousel4' data-bs-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.visually-hidden Next
+                .box-big.bg-color-6.w-100
+                    div
+                        iframe.w-100.h-100(src='https://www.youtube.com/embed/BeuFEvjP02g?rel=0&modestbranding=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+        .row.g-0
+            .col-md-4: .disc
+                p.small 2022‧26 x 12 cm
+                h2 初心
+                p 碳鋼
+                p.mt-4: b.
+                    一顆顆廢棄瓦斯桶的改造與再生，是天鼓的開始與初心。
+            .col-md-8
+                #carousel5.carousel.slide.w-100(data-bs-ride='false')
+                    .carousel-inner
+                        .carousel-item.active
+                            .row.g-0
+                                .col-6.carousel-left: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/05-01.jpg')
+                                .col-6.carousel-right: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/05-02.jpg')
+                        .carousel-item
+                            .row.g-0
+                                .col-6.carousel-left: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/05-03.jpg')
+                                .col-6.carousel-right: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/05-04.jpg')
+                        .carousel-item
+                            .row.g-0
+                                .col-6.carousel-left: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/05-05.jpg')
+                                .col-6.carousel-right: div: a.workbox(href="#")
+                                    img.d-block.h-100.w-100(src='/assets/artist/2/05-06.jpg')
+                    button.carousel-control-prev(data-bs-target='#carousel5' data-bs-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.visually-hidden Previous
+                    button.carousel-control-next(data-bs-target='#carousel5' data-bs-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.visually-hidden Next
+                .box-big.bg-color-6.w-100
+                    div
+                        iframe.w-100.h-100(src='https://www.youtube.com/embed/eK1IqKtTUec?rel=0&modestbranding=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+
+        .row.g-0
+            .col-md-4.bg-color-2.about
+                h1 創作概念
+                span.
+            .col-md-8.bg-color-6: .box-big
+                p.
+                    聲音，是官能對比最強烈的一種感受<br>
+                    而對比，是世界組成的真相<br>
+                    動靜、呼吸、內外、生滅、終始...
+                p.
+                    藉由彈敲點奏的動作，與自己互動<br>
+                    藉由金屬反映的鏡像，與自己相識<br>
+                    藉由倍率和諧的音頻鳴響，與自然之法共在
+                p.
+                    外形如飛船的天鼓<br>
+                    如凝縮宇宙體般的橢圓腔體<br>
+                    用理型純粹卻溫柔的奇異輪廓<br>
+                    波波振送著天籟之鳴，運載、轉譯著天來之音<br>
+                    與之，暫卻時空<br>
+                    持續平衡，找回自我。
+        .row.g-0
+            .col-md-4.bg-color-3.artist
+                h1 藝術家介紹
+                span.
+            .col-md-8.bg-color-6: .box-big
+                p: b 潘子村(阿丹)・村 碟樂
+                p 台灣宜蘭人。
+                p 2013年10月，經網路自學，創立台灣第一家天鼓 (steel tongue drum)自造品牌Sine. Studio，融合體驗設計、工藝美學，賦予樂器製作更多生活與休閒的詮釋空間。<br>曾獲2020年台灣金點設計獎標章，2021台灣文博會最佳文創精品獎。
+                p 2021年 6月，亦經自學自造，製作出台灣第一只手碟(Handpan)，同年8月以實驗與精進為目標，草創村手碟Tzun’s Handpan，開啟台灣第一批自造手碟之歷程。
+                p 2022年1月，以"碟樂"一稱統合天鼓與手碟之製作經驗、文化背景，工作室更名「村 碟樂 Tzun’s Pan Sound Sculptures 」。
+                a(href="https://www.sinestudio.co/" target="_blank") 更了解藝術家
+append script
+    script(src="/assets/js/artist.js") 
