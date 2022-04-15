@@ -290,12 +290,15 @@ body {
     --radius-value: 2rem;
   }
 
+  #navOffcanvas .link-box {
+    padding-bottom: 0.75rem;
+  }
   #navOffcanvas .dropdown-menu {
     background-color: transparent;
   }
   #navOffcanvas .dropdown-menu.lang-dropdown {
     margin-left: 1.5rem !important;
-    padding: 1rem 0;
+    padding: 1rem 0 0 0;
   }
   #navOffcanvas .dropdown-menu.lang-dropdown .dropdown-item {
     padding: 0.25rem 0;
