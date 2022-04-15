@@ -118,8 +118,19 @@ body
             font-size: 2rem
             margin-right: 4rem
             padding: 0
+            background: black
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            background-clip: text
+            text-fill-color: transparent
             &:hover
-                color: $color-link !important
+                transition: .5s
+                background: linear-gradient(91.3deg, rgba(124, 58, 237, 0.5) -30.43%, rgba(140, 223, 250, 0.7) 63.6%, rgba(124, 58, 237, 0.2) 103.39%, rgba(124, 58, 237, 0.6) 129.68%)
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+                background-clip: text
+                text-fill-color: transparent
+
         &.nav-link
             color: #484646
             padding: .25rem .5rem
