@@ -172,11 +172,11 @@ body {
   border-color: transparent !important;
 }
 .navbar.navbar-light a.btn {
-  padding: 0.4rem 0.5rem;
   height: min-content;
   filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.1));
   z-index: 1;
   word-break: keep-all;
+  line-height: 1.5rem;
 }
 .navbar.navbar-light .dropdown-menu {
   background-color: #FFFAEF;
@@ -293,6 +293,9 @@ body {
 
   #navOffcanvas .link-box {
     padding-bottom: 0.75rem;
+  }
+  #navOffcanvas .link-box a.btn {
+    padding: 0.4rem 0.5rem;
   }
   #navOffcanvas .dropdown-menu {
     background-color: transparent;
