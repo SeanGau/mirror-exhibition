@@ -11,11 +11,11 @@ append body
             .topeye
             .bottomeye
             .textbox
-                p 您可以關掉周圍的燈光
-                p 戴上耳機
-                p 靜下心
-                p 影片約五分鐘
-                button.btn#startanim 開始
+                p Please turn off the light.
+                p Put on your headphone.
+                p Relax.
+                p And enjoy the five-minute video.
+                button.btn#startanim Start
     .slogan.align-items-center.text-center
         h3 Responding to the world and self with the sincere warmth of both hands; within the regularity of repetition we find light and brilliance.
         h6 CHANG Po-Chien
@@ -91,7 +91,8 @@ append script
                     playsinline: 1,
                 },
                 events: {
-                    'onReady': onPlayerReady
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
                 }
             })
         }
@@ -99,4 +100,17 @@ append script
         function onPlayerReady(event) {
             var player = event.target;
             iframe = $('#player')[0];
+        }
+
+        function onPlayerStateChange(event) {
+            console.log(event.data)
+            if (event.data == 0) {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) { /* Safari */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE11 */
+                    document.msExitFullscreen();
+                }
+            }
         }
