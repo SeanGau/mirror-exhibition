@@ -293,7 +293,11 @@ body {
     background-color: transparent;
   }
   #navOffcanvas .dropdown-menu.lang-dropdown {
-    margin-left: -0.5rem !important;
+    margin-left: 1.5rem !important;
+    padding: 1rem 0;
+  }
+  #navOffcanvas .dropdown-menu.lang-dropdown .dropdown-item {
+    padding: 0.25rem 0;
   }
   #navOffcanvas.offcanvas {
     max-width: 101%;
