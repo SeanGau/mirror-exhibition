@@ -171,29 +171,5 @@ append script
     script(src="/assets/js/artist.js") 
     script.
         $( document ).ready(function() {
-            anime({
-                targets: ['#intro-overlay .textbox p', '#startanim'],
-                opacity: 1,
-                easing: 'easeInQuad',
-                duration: 2000,
-                delay: anime.stagger(1000)
-            })
-        })
-        $("#startanim").on("click", function(e){
-            $("#intro-overlay .textbox").fadeOut(300)
-            anime({
-                targets: '#intro-overlay .topeye',
-                translateY: "-100%",
-                duration: 1000,
-                easing: 'easeInOutQuad',
-            })
-            anime({
-                targets: '#intro-overlay .bottomeye',
-                translateY: "100%",
-                duration: 1000,
-                easing: 'easeInOutQuad',
-                complete: function(anim) {
-                    $("#intro-overlay").fadeOut(500, function(e) {})
-                }
-            })
+            startItro(2000);
         })

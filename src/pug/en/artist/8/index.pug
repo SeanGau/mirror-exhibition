@@ -7,6 +7,12 @@ append head
 append body
     #top-anim
         iframe.w-100.h-100(src="/zh_tw/artist/8/anim.html", frameborder="0") 
+        #intro-overlay
+            .topeye
+            .bottomeye
+            .textbox
+                p Try to connect the dotted line
+                button.btn#startanim Start
     .slogan.align-items-center.text-center
         h3 What is broken would not restore itself. Only with the determination to repair is there a chance to put things together slowly.
         h6 LAI Hsin-You
@@ -47,3 +53,7 @@ append body
                 a(href="https://www.kousancraft.com.tw/" target="_blank") 更了解藝術家
 append script
     script(src="/assets/js/artist.js")
+    script.
+        $( document ).ready(function() {
+            startItro(2000);
+        })
