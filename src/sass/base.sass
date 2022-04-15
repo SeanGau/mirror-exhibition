@@ -104,8 +104,7 @@ body
                 &::after
                     transform: translate(0px, -8px) rotate(-45deg) scale(.75)
                 
-
-    .link-box
+    .link-box, .button-box
         height: min-content
         padding-top: .25rem
     a
@@ -147,9 +146,19 @@ body
                     color: $color-link !important
                     border-color: transparent !important
         &.btn
-            height: min-content
+            height: fit-content
             filter: drop-shadow(0px 4px 12px rgba(#000, .1))
             z-index: 1
+            word-break: keep-all
+            &.square
+                padding: 0
+                line-height: 1.5rem
+                display: flex
+                justify-content: center
+                align-items: center
+                height: 2.5rem
+                width: 2.6rem
+
             
     .dropdown-menu
         background-color: #FFFAEF
@@ -242,16 +251,20 @@ body
     .navbar.navbar-light
         height: 4rem !important
         filter: drop-shadow(0px 4px 12px rgba(#000, .1))
+        .button-box
+            margin-right: 1rem
 
 @media (max-width: 767.98px)
     :root
         --radius-value: 2rem
     #navOffcanvas
+        .link-box, .button-box
+            padding-bottom: 0.75rem
         .dropdown-menu
             background-color: transparent
             &.lang-dropdown
                 margin-left: 1.5rem !important
-                padding: 1rem 0
+                padding: 1rem 0 0 0
                 .dropdown-item
                     padding: .25rem 0
         &.offcanvas
@@ -260,5 +273,7 @@ body
             height: max-content
             background-color: #FFFAEF
             margin-top: 3.8rem
+            .offcanvas-body
+                padding: 1rem 1rem 1rem 1rem
     .offcanvas-backdrop
         margin-top: 4rem
