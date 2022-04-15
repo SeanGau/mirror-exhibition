@@ -229,6 +229,7 @@
 }
 #teams .team-page {
   display: none;
+  min-height: 30rem;
 }
 #teams .team-page b {
   padding-right: 1.5rem;
