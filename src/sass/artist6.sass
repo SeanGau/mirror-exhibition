@@ -54,7 +54,7 @@
         line-height: 3rem
         color: rgba(#444, .25) !important
     span
-        width: 5rem
+        width: 4rem
         display: block
         height: 1rem
         border-radius: .5rem
@@ -100,6 +100,8 @@
             padding: 3rem
             border-radius: var(--radius-value)
             position: relative
+            p
+                margin-bottom: .75rem
             h3
                 position: relative
                 z-index: 1
@@ -127,7 +129,15 @@
         .box-right
             .title-box
                 right: 3rem
-            
+
+.en 
+    #moreNav .nav-link span
+        width: 9rem
+    .works .outer-box
+        .box-left, .box-right
+            .title-box span
+                width: 9rem
+                
 @media (max-width: 767px)
     .works
         .outer-box
@@ -142,3 +152,5 @@
             .box-right
                 .title-box
                     right: 2rem
+    .en #tab-content
+        margin-top: 8rem

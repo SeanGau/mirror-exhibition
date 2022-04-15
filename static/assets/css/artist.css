@@ -90,10 +90,11 @@
 }
 .works .disc .small, .works .about .small, .works .artist .small {
   color: #9D9EA0;
+  margin-bottom: 0.25rem;
+  padding-left: 0.25rem;
 }
 .works .disc p, .works .about p, .works .artist p {
   padding-left: 0.25rem;
-  margin-bottom: 0.25rem;
 }
 .works .disc h2, .works .about h2, .works .artist h2 {
   margin-bottom: 0.75rem;
@@ -180,6 +181,13 @@
 }
 .works .box-big a:link:hover, .works .box-big a:visited:hover {
   opacity: 0.8;
+}
+
+.en .bg-color-2.about span {
+  width: 12.5rem;
+}
+.en .bg-color-3.artist span {
+  width: 9rem;
 }
 
 @media (max-width: 767px) {
