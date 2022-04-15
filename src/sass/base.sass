@@ -112,11 +112,14 @@ body
         font-weight: 500
         color: #484646
         &.navbar-brand
+            color: black
             font-family: 'Noto Sans', sans-serif
             font-weight: bold
             font-size: 2rem
             margin-right: 4rem
             padding: 0
+            &:hover
+                color: $color-link !important
         &.nav-link
             color: #484646
             padding: .25rem .5rem
@@ -128,9 +131,10 @@ body
                 color: #484646
             &:link, &:visited
                 border-bottom: 2px solid transparent
-                &:hover
-                    color: #484646
-                    border-bottom: 2px solid $color-link
+                &:hover, &.active
+                    background-color: transparent
+                    color: $color-link !important
+                    border-color: transparent !important
         &.btn
             height: min-content
             filter: drop-shadow(0px 4px 12px rgba(#000, .1))
@@ -147,10 +151,6 @@ body
             left: auto
             padding: 1rem
             min-width: 5rem
-            .dropdown-item
-                &:hover
-                    color: $color-link !important
-                    border-color: transparent !important
 #workModal
     z-index: 1058
     #workImageBox

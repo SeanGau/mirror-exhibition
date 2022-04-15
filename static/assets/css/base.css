@@ -133,11 +133,15 @@ body {
   color: #484646;
 }
 .navbar.navbar-light a.navbar-brand {
+  color: black;
   font-family: "Noto Sans", sans-serif;
   font-weight: bold;
   font-size: 2rem;
   margin-right: 4rem;
   padding: 0;
+}
+.navbar.navbar-light a.navbar-brand:hover {
+  color: #7C3AED !important;
 }
 .navbar.navbar-light a.nav-link {
   color: #484646;
@@ -152,9 +156,10 @@ body {
 .navbar.navbar-light a.nav-link:link, .navbar.navbar-light a.nav-link:visited, .navbar.navbar-light a.dropdown-item:link, .navbar.navbar-light a.dropdown-item:visited {
   border-bottom: 2px solid transparent;
 }
-.navbar.navbar-light a.nav-link:link:hover, .navbar.navbar-light a.nav-link:visited:hover, .navbar.navbar-light a.dropdown-item:link:hover, .navbar.navbar-light a.dropdown-item:visited:hover {
-  color: #484646;
-  border-bottom: 2px solid #7C3AED;
+.navbar.navbar-light a.nav-link:link:hover, .navbar.navbar-light a.nav-link:link.active, .navbar.navbar-light a.nav-link:visited:hover, .navbar.navbar-light a.nav-link:visited.active, .navbar.navbar-light a.dropdown-item:link:hover, .navbar.navbar-light a.dropdown-item:link.active, .navbar.navbar-light a.dropdown-item:visited:hover, .navbar.navbar-light a.dropdown-item:visited.active {
+  background-color: transparent;
+  color: #7C3AED !important;
+  border-color: transparent !important;
 }
 .navbar.navbar-light a.btn {
   height: min-content;
@@ -174,10 +179,6 @@ body {
   left: auto;
   padding: 1rem;
   min-width: 5rem;
-}
-.navbar.navbar-light .dropdown-menu.lang-dropdown .dropdown-item:hover {
-  color: #7C3AED !important;
-  border-color: transparent !important;
 }
 
 #workModal {

@@ -19,6 +19,7 @@ html(lang="zh-Hant-TW")
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous')
         script(src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js")
         script.
+            var currentUrl = window.location.href
             $( document ).ready(function() {
                 function checkLoad() {
                     const lastVisit = localStorage.getItem('lastVisit')
@@ -33,6 +34,12 @@ html(lang="zh-Hant-TW")
                     helpModal.show()
                 }
                 checkLoad()
+                var urlArray = currentUrl.split("/")
+                if(urlArray.indexOf("artist") >= 0) {
+                    var currentArtist = urlArray[urlArray.indexOf("artist")+1]
+                    //console.log(currentArtist)
+                    $(`#navOffcanvas .dropdown-item[aria-label="${currentArtist}"]`).addClass("active")
+                }
             })
             /*
             body overflow hidden
@@ -68,7 +75,6 @@ html(lang="zh-Hant-TW")
             })
             $(".lang-dropdown .dropdown-item").on("click", function(e) {
                 e.preventDefault()
-                var currentUrl = window.location.href
                 if(currentUrl.indexOf("/en") >= 0) {
                     window.location.href = currentUrl.replace("/en", $(this).data("lang-target"))
                 } else {
