@@ -1,3 +1,4 @@
+@import _variables.sass
 .bg-color-1
     background-color: #F6E9D0
 .bg-color-2
@@ -92,7 +93,7 @@
         height: 50vw
         padding: 3rem
         a:link, a:visited
-            color: black
+            color: $color-text
             text-decoration: none
         .box-left, .box-right
             height: 100%
@@ -127,6 +128,7 @@
             .title-box
                 left: 3rem
         .box-right
+            padding-bottom: 4rem
             .title-box
                 right: 3rem
 
@@ -137,8 +139,15 @@
         .box-left, .box-right
             .title-box span
                 width: 9rem
-                
-@media (max-width: 767px)
+
+
+@media (min-width: 1200px)
+    #works
+        padding: 4vw
+    .works .outer-box
+        height: 46vw
+
+@media (max-width: 767.98px)
     .works
         .outer-box
             height: 100vw

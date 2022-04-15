@@ -91,7 +91,8 @@ append script
                     playsinline: 1,
                 },
                 events: {
-                    'onReady': onPlayerReady
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
                 }
             })
         }
@@ -99,4 +100,17 @@ append script
         function onPlayerReady(event) {
             var player = event.target;
             iframe = $('#player')[0];
+        }
+
+        function onPlayerStateChange(event) {
+            console.log(event.data)
+            if (event.data == 0) {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) { /* Safari */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE11 */
+                    document.msExitFullscreen();
+                }
+            }
         }

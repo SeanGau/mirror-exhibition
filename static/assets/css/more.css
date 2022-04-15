@@ -135,7 +135,7 @@ table th {
   padding: 3rem;
 }
 #talk .content-box a {
-  color: black;
+  color: #484646;
   text-decoration: none;
 }
 #talk .content-box .bg-1 {
@@ -218,7 +218,7 @@ table th {
   color: rgba(255, 255, 255, 0.8);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
   #exhibition, #talk {
     padding: 1.5rem;
   }
