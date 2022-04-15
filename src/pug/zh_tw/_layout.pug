@@ -3,6 +3,7 @@ block variables
     - lang='zh_tw';
 block head
     title #{title} - 《鏡子》療癒工藝線上展
+    meta(name="description" content="《鏡子》療癒工藝線上展邀請8位藝術家回看自己創作的核心，試著將情緒感官化，以直觀的方式產出。在哲學思辨中更認識自己，在光影中尋找歸屬感，在冥想中紀錄生活的不同情境與狀態，也思考面對關係的修復，如何讓受傷的心走向癒合。在原初、投射和轉化之間來回走動。")
 block body
     nav.navbar.navbar-expand-md.navbar-light.fixed-top: .container-fluid
         a.navbar-brand.ms-2.ps-1(href="/"+lang) Mirror
@@ -15,20 +16,20 @@ block body
                     a.nav-link#artistDropdownMenuLink(href='#' data-bs-toggle="dropdown" aria-expanded="false") 藝術家
                     ul.dropdown-menu(aria-labelledby="artistDropdownMenuLink")
                         li
-                            a.dropdown-item(href='/'+lang+'/artist/1') 王筱璦‧王筱璦金工藝術
-                            a.dropdown-item(href='/'+lang+'/artist/2') 潘子村‧村 碟樂
-                            a.dropdown-item(href='/'+lang+'/artist/3') 黃虹毓‧土星工作室
-                            a.dropdown-item(href='/'+lang+'/artist/4') 陳向榮‧向榮水果行
-                            a.dropdown-item(href='/'+lang+'/artist/5') 康雅筑‧織物地圖
-                            a.dropdown-item(href='/'+lang+'/artist/6') 林秀蘋(思良)‧BONTE好物金工
-                            a.dropdown-item(href='/'+lang+'/artist/7') 張博傑‧真真鑲嵌玻璃研究所
-                            a.dropdown-item(href='/'+lang+'/artist/8') 賴信佑‧光山行漆器工藝
+                            a.dropdown-item(href='/'+lang+'/artist/1' aria-label="1") 王筱璦‧王筱璦金工藝術
+                            a.dropdown-item(href='/'+lang+'/artist/2' aria-label="2") 潘子村‧村 碟樂
+                            a.dropdown-item(href='/'+lang+'/artist/3' aria-label="3") 黃虹毓‧土星工作室
+                            a.dropdown-item(href='/'+lang+'/artist/4' aria-label="4") 陳向榮‧向榮水果行
+                            a.dropdown-item(href='/'+lang+'/artist/5' aria-label="5") 康雅筑‧織物地圖
+                            a.dropdown-item(href='/'+lang+'/artist/6' aria-label="6") 林秀蘋(思良)‧BONTE好物金工
+                            a.dropdown-item(href='/'+lang+'/artist/7' aria-label="7") 張博傑‧真真鑲嵌玻璃研究所
+                            a.dropdown-item(href='/'+lang+'/artist/8' aria-label="8") 賴信佑‧光山行漆器工藝
                 li.nav-item: a.nav-link(href='/'+lang+'/more') 了解更多
             ul.navbar-nav.link-box.flex-row
                 li.nav-item: a.ms-3.btn.btn-purple(href='https://player.soundon.fm/p/25079601-f138-48b3-868b-9e2be7886ca7' target="_blank") 🎧閉上眼聽展覽
-                li.nav-item: a.ms-4.btn.btn-purple(href='#' data-bs-toggle="modal" data-bs-target="#helpModal") 🦄
+                li.nav-item: a.ms-4.btn.btn-purple(href='#' data-bs-toggle="modal" data-bs-target="#helpModal" aria-label="Unicorn 導覽") 🦄
                 li.nav-item.dropdown
-                    a.ms-4.btn.btn-purple#langDropdownLink(href='#' data-bs-toggle="dropdown" aria-expanded="false") 🌍
+                    a.ms-4.btn.btn-purple#langDropdownLink(href='#' data-bs-toggle="dropdown" aria-expanded="false" aria-label="Globe 語言") 🌍
                     ul.dropdown-menu.lang-dropdown(aria-labelledby="langDropdownLink")
                         li
                             a.dropdown-item(href='#' data-lang-target="/zh_tw") 中文
@@ -40,7 +41,7 @@ block body
                 .modal-body.d-flex.justify-content-center.align-items.center
                     #workImageBox: div.img-box
                         img(src="", alt="", srcset="")
-                        a.close-button(data-bs-dismiss='modal' aria-label='Close')
+                        a.close-button(data-bs-dismiss='modal' title='Close')
                             svg.w-100.h-100(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='currentColor')
                                 // ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. 
                                 path(d='M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z')
@@ -79,7 +80,7 @@ block body
                             p 點選「🦄」可再度展開本說明
                             p 請戴上耳機，靜下心自由地感受
 
-                        a.close-button(data-bs-dismiss='modal' aria-label='Close')
+                        a.close-button(data-bs-dismiss='modal' title='Close')
                             svg.w-100.h-100(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='currentColor')
                                 // ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. 
                                 path(d='M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z')
