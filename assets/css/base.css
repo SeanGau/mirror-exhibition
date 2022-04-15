@@ -118,10 +118,10 @@ body {
   background-color: transparent;
 }
 .navbar.navbar-light .navbar-toggler-burger.clicked span::before {
-  transform: translate(0px, 7.5px) rotate(45deg);
+  transform: translate(0px, 8px) rotate(45deg) scale(0.75);
 }
 .navbar.navbar-light .navbar-toggler-burger.clicked span::after {
-  transform: translate(0px, -7.5px) rotate(-45deg);
+  transform: translate(0px, -8px) rotate(-45deg) scale(0.75);
 }
 .navbar.navbar-light .link-box {
   height: min-content;
@@ -181,13 +181,51 @@ body {
 #workModal {
   z-index: 1058;
 }
+#workModal #workImageBox {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 85vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#workModal #workImageBox .img-box {
+  position: relative;
+  height: 100%;
+}
+#workModal #workImageBox img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: var(--radius-value);
+  filter: drop-shadow(0px 6px 40px rgba(0, 0, 0, 0.5));
+}
 
 #helpModal {
+  margin-top: 2rem;
   transition: 0.3s;
   background-color: white;
   background-image: url("/assets/overlay.png");
   background-size: cover;
   background-position: center center;
+}
+#helpModal #helpBox {
+  margin: auto;
+  position: relative;
+  padding: 6vh 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 6px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-value);
+  color: white;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+#helpModal #helpBox > div {
+  filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.25));
+  padding: 1rem;
 }
 
 .modal-backdrop.fade, .offcanvas-backdrop.fade {
@@ -201,43 +239,6 @@ body {
 
 .modal-content {
   background-color: transparent;
-}
-.modal-content #workImageBox {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 85vh;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.modal-content #workImageBox .img-box {
-  position: relative;
-  height: 100%;
-}
-.modal-content #workImageBox img {
-  max-height: 100%;
-  max-width: 100%;
-  border-radius: var(--radius-value);
-  filter: drop-shadow(0px 6px 40px rgba(0, 0, 0, 0.5));
-}
-.modal-content #helpBox {
-  margin: auto;
-  position: relative;
-  padding: 6vh 4vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: 6px solid rgba(255, 255, 255, 0.5);
-  border-radius: var(--radius-value);
-  color: white;
-  background-color: rgba(255, 255, 255, 0.25);
-}
-.modal-content #helpBox > div {
-  filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.25));
-  padding: 1rem;
 }
 .modal-content .close-button {
   display: block;
@@ -270,7 +271,7 @@ body {
     --radius-value: 2rem;
   }
 
-  #navbarNav.offcanvas {
+  #navOffcanvas.offcanvas {
     max-width: 101%;
     width: 101%;
     height: max-content;
