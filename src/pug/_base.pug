@@ -42,11 +42,16 @@ html(lang="zh-Hant-TW")
             */
             $(window).on("load", function() {
             })
-
-            $("#navbarNav").on("show.bs.offcanvas", function() {
+            
+            var bsOffcanvas = new bootstrap.Offcanvas(document.getElementById('navOffcanvas'))
+            $("#helpModal").on("show.bs.modal", function() {
+                bsOffcanvas.hide()
+            })
+            
+            $("#navOffcanvas").on("show.bs.offcanvas", function() {
                 $(".navbar-toggler-burger").addClass("clicked")
             })
-            $("#navbarNav").on("hide.bs.offcanvas", function() {
+            $("#navOffcanvas").on("hide.bs.offcanvas", function() {
                 $(".navbar-toggler-burger").removeClass("clicked")
             })
 

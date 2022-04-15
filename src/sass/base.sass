@@ -99,9 +99,9 @@ body
             span
                 background-color: transparent
                 &::before
-                    transform: translate(0px, 7.5px) rotate(45deg)
+                    transform: translate(0px, 8px) rotate(45deg) scale(.75)
                 &::after
-                    transform: translate(0px, -7.5px) rotate(-45deg)
+                    transform: translate(0px, -8px) rotate(-45deg) scale(.75)
                 
 
     .link-box
@@ -151,23 +151,6 @@ body
                     border-color: transparent !important
 #workModal
     z-index: 1058
-#helpModal
-    transition: .3s
-    background-color: white
-    background-image: url("/assets/overlay.png")
-    background-size: cover
-    background-position: center center
-
-.modal-backdrop, .offcanvas-backdrop
-    &.fade
-        -webkit-backdrop-filter: blur(5px)
-        backdrop-filter: blur(5px)
-        background-color: rgba(0, 0, 0, .5)
-    &.show
-        opacity: 1
-    
-.modal-content
-    background-color: transparent
     #workImageBox
         background-size: contain
         background-repeat: no-repeat
@@ -185,6 +168,14 @@ body
             max-width: 100%
             border-radius: var(--radius-value)
             filter: drop-shadow(0px 6px 40px rgba(#000, .5))
+    
+#helpModal
+    margin-top: 2rem
+    transition: .3s
+    background-color: white
+    background-image: url("/assets/overlay.png")
+    background-size: cover
+    background-position: center center
     #helpBox
         margin: auto
         position: relative
@@ -201,6 +192,16 @@ body
             filter: drop-shadow(2px 3px 3px rgba(#000, .25))
             padding: 1rem
 
+.modal-backdrop, .offcanvas-backdrop
+    &.fade
+        -webkit-backdrop-filter: blur(5px)
+        backdrop-filter: blur(5px)
+        background-color: rgba(0, 0, 0, .5)
+    &.show
+        opacity: 1
+    
+.modal-content
+    background-color: transparent
     .close-button
         display: block
         position: absolute
@@ -227,7 +228,7 @@ body
 @media (max-width: 767px)
     :root
         --radius-value: 2rem
-    #navbarNav
+    #navOffcanvas
         //transition: .3s ease-in-out
         &.offcanvas
             max-width: 101%
