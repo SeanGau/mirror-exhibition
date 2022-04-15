@@ -136,7 +136,7 @@
   padding: 3rem;
 }
 .works .outer-box a:link, .works .outer-box a:visited {
-  color: black;
+  color: #484646;
   text-decoration: none;
 }
 .works .outer-box .box-left, .works .outer-box .box-right {
@@ -177,6 +177,9 @@
 .works .outer-box .box-left .title-box {
   left: 3rem;
 }
+.works .outer-box .box-right {
+  padding-bottom: 4rem;
+}
 .works .outer-box .box-right .title-box {
   right: 3rem;
 }
@@ -188,7 +191,16 @@
   width: 9rem;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 1200px) {
+  #works {
+    padding: 4vw;
+  }
+
+  .works .outer-box {
+    height: 46vw;
+  }
+}
+@media (max-width: 767.98px) {
   .works .outer-box {
     height: 100vw;
     padding: 1rem;

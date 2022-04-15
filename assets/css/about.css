@@ -156,7 +156,7 @@
   background-color: #FAF0E7;
 }
 #rows .bg-team-4 {
-  color: black;
+  color: #484646;
   background-color: #D6CDC5;
 }
 #rows .bg-team-4 h1 {
@@ -266,7 +266,7 @@
     background-color: transparent;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
   #top-anim .anim-card {
     height: 60vw;
     width: 40vw;
