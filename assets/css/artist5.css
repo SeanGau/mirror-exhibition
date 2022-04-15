@@ -30,6 +30,10 @@
   background-color: #ECEBED;
 }
 
+#carouselImg {
+  width: 80%;
+  margin: auto;
+}
 #carouselImg .carousel-item {
   padding: 4rem;
 }

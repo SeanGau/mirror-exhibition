@@ -98,10 +98,10 @@
 }
 
 #goback {
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   position: fixed;
-  right: 0rem;
+  right: -0.5rem;
   top: 33vh;
   z-index: 1050;
 }
