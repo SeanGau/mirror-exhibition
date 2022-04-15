@@ -39,7 +39,7 @@ html(lang="zh-Hant-TW")
                 if(urlArray.indexOf("artist") >= 0) {
                     var currentArtist = urlArray[urlArray.indexOf("artist")+1]
                     //console.log(currentArtist)
-                    $(`#navOffcanvas .dropdown-item[aria-label="${currentArtist}"]`).addClass("active")
+                    $(`#navOffcanvas .dropdown-item[index="${currentArtist}"]`).addClass("active")
                 }
             })
             /*
