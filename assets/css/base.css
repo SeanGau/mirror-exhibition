@@ -124,7 +124,7 @@ body {
 .navbar.navbar-light .navbar-toggler-burger.clicked span::after {
   transform: translate(0px, -8px) rotate(-45deg) scale(0.75);
 }
-.navbar.navbar-light .link-box {
+.navbar.navbar-light .link-box, .navbar.navbar-light .button-box {
   height: min-content;
   padding-top: 0.25rem;
 }
@@ -293,13 +293,16 @@ body {
     height: 4rem !important;
     filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.1));
   }
+  .navbar.navbar-light .button-box {
+    margin-right: 1rem;
+  }
 }
 @media (max-width: 767.98px) {
   :root {
     --radius-value: 2rem;
   }
 
-  #navOffcanvas .link-box {
+  #navOffcanvas .link-box, #navOffcanvas .button-box {
     padding-bottom: 0.75rem;
   }
   #navOffcanvas .dropdown-menu {
