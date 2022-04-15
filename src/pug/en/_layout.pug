@@ -2,6 +2,14 @@ extends /_base.pug
 block variables
     - lang='en';
 block head
+    //  Global site tag (gtag.js) - Google Analytics 
+    script(async src='https://www.googletagmanager.com/gtag/js?id=G-VJW6K1MEVD')
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VJW6K1MEVD');
+    
     title #{title} - Mirror — An Online Exhibition about the Craft of Healing
     meta(name="description" content="Mirror — An Online Exhibition about the Craft of Healing invited eight artists to look back at the core of their creative practice, trying to sensualize emotions and process them in an intuitive way. Artists get to know themselves better through philosophical speculation, search for a sense of belonging in light and shadow, keep notes of different situations and states of life through meditation, and also confront, reflect on and repair a relationship, learning to heal a wounded heart. They shift between aspiration, projection and transformation.")
 block body
