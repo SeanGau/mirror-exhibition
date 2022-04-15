@@ -17,11 +17,12 @@ html(lang="zh-Hant-TW")
         block body      
         script(src='https://code.jquery.com/jquery-3.6.0.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=' crossorigin='anonymous')        
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous')
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js")
         script.
-            $(function() {
+            $( document ).ready(function() {
                 function checkLoad() {
                     const lastVisit = localStorage.getItem('lastVisit')
+                    console.log(lastVisit)
                     const now = new Date()
                     if(lastVisit) {
                         if(now.getTime() - lastVisit < 24*60*60*1000) 

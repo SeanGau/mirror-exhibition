@@ -98,7 +98,7 @@ append body
 append script
     script(src="/assets/js/artist.js") 
     script.
-        $(function(){
+        $( document ).ready(function() {
             anime({
                 targets: ['#intro-overlay .textbox p', '#startanim'],
                 opacity: 1,
