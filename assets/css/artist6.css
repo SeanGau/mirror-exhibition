@@ -85,7 +85,7 @@
   color: rgba(68, 68, 68, 0.25) !important;
 }
 #moreNav .nav-link span {
-  width: 5rem;
+  width: 4rem;
   display: block;
   height: 1rem;
   border-radius: 0.5rem;
@@ -146,6 +146,9 @@
   border-radius: var(--radius-value);
   position: relative;
 }
+.works .outer-box .box-left p, .works .outer-box .box-right p {
+  margin-bottom: 0.75rem;
+}
 .works .outer-box .box-left h3, .works .outer-box .box-right h3 {
   position: relative;
   z-index: 1;
@@ -178,6 +181,13 @@
   right: 3rem;
 }
 
+.en #moreNav .nav-link span {
+  width: 9rem;
+}
+.en .works .outer-box .box-left .title-box span, .en .works .outer-box .box-right .title-box span {
+  width: 9rem;
+}
+
 @media (max-width: 767px) {
   .works .outer-box {
     height: 100vw;
@@ -192,5 +202,9 @@
   }
   .works .outer-box .box-right .title-box {
     right: 2rem;
+  }
+
+  .en #tab-content {
+    margin-top: 8rem;
   }
 }
