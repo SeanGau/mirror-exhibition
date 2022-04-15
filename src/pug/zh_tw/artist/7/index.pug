@@ -83,8 +83,13 @@ append script
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('player', {
                 height: '',
-                width: '300',
+                width: '',
                 videoId: 'wjwdxoMe4ZY',
+                playerVars: {
+                    rel: 0,
+                    modestbranding: 1,
+                    playsinline: 1,
+                },
                 events: {
                     'onReady': onPlayerReady
                 }
