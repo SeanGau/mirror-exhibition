@@ -24,13 +24,13 @@ html(lang="zh-Hant-TW")
                     const lastVisit = localStorage.getItem('lastVisit')
                     console.log(lastVisit)
                     const now = new Date()
+                    localStorage.setItem('lastVisit', now.getTime())
                     if(lastVisit) {
                         if(now.getTime() - lastVisit < 24*60*60*1000) 
                             return
                     }
                     let helpModal = new bootstrap.Modal(document.getElementById('helpModal'), {})
                     helpModal.show()
-                    localStorage.setItem('lastVisit', now.getTime())
                 }
                 checkLoad()
             })
