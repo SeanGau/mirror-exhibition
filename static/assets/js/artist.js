@@ -5,9 +5,13 @@ $('.workbox').on('click', function (e) {
     $('#workImageBox img').attr("src", imgpath)
     myModal.toggle()
     $(".modal-backdrop").css("z-index", "1057")
+    gtag('event', '作品（圖片）點擊', {
+        'debug_mode': false,
+        'event_label': imgpath
+    });
 })
 
-$("workModal").on("hide.bs.modal", function(e) {
+$("workModal").on("hide.bs.modal", function (e) {
     $(".modal-backdrop").css("z-index", "")
 })
 
@@ -17,23 +21,26 @@ function startItro(duration) {
         opacity: 1,
         easing: 'easeInQuad',
         duration: duration,
-        delay: anime.stagger(duration/2)
+        delay: anime.stagger(duration / 2)
     })
-    $("#startanim").on("click", function(e){
-        $("#intro-overlay .textbox").fadeOut(duration/6)
+    $("#startanim").on("click", function (e) {
+        $("#intro-overlay .textbox").fadeOut(duration / 6)
+        gtag('event', '動畫互動', {
+            'debug_mode': false,
+        });
         anime({
             targets: '#intro-overlay .topeye',
             translateY: "-100%",
-            duration: duration/2,
+            duration: duration / 2,
             easing: 'easeInOutQuad',
         })
         anime({
             targets: '#intro-overlay .bottomeye',
             translateY: "100%",
-            duration: duration/2,
+            duration: duration / 2,
             easing: 'easeInOutQuad',
-            complete: function(anim) {
-                $("#intro-overlay").fadeOut(duration/6, function(e) {})
+            complete: function (anim) {
+                $("#intro-overlay").fadeOut(duration / 6, function (e) { })
             }
         })
     })
